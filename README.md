@@ -1,4 +1,4 @@
 Portfolio v1, 
-#nextJs
-#styled-components
-#firebase
+# nextJs
+# styled-components
+# firebase
