@@ -1,1 +1,2 @@
-Portfolio v1, [nextJs],[styled-components],[firebase],
+## Portfolio v1 
+### nextJs, styled-components, firebase,
