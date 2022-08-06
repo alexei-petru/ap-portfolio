@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
-export const StyledContainer = styled.div`
-  min-height: 100vh;
+const StyledContainer = styled.div`
+  max-width: 1200px;
   padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  margin: 0 auto;
 `;
+export default StyledContainer;
