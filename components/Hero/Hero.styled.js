@@ -6,5 +6,6 @@ const StyledHero = styled.section`
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   height: 100vh;
+  max-height: 1080px;
 `;
 export default StyledHero;

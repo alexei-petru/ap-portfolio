@@ -9,7 +9,6 @@ export const StyledNavbar = styled.nav`
   background-color: ${headerBackgroundColor};
   padding: 20px;
   margin-top: 0;
-  border: 2px solid red;
 
   li {
     list-style: none;
