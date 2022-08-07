@@ -1,19 +1,22 @@
 import Head from "next/head";
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
-import Hero from "../components/Hero/Hero";
-import Navbar from "../components/Navbar/Navbar";
-import StyledContainer from "../styles/Container.styled";
 import { GlobalStyle } from "../styles/GlobalStyle";
+import dynamic from "next/dynamic";
+
+const Main = dynamic(() => import("../components/Main/Main"), { ssr: false });
 
 export default function Home() {
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle /> 
       <Head>
         <title>A.P. Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <Main />
+      <Footer />
     </>
   );
 }

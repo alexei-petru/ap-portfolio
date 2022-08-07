@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { headerBackgroundColor } from "../../constants/constants";
+import { headerNavbarBackgroundColor } from "../../constants/constants";
 
 export const StyledNavbar = styled.nav`
   position: relative;
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  background-color: ${headerBackgroundColor};
+  background-color: ${headerNavbarBackgroundColor};
   padding: 20px;
   margin-top: 0;
 

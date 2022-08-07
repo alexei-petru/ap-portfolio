@@ -1,17 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import StyledHero from "./Hero.styled";
-import AvatarWrapper from "./AvatarWrapper.styled";
-import StyledUserDescription from "./UserDescription.styled";
-import StyledApodDescription from "./ApodDescription.styled";
-import StyledApodParagraph from "./ApodParagraph.styled";
+import {
+  StyledHero,
+  StyledApodDescription,
+  StyledAvatarWrapper,
+  StyledUserDescription,
+  StyledApodParagraph,
+} from "./Hero.styled";
 
 const Hero = () => {
   return (
     <StyledHero>
-      <AvatarWrapper>
+      <StyledAvatarWrapper>
         <Image objectFit="contain" layout="fill" src={"/me.png"} />
-      </AvatarWrapper>
+      </StyledAvatarWrapper>
       <StyledUserDescription>
         Hello, my name is Alexei Petru and i am a frontend developer.
       </StyledUserDescription>
@@ -26,6 +28,8 @@ const Hero = () => {
           <StyledApodParagraph>APOD Dynamic Image</StyledApodParagraph>
         </a>
       </StyledApodDescription>
+      {/* <Card className="card"></Card> */}
+      {/* <CardStyles /> */}
     </StyledHero>
   );
 };

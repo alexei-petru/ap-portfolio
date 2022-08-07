@@ -1,23 +1,22 @@
-import Image from "next/image";
 import React from "react";
-import { headerBackgroundFilter, nasaImage } from "../../constants/constants";
-import StyledContainer from "../../styles/Container.styled";
-import StyledHeader from "../Header/Header.styled";
+import { StyledContainer } from "../../styles/Container.styled";
 import Hero from "../Hero/Hero";
-import HeroBackground from "../Hero/HeroBackground";
 import Navbar from "../Navbar/Navbar";
+import { StyledHeader } from "./Header.styled";
+import HeaderBackground from "./HeaderBackground";
+import { StyledMain } from "../Main/Main.styled";
 
 const Header = () => {
   return (
-    <header>
+    <>
       <StyledHeader>
-        <HeroBackground />
+        <HeaderBackground />
+        <StyledContainer>
+          <Navbar />
+          <Hero />
+        </StyledContainer>
       </StyledHeader>
-      <StyledContainer>
-        <Navbar />
-        <Hero />
-      </StyledContainer>
-    </header>
+    </>
   );
 };
 
