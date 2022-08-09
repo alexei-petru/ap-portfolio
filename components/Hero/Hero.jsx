@@ -15,7 +15,7 @@ const Hero = () => {
         <Image objectFit="contain" layout="fill" src={"/me.png"} />
       </StyledAvatarWrapper>
       <StyledUserDescription>
-        Hello, my name is Alexei Petru and i am a frontend developer.
+        Hello, my name is Alexei Petru and i am self-taught  frontend developer.
       </StyledUserDescription>
       <StyledApodDescription>
         <a href="#">
