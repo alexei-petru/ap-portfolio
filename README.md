@@ -3,4 +3,4 @@
 ### nextJs, styled-components, firebase,
 
 
-## Live Demo https://ap-portfolio-ten.vercel.app/
+## Starter demo https://ap-portfolio-ten.vercel.app/

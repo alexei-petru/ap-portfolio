@@ -3,7 +3,7 @@ import {
   headerBackgroundColor,
   headerBackgroundFilter,
   maxDeviceHeight,
-} from "../../constants/constants";
+} from "constants/constants";
 headerBackgroundColor;
 
 export const StyledHeader = styled.header`
