@@ -18,7 +18,13 @@ export const GlobalStyle = styled.createGlobalStyle`
     color: white;
     padding: 0;
     margin: 0;
+    position: relative;
+    z-index: 1;
   }
-  .card {
+
+  @font-face {
+    font-family: monoton;
+    font-weight: 400;
+    src: url("/Monoton-Regular.ttf");
   }
 `;

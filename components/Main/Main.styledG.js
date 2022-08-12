@@ -6,21 +6,30 @@ export const MainGlobalStyles = styled.createGlobalStyle`
   .card-project {
     width: 350px !important;
     justify-content: center;
-    height: 100% !important;
+    height: 400px !important;
   }
 
   .card-project-div3 img {
     width: 230px !important;
     height: auto !important;
+    align-items: flex-start !important;
+    height: initial !important;
+    flex: initial !important;
+    /* align-items:flex-start !important; */
+  }
+
+  .card-project-div4 img {
+    height: 100% !important;
+    justify-content: flex-start;
   }
 
   .card-project-div5 {
     /* border: 2px solid red; */
     /* margin-left: 0; */
-    font-size: calc(19px + (21 - 19) * ((100vw - 300px) / (1600 - 300)));
+    /* font-size: calc(19px + (21 - 19) * ((100vw - 300px) / (1600 - 300))); */
     font-weight: 600;
     word-spacing: 1.1px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
   .card-project-div6 {
     /* border: 2px solid red; */
@@ -36,6 +45,8 @@ export const MainGlobalStyles = styled.createGlobalStyle`
       padding: 5px;
       margin: 1px !important;
     }
+    margin-top: auto;
+    margin-bottom: 5%;
   }
 
   .card::before {

@@ -4,23 +4,39 @@ import { StyledContainer } from "styles/Container.styled";
 import * as St from "components/Main/Main.styled";
 import { MainGlobalStyles } from "components/Main/Main.styledG";
 import { CARDS_INFO } from "data/localData";
+import ReactDOM from "react-dom";
 
-const useSetCardsClassNames = () => {
+const useChangeCardsClassNames = () => {
   useEffect(() => {
     const cardDivs = document.querySelectorAll(".card-project div");
-    console.log(cardDivs);
     cardDivs.forEach((div, i) => {
-      div.classList.add(`card-project-div${i}`);
+      div.classList.add(`card-project-div${i % 8}`);
     });
   }, []);
 };
 
+const useAddCardsButtons = () => {
+  // useEffect(() => {
+  //   const cardButtons = (
+  //     <div>
+  //       <button>Button1</button>
+  //       <button>Button2</button>
+  //     </div>
+  //   );
+  //   const lastDiv = document.querySelector(`.card-project-div7`);
+  //   console.log(lastDiv);
+  //   // lastDiv.insertAdjacentElement("afterend", cardButtons);
+  //   ReactDOM.render(cardButtons, lastDiv); 
+  // }, []);
+};
+
 const Main = () => {
-  useSetCardsClassNames();
+  useChangeCardsClassNames();
+  useAddCardsButtons();
   return (
     <St.Main>
       <StyledContainer>
-        <h1>Projects</h1>
+        <St.ProjectsTitle>Projects</St.ProjectsTitle>
         <St.CardsSection>
           {CARDS_INFO.map((project) => {
             return (

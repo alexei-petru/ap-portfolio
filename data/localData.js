@@ -3,13 +3,13 @@ export const CARDS_INFO = [
     title: "Real Idea",
     description:
       "Landing Page created after 300hours of learning web development.",
-    tags: ["Html", "Css", "Bem", "Stylelint", "Sccs"],
+    tags: ["Html", "Css", "Bem", "StyleLint", "Sccs"],
     thumbnail: "/real-idea.png",
   },
   {
     title: "Encryptor",
     description: "Mini project based on a simple encrypt algorythm",
-    tags: ["Html", "Css", "JavaScript"],
+    tags: ["Html", "Css", "JavaScript",],
     thumbnail: "/encryptor.png",
   },
   {
