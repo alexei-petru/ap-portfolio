@@ -10,7 +10,7 @@ const Header = () => {
       <StyledHeader>
         <HeaderBackground />
         <StyledContainer>
-          <Navbar /> 
+          <Navbar />
           <Hero />
         </StyledContainer>
       </StyledHeader>

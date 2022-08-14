@@ -1,4 +1,3 @@
-import React from "react";
 import { StyledContainer } from "styles/Container.styled";
 import * as St from "components/Main/Main.styled";
 import { MainGlobalStyles } from "components/Main/Main.styledG";
@@ -26,7 +25,7 @@ const Main = () => {
           })}
         </St.CardsSection>
       </StyledContainer>
-      <MainGlobalStyles />
+      <MainGlobalStyles /> 
     </St.Main>
   );
 };
