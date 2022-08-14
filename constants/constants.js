@@ -7,6 +7,6 @@ export const nasaImage =
 
 export const headerBackgroundColor = "#cc1414c6";
 export const headerNavbarBackgroundColor = "#00000059";
-export const headerBackgroundFilter = "blur(2px)";
+export const headerBackgroundFilter = "blur(2px) brightness(0.75)";
 export const maxDeviceHeight = "1080px";
  

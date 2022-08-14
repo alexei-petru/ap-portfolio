@@ -9,7 +9,7 @@ const Main = dynamic(() => import("../components/Main/Main"), { ssr: false });
 export default function Home() {
   return (
     <>
-      <GlobalStyle /> 
+      <GlobalStyle />
       <Head>
         <title>A.P. Portfolio</title>
         <link rel="icon" href="/favicon.ico" />

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { headerNavbarBackgroundColor } from "../../constants/constants";
+import { headerNavbarBackgroundColor } from "../../../constants/constants";
 
 export const StyledNavbar = styled.nav`
   position: relative;

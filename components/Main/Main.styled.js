@@ -11,7 +11,7 @@ export const CardsSection = styled.div`
   justify-content: center;
   align-content: center;
   grid-gap: 20px;
-  background-color: black; 
+  background-color: black;
 `;
 
 export const ProjectsTitle = styled.h2`

@@ -1,27 +1,11 @@
 import styled, { createGlobalStyle } from "styled-components";
 
-export const CardStyles = createGlobalStyle`
-.card{
-    
-} 
-`;
-
 export const StyledHero = styled.section`
-  /* z-index: 1; */
   display: grid;
-  padding: 100px 0;
-
   grid-template-columns: repeat(12, 1fr);
-  /* grid-template-rows: repeat(12, 5vw); */
-  /* height: 100vh; */
-  /* max-height: 1080px; */
-`;
-
-export const StyledApodDescription = styled.div`
-  z-index: 1;
-  grid-row: 4 / span 3;
-  grid-column: 1 / span 3;
-  margin-top: 50px;
+  /* grid-template-rows: repeat(12, calc(100vh / 12)); */
+  max-height: 1080px;
+  height: 100%;
 `;
 
 export const StyledAvatarWrapper = styled.div`
@@ -30,9 +14,14 @@ export const StyledAvatarWrapper = styled.div`
   width: clamp(138px, 17vw, 288px);
   height: clamp(144px, 17vw, 302px);
   border-radius: 10%;
-  grid-row: 2 / span 3;
+  grid-row: 4 / span 3;
   grid-column: 9 / span 3;
   overflow: hidden;
+`;
+export const StyledApodDescription = styled.div`
+  z-index: 1;
+  grid-row: 7 / span 3;
+  grid-column: 1 / span 3;
 `;
 
 export const StyledApodParagraph = styled.p`
@@ -41,11 +30,9 @@ export const StyledApodParagraph = styled.p`
 `;
 
 export const StyledUserDescription = styled.h1`
-  /* @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap'); */
-
   z-index: 1;
-  font-size: clamp(16px, 6vw, 48px);
-  grid-row: 3 / span 1;
+  font-size: clamp(16px, 5vw, 40px);
+  grid-row: 5 / span 1;
   grid-column: 2 / span 6;
   font-family: monoton;
   text-align: center;

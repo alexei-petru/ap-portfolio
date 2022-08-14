@@ -11,6 +11,7 @@ export const MainGlobalStyles = styled.createGlobalStyle`
 
   .card-project-div3 img {
     width: 230px !important;
+    height: 96% !important;
     height: auto !important;
     align-items: flex-start !important;
     height: initial !important;

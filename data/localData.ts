@@ -1,4 +1,11 @@
-export const CARDS_INFO = [
+type CARDS_INFO_Type = {
+  title: string;
+  description: string;
+  tags: string[];
+  thumbnail: string;
+};
+
+export const CARDS_INFO: CARDS_INFO_Type[] = [
   {
     title: "Real Idea",
     description:
@@ -9,7 +16,7 @@ export const CARDS_INFO = [
   {
     title: "Encryptor",
     description: "Mini project based on a simple encrypt algorythm",
-    tags: ["Html", "Css", "JavaScript",],
+    tags: ["Html", "Css", "JavaScript"],
     thumbnail: "/encryptor.png",
   },
   {

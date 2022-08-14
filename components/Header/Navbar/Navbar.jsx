@@ -1,6 +1,6 @@
 import React from "react";
 import { AiFillGithub } from "react-icons/ai";
-import { StyledNavbar } from "components/Navbar/Navbar.styled";
+import { StyledNavbar } from "components/Header/Navbar/Navbar.styled";
 
 const Navbar = () => {
   return (

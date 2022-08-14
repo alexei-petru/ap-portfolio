@@ -6,7 +6,7 @@ import {
   StyledAvatarWrapper,
   StyledUserDescription,
   StyledApodParagraph,
-} from "components/Hero/Hero.styled";
+} from "components/Header/Hero/Hero.styled";
 
 const Hero = () => {
   return (
