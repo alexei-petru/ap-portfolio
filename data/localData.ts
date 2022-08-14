@@ -1,11 +1,11 @@
-type CARDS_INFO_Type = {
-  title: string;
-  description: string;
-  tags: string[];
-  thumbnail: string;
-};
+// type CARDS_INFO_Type = {
+//   title: string;
+//   description: string;
+//   tags: string[];
+//   thumbnail: string;
+// };
 
-export const CARDS_INFO: CARDS_INFO_Type[] = [
+export const CARDS_INFO = [
   {
     title: "Real Idea",
     description:

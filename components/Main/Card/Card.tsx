@@ -1,7 +1,19 @@
 import React from "react";
 import * as St from "./Card.styled";
+type CardPropsType = {
+  title: string;
+  description: string;
+  tags: string[];
+  thumbnail: string;
+  className: string;
+};
 
-const ProjectCard = ({ thumbnail, title, description, tags }) => {
+const ProjectCard = ({
+  // thumbnail,
+  title,
+  // description,
+  // tags,
+}: CardPropsType) => {
   return (
     <St.Card>
       {/* <CardOverlay thumbnail={thumbnail} />

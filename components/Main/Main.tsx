@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { StyledContainer } from "styles/Container.styled";
 import * as St from "components/Main/Main.styled";
 import { MainGlobalStyles } from "components/Main/Main.styledG";

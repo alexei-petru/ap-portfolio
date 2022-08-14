@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
+import Footer from "components/Footer/Footer";
+import Header from "components/Header/Header";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import dynamic from "next/dynamic";
 
@@ -13,7 +13,7 @@ export default function Home() {
       <Head>
         <title>A.P. Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> 
       <Header />
       <Main />
       <Footer />
