@@ -1,37 +1,27 @@
-import React from "react";
-// import { StyledFooter } from "./Footer.styled";
-import styled from "styled-components";
-
-export const StyledFooter = styled.footer`
-  margin-left: 20px;
-  width: 20vw;
-
-  div:nth-child(1),
-  div:nth-child(2) {
-    padding: 3px;
-  }
-
-  div {
-    border: 1px solid red;
-  }
-`;
+import { StyledContainer } from "styles/Container.styled";
+import * as St from "./Footer.styled";
 
 const Footer = () => {
   return (
     <>
-      <StyledFooter>
-        <div>
-          outer
-          <div>
-            a<div>1</div>
-            <div>2</div>
-          </div>
-          <div>
-            b<div>4</div>
-            <div>5</div>
-          </div>
-        </div>
-      </StyledFooter>
+      <St.Footer>
+        <StyledContainer>
+          <St.Form
+            action="mailto:contact@yourdomain.com"
+            method="POST"
+            encType="multipart/form-data"
+            name="EmailForm"
+          >
+            Name:
+            <br />
+            <input type="text" size={19} name="ContactName" />
+            Message:
+            <br /> <textarea name="ContactCommentt"></textarea>
+            <br /> <input type="submit" value="Submit" />
+          </St.Form>
+          <p style={{ color: "black", fontSize: "24px" }}></p>
+        </StyledContainer>
+      </St.Footer>
     </>
   );
 };

@@ -1,3 +1,10 @@
 import styled from "styled-components";
 
-export const StyledFooter = styled.footer``;
+export const Footer = styled.footer``;
+export const Form = styled.form`
+  color: white;
+  input,
+  textarea {
+    color: black;
+  }
+`;

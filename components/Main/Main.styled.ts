@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 export const Main = styled.main`
   padding: 50px;
@@ -9,8 +9,9 @@ export const CardsSection = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
   justify-content: center;
+  justify-items: center;
   align-content: center;
-  grid-gap: 20px;
+  grid-gap: 50px 0;
   background-color: black;
 `;
 

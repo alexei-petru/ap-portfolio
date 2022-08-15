@@ -6,7 +6,7 @@ import {
 } from "constants/constants";
 headerBackgroundColor;
 
-export const StyledHeader = styled.header`
+export const Header = styled.header`
   display: flex;
   justify-content: center;
   width: 100%;
@@ -14,7 +14,7 @@ export const StyledHeader = styled.header`
   max-height: ${maxDeviceHeight};
 `;
 
-export const StyledHeaderImageWrapper = styled.div`
+export const HeaderImageWrapper = styled.div`
   filter: ${headerBackgroundFilter};
   position: absolute;
   height: 100%;

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import { nasaImage } from "../../constants/constants";
-import { StyledHeaderImageWrapper } from "./Header.styled";
+import * as St from "./Header.styled";
 
 const HeroBackground = () => {
   return (
-    <StyledHeaderImageWrapper>
+    <St.HeaderImageWrapper>
       <Image
         style={{ zIndex: "0" }}
         layout="fill"
@@ -13,7 +13,7 @@ const HeroBackground = () => {
         objectPosition={"center"}
         src={nasaImage}
       />
-    </StyledHeaderImageWrapper>
+    </St.HeaderImageWrapper>
   );
 };
 
