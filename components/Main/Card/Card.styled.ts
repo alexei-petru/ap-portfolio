@@ -12,8 +12,8 @@ export const Card = styled.div`
   background: hsla(0, 0%, 100%, 0.3);
   border-radius: 0.2rem;
   user-select: text;
-  transition: 0.25s;
-  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  /* cursor: pointer; */
   box-shadow: 5px 3px 30px black;
   overflow: hidden;
 
@@ -109,26 +109,39 @@ export const CardTag = styled.span`
 `;
 
 export const ButtonsWrapper = styled.div`
+  --btn-size: 49px;
+  top: calc(50% - calc(var(--btn-size)) / 2);
   position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
   z-index: 99;
 
-  button {
-    color: white;
-    padding: 5px;
-    width: 70px;
+  a {
+    width: var(--btn-size);
+    height: var(--btn-size);
     border-radius: 5px;
-    border: 1px solid white;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    transition: margin, opacity, 0.25s ease-in-out;
+    opacity: ${(props) => (props["data-isCardHover"] ? "1" : "0")};
   }
 `;
-export const ButtonGit = styled.button`
+export const LinkGit = styled.a`
   background-color: gray;
+  background: url("github.png") no-repeat center / contain;
+  color: red;
+  margin-left: ${(props) =>
+    props["data-isCardHover"] ? "0px" : "calc(0px - var(--btn-size))"};
 `;
-export const ButtonLive = styled.button`
-  background-color: green;
+export const LinkLive = styled.a`
+  background: url("live.png") no-repeat center / contain;
+  color: green;
+  margin-right: ${(props) =>
+    props["data-isCardHover"] ? "0px" : "calc(0px - var(--btn-size))"};
 `;

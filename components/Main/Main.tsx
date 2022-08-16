@@ -18,14 +18,15 @@ const Main = () => {
                   description={project.description}
                   tags={project.tags}
                   thumbnail={project.thumbnail}
-                  className={"card-project"}
+                  urlGit={project.urlGit}
+                  urlLive={project.urlLive}
                 />
               </St.CardWrapper>
             );
           })}
         </St.CardsSection>
       </StyledContainer>
-      <MainGlobalStyles /> 
+      <MainGlobalStyles />
     </St.Main>
   );
 };

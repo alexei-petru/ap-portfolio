@@ -1,10 +1,12 @@
+import { useState } from "react";
 import * as St from "./Card.styled";
 type CardPropsType = {
   title: string;
   description: string;
   tags: string[];
   thumbnail: string;
-  className?: string;
+  urlGit: string;
+  urlLive: string;
 };
 
 const ProjectCard = ({
@@ -12,9 +14,16 @@ const ProjectCard = ({
   title,
   description,
   tags,
+  urlGit,
+  urlLive,
 }: CardPropsType) => {
+  const [isCardHover, setIsCardHover] = useState(false);
   return (
-    <St.Card data-thumbnail={thumbnail}>
+    <St.Card
+      onMouseEnter={() => setIsCardHover(true)}
+      onMouseLeave={() => setIsCardHover(false)}
+      data-thumbnail={thumbnail}
+    >
       <St.CardContent>
         <St.CardThumbnail>
           <St.CardImg src={thumbnail} />
@@ -29,9 +38,18 @@ const ProjectCard = ({
             ))}
           </St.CardTagsWrapper>
         </St.CardTextWrapper>
-        <St.ButtonsWrapper>
-          <St.ButtonGit>GitHub</St.ButtonGit>
-          <St.ButtonLive>Live</St.ButtonLive>
+        <St.ButtonsWrapper data-isCardHover={isCardHover}>
+          <St.LinkGit
+            href={`${urlGit === "#" ? "javascript:void(0)" : urlGit}`}
+            target={`${urlGit === "#" ? "_parent" : "_blank"}`}
+            data-isCardHover={isCardHover}
+            data-isDisabled={urlGit === "#"}
+          />
+          <St.LinkLive
+            href={urlLive}
+            target={`${urlLive === "#" ? "_parent" : "_blank"}`}
+            data-isCardHover={isCardHover}
+          />
         </St.ButtonsWrapper>
       </St.CardContent>
     </St.Card>
