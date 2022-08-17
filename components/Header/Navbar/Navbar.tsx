@@ -1,13 +1,14 @@
 import React from "react";
 import { AiFillGithub } from "react-icons/ai";
-import { StyledNavbar } from "components/Header/Navbar/Navbar.styled";
+import * as St from "components/Header/Navbar/Navbar.styled";
 
 const Navbar = () => {
   return (
-    <StyledNavbar>
-      <div>
+    <St.Navbar>
+      <St.LogoWrapper>
         <li>A.P.</li>
-      </div>
+        <img src="./work-in-progress.png" alt="work in progress" />
+      </St.LogoWrapper>
       <menu>
         <li>
           <a href="#">Projects</a>
@@ -21,7 +22,7 @@ const Navbar = () => {
           </a>
         </li>
       </menu>
-    </StyledNavbar>
+    </St.Navbar>
   );
 };
 

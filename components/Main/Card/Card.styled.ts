@@ -134,7 +134,8 @@ export const ButtonsWrapper = styled.div`
 `;
 export const LinkGit = styled.a`
   background-color: gray;
-  background: url("github.png") no-repeat center / contain;
+  background: url(${(props) =>props["data-isDisabled"] ? "github-lock.png" : "github.png"})
+    no-repeat center / contain;
   color: red;
   margin-left: ${(props) =>
     props["data-isCardHover"] ? "0px" : "calc(0px - var(--btn-size))"};

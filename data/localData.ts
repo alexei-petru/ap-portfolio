@@ -1,9 +1,18 @@
-// type CARDS_INFO_Type = {
-//   title: string;
-//   description: string;
-//   tags: string[];
-//   thumbnail: string;
-// };
+export const HERO_AP_DESCRIPTION = [
+  "Hello ",
+  "my ",
+  "name ",
+  "is ",
+  "Alexei ",
+  "Petru ",
+  "and ",
+  "i ",
+  "am ",
+  ,
+  "self-taught",
+  "frontend ",
+  "developer.",
+];
 
 export const CARDS_INFO = [
   {

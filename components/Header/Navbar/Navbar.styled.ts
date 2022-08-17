@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { headerNavbarBackgroundColor } from "../../../constants/constants";
 
-export const StyledNavbar = styled.nav`
+export const Navbar = styled.nav`
   position: relative;
   z-index: 2;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: ${headerNavbarBackgroundColor};
-  padding: 20px;
+  padding: 10px;
   margin-top: 0;
 
   li {
@@ -22,5 +23,16 @@ export const StyledNavbar = styled.nav`
     li {
       margin-left: 20px;
     }
+  }
+`;
+
+export const LogoWrapper = styled.nav`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  img {
+    width: auto;
+    height: 50px;
   }
 `;
