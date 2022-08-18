@@ -134,6 +134,7 @@ export const ButtonsWrapper = styled.div`
 `;
 export const LinkGit = styled.a`
   background-color: gray;
+
   background: url(${(props) =>props["data-isDisabled"] ? "github-lock.png" : "github.png"})
     no-repeat center / contain;
   color: red;
