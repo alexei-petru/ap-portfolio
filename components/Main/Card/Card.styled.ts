@@ -5,7 +5,7 @@ export const Card = styled.div`
   max-width: 100%;
   width: 250px;
   min-width: 250px;
-  min-height: 350px;
+  min-height: 433px;
   display: flex;
   flex-flow: column;
   background-color: #ecf0f1;
@@ -69,7 +69,7 @@ export const CardTextWrapper = styled.div`
   flex-flow: column;
   justify-content: space-between;
   width: 100%;
-  min-height: 220px;
+  min-height: 235px;
   padding: 1rem;
 
   margin-top: 1rem;
@@ -108,7 +108,12 @@ export const CardTag = styled.span`
   border-radius: 2rem;
 `;
 
-export const ButtonsWrapper = styled.div`
+type cardButtonsProps = {
+  isDisabled?: boolean;
+  isCardHover?: boolean;
+};
+
+export const ButtonsWrapper = styled.div<cardButtonsProps>`
   --btn-size: 49px;
   top: calc(50% - calc(var(--btn-size)) / 2);
   position: absolute;
@@ -129,22 +134,25 @@ export const ButtonsWrapper = styled.div`
     font-size: 18px;
     border: none;
     transition: margin, opacity, 0.25s ease-in-out;
-    opacity: ${(props) => (props["data-isCardHover"] ? "1" : "0")};
+    opacity: ${(props) => (props.isCardHover ? "1" : "0")};
   }
 `;
-export const LinkGit = styled.a`
-  background-color: gray;
 
-  background: url(${(props) =>props["data-isDisabled"] ? "github-lock.png" : "github.png"})
+export const LinkGit = styled.a<cardButtonsProps>`
+  background-color: gray;
+  background: url(${(props) =>
+      props.isDisabled ? "github-lock.png" : "github.png"})
     no-repeat center / contain;
   color: red;
   margin-left: ${(props) =>
-    props["data-isCardHover"] ? "0px" : "calc(0px - var(--btn-size))"};
+    props.isCardHover ? "0px" : "calc(0px - var(--btn-size))"};
 `;
-export const LinkLive = styled.a`
-  background: url(${(props) =>props["data-isDisabled"] ? "live-lock.png" : "live.png"})
+
+export const LinkLive = styled.a<cardButtonsProps>`
+  background: url(${(props) =>
+      props.isDisabled ? "live-lock.png" : "live.png"})
     no-repeat center / contain;
   color: green;
   margin-right: ${(props) =>
-    props["data-isCardHover"] ? "0px" : "calc(0px - var(--btn-size))"};
+    props.isCardHover ? "0px" : "calc(0px - var(--btn-size))"};
 `;

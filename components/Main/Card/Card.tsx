@@ -38,18 +38,18 @@ const ProjectCard = ({
             ))}
           </St.CardTagsWrapper>
         </St.CardTextWrapper>
-        <St.ButtonsWrapper data-isCardHover={isCardHover}>
+        <St.ButtonsWrapper isCardHover={isCardHover}>
           <St.LinkGit
             href={`${urlGit === "#" ? "javascript:void(0)" : urlGit}`}
             target={`${urlGit === "#" ? "_parent" : "_blank"}`}
-            data-isCardHover={isCardHover}
-            data-isDisabled={urlGit === "#"}
+            isCardHover={isCardHover}
+            isDisabled={urlGit === "#"}
           />
           <St.LinkLive
-            href={urlLive}
-            target={`${urlLive === "#" ? "_parent" : "_blank"}`}
-            data-isCardHover={isCardHover}
-            data-isDisabled={urlLive === "#"}
+            href={`${urlLive === "#" ? "javascript:void(0)" : urlLive}`}
+            target={`${urlLive === "#" ? "javascript:void(0)" : urlLive}`}
+            isCardHover={isCardHover}
+            isDisabled={urlLive === "#"}
           />
         </St.ButtonsWrapper>
       </St.CardContent>

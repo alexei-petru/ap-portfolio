@@ -36,9 +36,9 @@ export const CARDS_INFO = [
     title: "Random Movie",
     description: "React app for searching a good random movie",
     tags: [
-      "Html",
-      "Css",
+      "Html/Css",
       "React",
+      "Redux",
       "Typescript",
       "Firebase",
       "Styled-Components",
