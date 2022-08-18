@@ -142,7 +142,8 @@ export const LinkGit = styled.a`
     props["data-isCardHover"] ? "0px" : "calc(0px - var(--btn-size))"};
 `;
 export const LinkLive = styled.a`
-  background: url("live.png") no-repeat center / contain;
+  background: url(${(props) =>props["data-isDisabled"] ? "live-lock.png" : "live.png"})
+    no-repeat center / contain;
   color: green;
   margin-right: ${(props) =>
     props["data-isCardHover"] ? "0px" : "calc(0px - var(--btn-size))"};

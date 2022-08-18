@@ -49,6 +49,7 @@ const ProjectCard = ({
             href={urlLive}
             target={`${urlLive === "#" ? "_parent" : "_blank"}`}
             data-isCardHover={isCardHover}
+            data-isDisabled={urlLive === "#"}
           />
         </St.ButtonsWrapper>
       </St.CardContent>
