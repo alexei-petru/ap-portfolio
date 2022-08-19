@@ -1,14 +1,21 @@
 import { StyledContainer } from "styles/Container.styled";
 import * as St from "components/Main/Main.styled";
-import { MainGlobalStyles } from "components/Main/Main.styledG";
 import { CARDS_INFO } from "data/localData";
 import Card from "components/Main/Card/Card";
+import { BsInfoCircle } from "react-icons/bs";
+import ProjectsTitlePopover from "./ProjectsTitlePopover";
 
 const Main = () => {
   return (
     <St.Main>
       <StyledContainer>
-        <St.ProjectsTitle>Projects</St.ProjectsTitle>
+        <St.ProjectsTitleWrapper>
+          <St.ProjectsTitle>
+            Projects
+            <BsInfoCircle />
+          </St.ProjectsTitle>
+          <ProjectsTitlePopover />
+        </St.ProjectsTitleWrapper>
         <St.CardsSection>
           {CARDS_INFO.map((project) => {
             return (
@@ -26,7 +33,6 @@ const Main = () => {
           })}
         </St.CardsSection>
       </StyledContainer>
-      <MainGlobalStyles />
     </St.Main>
   );
 };

@@ -31,7 +31,7 @@ export const StyledApodParagraph = styled.p`
 
 export const StyledUserDescription = styled.h1`
   z-index: 1;
-  font-size: clamp(16px, 5vw, 40px);
+  font-size: clamp(16px, 5vw, 38px);
   grid-row: 5 / span 1;
   grid-column: 2 / span 6;
   font-family: monoton;
@@ -39,7 +39,8 @@ export const StyledUserDescription = styled.h1`
   transform: scale(0.9);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px; 
+  word-spacing: 3px;
 
   @keyframes scale {
     100% {
