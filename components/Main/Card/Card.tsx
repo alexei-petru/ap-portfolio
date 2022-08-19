@@ -47,7 +47,7 @@ const ProjectCard = ({
           />
           <St.LinkLive
             href={`${urlLive === "#" ? "javascript:void(0)" : urlLive}`}
-            target={`${urlLive === "#" ? "javascript:void(0)" : urlLive}`}
+            target={`${urlLive === "#" ? "_parent" : "_blank"}`}
             isCardHover={isCardHover}
             isDisabled={urlLive === "#"}
           />
