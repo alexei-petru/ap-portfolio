@@ -10,6 +10,7 @@ export const GlobalStyle = styled.createGlobalStyle`
 
   body {
     background-color: black;
+    user-select: text;
   }
 
   *,
@@ -22,7 +23,4 @@ export const GlobalStyle = styled.createGlobalStyle`
     position: relative;
     z-index: 1;
   }
-
-
-  
 `;

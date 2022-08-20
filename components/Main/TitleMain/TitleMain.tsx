@@ -4,7 +4,7 @@ import Fade from "@mui/material/Fade";
 import Popper from "@mui/material/Popper";
 import { useRef, useState } from "react";
 import { BsInfoCircle, BsEmojiSmile } from "react-icons/bs";
-import * as St from "./MainTitle.styled";
+import * as St from "./TitleMain.styled";
 
 const MainTitle = () => {
   const [open, setOpen] = useState(false);

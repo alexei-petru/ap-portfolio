@@ -19,10 +19,14 @@ export const AvatarWrapper = styled.div`
   grid-column: 9 / span 2;
   overflow: hidden;
 `;
+
+export const ApodParagraphWrapper = styled.div``;
+
 export const ApodDescription = styled.div`
   z-index: 1;
   grid-row: 7 / span 3;
   grid-column: 1 / span 3;
+  cursor: pointer;
 `;
 
 export const ApodParagraph = styled.p`

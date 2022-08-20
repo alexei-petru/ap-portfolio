@@ -1,8 +1,7 @@
-import React from "react";
-import Image from "next/image";
+import ApodDescription from "components/Header/Hero/ApodDescription";
 import * as St from "components/Header/Hero/Hero.styled";
-
 import { HERO_AP_DESCRIPTION } from "data/localData";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -18,17 +17,7 @@ const Hero = () => {
           </span>
         ))}
       </St.UserDescription>
-      <St.ApodDescription>
-        <a href="#">
-          <Image
-            style={{ opacity: 0.5 }}
-            width={94}
-            height={68}
-            src={"/planet.png"}
-          />
-          <St.ApodParagraph>APOD Dynamic Image</St.ApodParagraph>
-        </a>
-      </St.ApodDescription>
+      <ApodDescription />
     </St.Hero>
   );
 };

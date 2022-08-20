@@ -3,13 +3,13 @@ import * as St from "components/Main/Main.styled";
 import { CARDS_INFO } from "data/localData";
 import Card from "components/Main/Card/Card";
 import React from "react";
-import MainTitle from "components/Main/MainTitle/MainTitle";
+import TitleMain from "components/Main/TitleMain/TitleMain";
 
 const Main = () => {
   return (
     <St.Main>
       <StyledContainer>
-        <MainTitle />
+        <TitleMain />
         <St.CardsSection>
           {CARDS_INFO.map((project) => {
             return (
