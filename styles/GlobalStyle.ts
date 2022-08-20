@@ -2,10 +2,10 @@ import { createGlobalStyle } from "styled-components";
 const styled = { createGlobalStyle };
 
 export const GlobalStyle = styled.createGlobalStyle`
-
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: "Times New Roman", Times, serif;
   }
 
   body {
@@ -23,9 +23,6 @@ export const GlobalStyle = styled.createGlobalStyle`
     z-index: 1;
   }
 
-  @font-face {
-    font-family: monoton;
-    font-weight: 400;
-    src: url("/Monoton-Regular.ttf");
-  }
+
+  
 `;

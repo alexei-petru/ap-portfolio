@@ -7,7 +7,8 @@ const Footer = () => {
       <St.Footer>
         <StyledContainer>
           <St.Form
-            action="mailto:contact@yourdomain.com"
+            // action="mailto:contact@yourdomain.com"
+            action="javascript:void(0)"
             method="POST"
             encType="multipart/form-data"
             name="EmailForm"

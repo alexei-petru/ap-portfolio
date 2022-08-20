@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import "@fontsource/monoton";
 
-export const StyledHero = styled.section`
+export const Hero = styled.section`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   /* grid-template-rows: repeat(12, calc(100vh / 12)); */
@@ -8,38 +9,38 @@ export const StyledHero = styled.section`
   height: 100%;
 `;
 
-export const StyledAvatarWrapper = styled.div`
+export const AvatarWrapper = styled.div`
   z-index: 2;
   position: relative;
-  width: clamp(138px, 17vw, 288px);
-  height: clamp(144px, 17vw, 302px);
+  width: clamp(138px, 25vw, 288px);
+  height: clamp(144px, 25vw, 199px);
   border-radius: 10%;
   grid-row: 4 / span 3;
-  grid-column: 9 / span 3;
+  grid-column: 9 / span 2;
   overflow: hidden;
 `;
-export const StyledApodDescription = styled.div`
+export const ApodDescription = styled.div`
   z-index: 1;
   grid-row: 7 / span 3;
   grid-column: 1 / span 3;
 `;
 
-export const StyledApodParagraph = styled.p`
+export const ApodParagraph = styled.p`
   margin-top: -50px;
   z-index: 1;
 `;
 
-export const StyledUserDescription = styled.h1`
+export const UserDescription = styled.h1`
   z-index: 1;
   font-size: clamp(16px, 5vw, 38px);
   grid-row: 5 / span 1;
   grid-column: 2 / span 6;
-  font-family: monoton;
+  font-family: "monoton", "Times New Roman", Times, serif;
   text-align: center;
   transform: scale(0.9);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   font-weight: 400;
-  letter-spacing: 0.5px; 
+  letter-spacing: 0.5px;
   word-spacing: 3px;
 
   @keyframes scale {
