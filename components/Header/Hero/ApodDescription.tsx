@@ -42,6 +42,6 @@ const ApodDescription = () => {
       </StyledPopoverDropdown>
     </StyledPopover>
   );
-};
-
+}; 
+ 
 export default ApodDescription;
