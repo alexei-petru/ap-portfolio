@@ -16,10 +16,9 @@ export const GlobalStyle = css`
   *::before,
   ::after {
     box-sizing: inherit;
-    color: white; 
+    color: white;
     padding: 0;
     margin: 0;
     position: relative;
-    z-index: 1;
   }
 `;

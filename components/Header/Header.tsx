@@ -3,11 +3,14 @@ import Hero from "./Hero/Hero";
 import Navbar from "./Navbar/Navbar";
 import * as St from "./Header.styled";
 import HeaderBackground from "components/Header/HeaderBackground";
+import { useViewportSize } from "@mantine/hooks";
 
 const Header = () => {
+  const { height } = useViewportSize();
+
   return (
     <>
-      <St.Header>
+      <St.Header height={height}>
         <HeaderBackground />
         <StyledContainer>
           <Navbar />

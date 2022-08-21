@@ -6,12 +6,15 @@ import {
 } from "constants/constants";
 headerBackgroundColor;
 
-export const Header = styled.header`
+export const Header = styled.header<{ height: number }>`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100vh;
-  max-height: ${maxDeviceHeight};
+  height: ${(props) =>
+    props.height > maxDeviceHeight
+      ? maxDeviceHeight + "px"
+      : props.height + `px`};
+  min-height: 680px;
 `;
 
 export const HeaderImageWrapper = styled.div`

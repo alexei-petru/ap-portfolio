@@ -30,6 +30,7 @@ export const LogoWrapper = styled.nav`
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 10px 0;
 
   img {
     width: auto;

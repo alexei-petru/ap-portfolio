@@ -30,16 +30,8 @@ export const BsInfoWrapper = styled.span`
 `;
 
 export const BsInfoText = styled.p`
-  padding: 5px;
-  border-radius: 5px;
-  color: black;
-  max-width: 298px;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: "roboto";
-
   svg {
-    margin-left: 5px;
+    margin-left: 2px;
     fill: #f6756e;
     font-size: 18px;
   }

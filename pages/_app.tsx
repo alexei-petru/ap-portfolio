@@ -27,12 +27,7 @@ export default function App(props: AppProps) {
         // withNormalizeCSS
         theme={{
           colors: {
-            whiteTransparent: [
-              "#ffffff",
-              "#ffffffca",
-              "#ffffff82",
-              "#ffffff3e",
-            ],
+            black: ["#000000", "#181818", "#26262618"],
           },
           colorScheme: "dark",
         }}

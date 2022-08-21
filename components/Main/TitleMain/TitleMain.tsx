@@ -29,8 +29,8 @@ function MainTitle() {
       </St.ProjectsTitleWrapper>
       <StyledPopoverDropdown>
         <St.BsInfoText>
-          All projects are fully designed "dont judge too hard
-          <BsEmojiSmile />" and coded by Alexei Petru
+          All projects are fully designed
+          <BsEmojiSmile /> and coded by Alexei Petru
         </St.BsInfoText>
       </StyledPopoverDropdown>
     </StyledPopover>

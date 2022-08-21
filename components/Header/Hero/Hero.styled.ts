@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import "@fontsource/monoton";
+import { Button } from "@mantine/core";
 
 export const Hero = styled.section`
   display: grid;
@@ -27,6 +28,13 @@ export const ApodDescription = styled.div`
   grid-row: 10 / span 1;
   grid-column: 1 / span 3;
   cursor: pointer;
+
+  @media (max-width: 512px) {
+    z-index: 1;
+    grid-row: 10 / span 1;
+    grid-column: 2 / span 4;
+    cursor: pointer;
+  }
 `;
 
 export const ApodParagraph = styled.p`
@@ -34,11 +42,26 @@ export const ApodParagraph = styled.p`
   z-index: 1;
 `;
 
+export const ApodDropdownText = styled.p`
+  text-align: center;
+`;
+
+export const ButtonApodDropdown = styled(Button<any>)`
+  margin-top: 5px;
+  margin-left: auto;
+  background-color: #120449;
+  box-shadow: 0 2px 5px rgba(21, 0, 255, 0.5);
+
+  &:hover {
+    background-color: #220596;
+  }
+`;
+
 export const UserDescription = styled.h1`
   z-index: 1;
   font-size: clamp(16px, 5vw, 38px);
   grid-row: 5 / span 7;
-  grid-column: 2 / span 5;
+  grid-column: 3 / span 5;
   font-family: "monoton", "Times New Roman", Times, serif;
   text-align: center;
   transform: scale(0.9);
@@ -46,6 +69,12 @@ export const UserDescription = styled.h1`
   font-weight: 400;
   letter-spacing: 0.5px;
   word-spacing: 3px;
+
+  @media (max-width: 512px) {
+    font-size: clamp(16px, 6vw, 38px);
+    grid-row: 5 / span 7;
+    grid-column: 5 / span 1;
+  }
 
   @keyframes scale {
     100% {
@@ -59,75 +88,75 @@ export const UserDescription = styled.h1`
     filter: blur(4px);
   }
 
-  span:nth-child(1) {
+  span:nth-of-type(1) {
     animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(2) {
+  span:nth-of-type(2) {
     animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(3) {
+  span:nth-of-type(3) {
     animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(4) {
+  span:nth-of-type(4) {
     animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(5) {
+  span:nth-of-type(5) {
     animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(6) {
+  span:nth-of-type(6) {
     animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(7) {
+  span:nth-of-type(7) {
     animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(8) {
+  span:nth-of-type(8) {
     animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(9) {
+  span:nth-of-type(9) {
     animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(10) {
+  span:nth-of-type(10) {
     animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(11) {
+  span:nth-of-type(11) {
     animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(12) {
+  span:nth-of-type(12) {
     animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(13) {
+  span:nth-of-type(13) {
     animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(14) {
+  span:nth-of-type(14) {
     animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(15) {
+  span:nth-of-type(15) {
     animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(16) {
+  span:nth-of-type(16) {
     animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(17) {
+  span:nth-of-type(17) {
     animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(18) {
+  span:nth-of-type(18) {
     animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 

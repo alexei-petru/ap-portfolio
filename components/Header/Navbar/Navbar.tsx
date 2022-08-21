@@ -7,7 +7,6 @@ const Navbar = () => {
     <St.Navbar>
       <St.LogoWrapper>
         <li>A.P.</li>
-        <img src="./work-in-progress.png" alt="work in progress" />
       </St.LogoWrapper>
       <menu>
         <li>
