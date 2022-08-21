@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import "@fontsource/monoton";
 
 export const Hero = styled.section`
@@ -15,7 +15,7 @@ export const AvatarWrapper = styled.div`
   width: clamp(138px, 25vw, 288px);
   height: clamp(144px, 25vw, 199px);
   border-radius: 10%;
-  grid-row: 4 / span 3;
+  grid-row: 5 / span 7;
   grid-column: 9 / span 2;
   overflow: hidden;
 `;
@@ -24,7 +24,7 @@ export const ApodParagraphWrapper = styled.div``;
 
 export const ApodDescription = styled.div`
   z-index: 1;
-  grid-row: 7 / span 3;
+  grid-row: 10 / span 1;
   grid-column: 1 / span 3;
   cursor: pointer;
 `;
@@ -37,8 +37,8 @@ export const ApodParagraph = styled.p`
 export const UserDescription = styled.h1`
   z-index: 1;
   font-size: clamp(16px, 5vw, 38px);
-  grid-row: 5 / span 1;
-  grid-column: 2 / span 6;
+  grid-row: 5 / span 7;
+  grid-column: 2 / span 5;
   font-family: "monoton", "Times New Roman", Times, serif;
   text-align: center;
   transform: scale(0.9);

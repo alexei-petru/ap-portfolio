@@ -4,11 +4,42 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { GlobalStyle } from "styles/GlobalStyle";
 
-export default function MyApp({ Component, pageProps }) {
+import { AppProps } from "next/app";
+import Head from "next/head";
+import { MantineProvider } from "@mantine/core";
+import { Global } from "@emotion/react";
+
+export default function App(props: AppProps) {
+  const { Component, pageProps } = props;
+
   return (
     <>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <Head>
+        <title>Page title</title>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+      </Head>
+
+      <MantineProvider
+        // withGlobalStyles
+        // withNormalizeCSS
+        theme={{
+          colors: {
+            whiteTransparent: [
+              "#ffffff",
+              "#ffffffca",
+              "#ffffff82",
+              "#ffffff3e",
+            ],
+          },
+          colorScheme: "dark",
+        }}
+      >
+        <Global styles={GlobalStyle} />
+        <Component {...pageProps} />
+      </MantineProvider>
     </>
   );
 }

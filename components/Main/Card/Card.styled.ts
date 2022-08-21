@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const Card = styled.div`
   position: relative;
@@ -140,8 +140,7 @@ export const ButtonsWrapper = styled.div<cardButtonsProps>`
 
 export const LinkGit = styled.a<cardButtonsProps>`
   background-color: gray;
-  background: url(${(props) =>
-      props.isDisabled ? "github-lock.png" : "github.png"})
+  background: url(${(props) => props.isDisabled ? "github-lock.png" : "github.png"})
     no-repeat center / contain;
   color: red;
   margin-left: ${(props) =>
@@ -149,8 +148,7 @@ export const LinkGit = styled.a<cardButtonsProps>`
 `;
 
 export const LinkLive = styled.a<cardButtonsProps>`
-  background: url(${(props) =>
-      props.isDisabled ? "live-lock.png" : "live.png"})
+  background: url(${(props) => props.isDisabled ? "live-lock.png" : "live.png"})
     no-repeat center / contain;
   color: green;
   margin-right: ${(props) =>

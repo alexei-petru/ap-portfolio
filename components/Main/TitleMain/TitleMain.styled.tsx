@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const ProjectsTitle = styled.h2`
   font-family: "monoton", "Times New Roman", Times, serif;
@@ -25,12 +25,12 @@ export const ProjectsInfoPopup = styled.div`
   color: black;
 `;
 
-export const BsInfoWrapper = styled.span``;
+export const BsInfoWrapper = styled.span`
+  display: inline-flex;
+`;
 
 export const BsInfoText = styled.p`
   padding: 5px;
-  background-color: #ffffffcc;
-  border: 5px solid black;
   border-radius: 5px;
   color: black;
   max-width: 298px;
@@ -40,6 +40,7 @@ export const BsInfoText = styled.p`
 
   svg {
     margin-left: 5px;
-    fill: black;
+    fill: #f6756e;
+    font-size: 18px;
   }
 `;

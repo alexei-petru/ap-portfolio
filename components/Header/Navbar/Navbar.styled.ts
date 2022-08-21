@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { headerNavbarBackgroundColor } from "../../../constants/constants";
 
 export const Navbar = styled.nav`

@@ -1,7 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-const styled = { createGlobalStyle };
+import { css } from "@emotion/react";
 
-export const GlobalStyle = styled.createGlobalStyle`
+export const GlobalStyle = css`
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -17,7 +16,7 @@ export const GlobalStyle = styled.createGlobalStyle`
   *::before,
   ::after {
     box-sizing: inherit;
-    color: white;
+    color: white; 
     padding: 0;
     margin: 0;
     position: relative;

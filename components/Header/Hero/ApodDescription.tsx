@@ -1,59 +1,41 @@
-import React from "react";
+import { Button, Popover } from "@mantine/core";
 import * as St from "components/Header/Hero/Hero.styled";
-import Box from "@mui/material/Box";
-import ClickAwayListener from "@mui/material/ClickAwayListener";
-import Fade from "@mui/material/Fade";
-import Popper from "@mui/material/Popper";
-import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
+import {
+  StyledPopover,
+  StyledPopoverDropdown,
+} from "styles/StyledPopover.styled";
 
 const ApodDescription = () => {
-  const [open, setOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const targetInfoClickHandler = (event: React.MouseEvent) => {
-    setAnchorEl(event.currentTarget);
-    setOpen((prev) => !prev);
-  };
-  const canBeOpen = open && Boolean(anchorEl);
-  const id = canBeOpen ? "transition-popper" : undefined;
-
-  const handleClickAway = () => {
-    setOpen(false);
-  };
+  const [opened, setOpened] = useState(false);
 
   return (
-    <ClickAwayListener onClickAway={handleClickAway}>
-      <St.ApodDescription>
-        <Image
-          style={{ opacity: 0.5 }}
-          width={94}
-          height={68}
-          src={"/planet.png"}
-        />
-        <St.ApodParagraphWrapper>
-          <St.ApodParagraph onClick={targetInfoClickHandler}>
-            APOD Dynamic Image
-          </St.ApodParagraph>
-          <Box sx={{ position: "relative" }}>
-            <Popper
-              style={{ padding: "5px" }}
-              id={id}
-              open={open}
-              anchorEl={anchorEl}
-              transition
-            >
-              {({ TransitionProps }) => (
-                <Fade {...TransitionProps} timeout={250}>
-                  {/* #refactor */}
-                  <p>Image description</p>
-                </Fade>
-              )}
-            </Popper>
-          </Box>
-        </St.ApodParagraphWrapper>
-      </St.ApodDescription>
-    </ClickAwayListener>
+    <StyledPopover
+      transition={"fade"}
+      transitionDuration={450}
+      withArrow
+      opened={opened}
+      onChange={setOpened}
+    >
+      <Popover.Target>
+        <St.ApodDescription onClick={() => setOpened((prev) => !prev)}>
+          <Image
+            style={{ opacity: 0.5 }}
+            width={94}
+            height={68}
+            src={"/planet.png"}
+          />
+          <St.ApodParagraphWrapper>
+            <St.ApodParagraph>APOD Dynamic Image</St.ApodParagraph>
+          </St.ApodParagraphWrapper>
+        </St.ApodDescription>
+      </Popover.Target>
+
+      <StyledPopoverDropdown>
+        <div>Image description</div>
+      </StyledPopoverDropdown>
+    </StyledPopover>
   );
 };
 
