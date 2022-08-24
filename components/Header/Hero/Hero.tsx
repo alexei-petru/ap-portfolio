@@ -7,11 +7,11 @@ const Hero = () => {
   return (
     <St.Hero>
       <St.AvatarWrapper>
-        <Image objectFit="contain" layout="fill" src={"/me.png"} />
+        <Image objectFit="contain" layout="fill" src={"/me.png"} priority />
       </St.AvatarWrapper>
       <St.UserDescription>
         {HERO_AP_DESCRIPTION.map((word) => (
-          <span> 
+          <span>
             {word}
             {"\u00A0"}
           </span>

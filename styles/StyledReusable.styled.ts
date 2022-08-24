@@ -16,3 +16,12 @@ export const StyledPopoverDropdown = styled(mantinePopover.Dropdown)`
     z-index: 99;
   }
 `;
+
+export const StyledTitleSection = styled.h2`
+  font-family: "monoton", "Times New Roman", Times, serif;
+  font-size: clamp(25px, 5vw, 33px);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 3px;
+  padding: 100px 0 50px 0;
+`;

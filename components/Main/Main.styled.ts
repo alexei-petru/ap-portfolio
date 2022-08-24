@@ -6,7 +6,7 @@ export const Main = styled.main`
 `;
 
 export const CardsSection = styled.div`
-  padding: 100px 0;
+  /* padding: 100px 0; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
   justify-content: center;
