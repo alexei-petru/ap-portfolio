@@ -18,4 +18,6 @@ export const CardsSection = styled.div`
 
 export const CardWrapper = styled.div`
   z-index: 1;
+  height: 439px;
+  display: flex;
 `;

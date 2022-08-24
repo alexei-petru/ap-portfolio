@@ -11,7 +11,7 @@ const Hero = () => {
       </St.AvatarWrapper>
       <St.UserDescription>
         {HERO_AP_DESCRIPTION.map((word) => (
-          <span>
+          <span> 
             {word}
             {"\u00A0"}
           </span>

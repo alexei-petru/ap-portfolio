@@ -34,7 +34,7 @@ const ApodDescription = () => {
 
       <StyledPopoverDropdown>
         <St.ApodDropdownText>
-          Background Image is ofered by Nasa Apod "Astronomycal image of the day
+          Background Image is ofered by Nasa Apod "Astronomycal image of the day"
           <St.ButtonApodDropdown >
             Full Description
           </St.ButtonApodDropdown>

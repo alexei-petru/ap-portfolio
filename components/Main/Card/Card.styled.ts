@@ -4,16 +4,13 @@ export const Card = styled.div`
   position: relative;
   max-width: 100%;
   width: 250px;
-  min-width: 250px;
-  min-height: 433px;
   display: flex;
   flex-flow: column;
   background-color: #ecf0f1;
   background: hsla(0, 0%, 100%, 0.3);
   border-radius: 0.2rem;
-  user-select: text;
-  transition: 0.25s ease-in-out;
-  /* cursor: pointer; */
+  user-select: text; 
+  transition: 0.25s ease-in-out; 
   box-shadow: 5px 3px 30px black;
   overflow: hidden;
 
@@ -32,28 +29,21 @@ export const Card = styled.div`
     bottom: 0;
     left: 0;
     filter: blur(20px) brightness(0.75);
-    z-index: -1;
     background: url(${(props) => props["data-thumbnail"]}) no-repeat top/ 250%;
   }
 `;
 
 export const CardContent = styled.div`
-  /* display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 100%; */
+  height: 100%;
 `;
 
 export const CardThumbnail = styled.div`
   display: flex;
-  height: 50%;
+  height: 40%;
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0 0 0;
-  flex: 1 1 auto;
+  padding: 2rem 0 1rem 0;
 `;
 
 export const CardImg = styled.img`
@@ -67,11 +57,10 @@ export const CardImg = styled.img`
 export const CardTextWrapper = styled.div`
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
-  min-height: 235px;
+  height: 60%;
   padding: 1rem;
-
   margin-top: 1rem;
   box-sizing: border-box;
   border-top: 1px solid rgba(#ecf0f1, 0.2);
@@ -140,7 +129,8 @@ export const ButtonsWrapper = styled.div<cardButtonsProps>`
 
 export const LinkGit = styled.a<cardButtonsProps>`
   background-color: gray;
-  background: url(${(props) => props.isDisabled ? "github-lock.png" : "github.png"})
+  background: url(${(props) =>
+      props.isDisabled ? "github-lock.png" : "github.png"})
     no-repeat center / contain;
   color: red;
   margin-left: ${(props) =>
@@ -148,7 +138,8 @@ export const LinkGit = styled.a<cardButtonsProps>`
 `;
 
 export const LinkLive = styled.a<cardButtonsProps>`
-  background: url(${(props) => props.isDisabled ? "live-lock.png" : "live.png"})
+  background: url(${(props) =>
+      props.isDisabled ? "live-lock.png" : "live.png"})
     no-repeat center / contain;
   color: green;
   margin-right: ${(props) =>
