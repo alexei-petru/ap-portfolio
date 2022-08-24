@@ -5,7 +5,7 @@ import * as St from "./TitleMain.styled";
 import {
   StyledPopover,
   StyledPopoverDropdown,
-} from "styles/StyledPopover.styled";
+} from "styles/StyledReusable.styled";
 
 function MainTitle() {
   const [opened, setOpened] = useState(false);

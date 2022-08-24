@@ -5,7 +5,7 @@ import { useState } from "react";
 import {
   StyledPopover,
   StyledPopoverDropdown,
-} from "styles/StyledPopover.styled";
+} from "styles/StyledReusable.styled";
 
 const ApodDescription = () => {
   const [opened, setOpened] = useState(false);
@@ -24,6 +24,7 @@ const ApodDescription = () => {
           width={94}
           height={68}
           src={"/planet.png"}
+          priority
         />
         <Popover.Target>
           <St.ApodParagraphWrapper onClick={() => setOpened((prev) => !prev)}>
@@ -34,7 +35,7 @@ const ApodDescription = () => {
 
       <StyledPopoverDropdown>
         <St.ApodDropdownText>
-          Background Image is ofered by Nasa Apod "Astronomycal image of the day
+          Background Image is ofered by Nasa Apod "Astronomycal image of the day"
           <St.ButtonApodDropdown >
             Full Description
           </St.ButtonApodDropdown>

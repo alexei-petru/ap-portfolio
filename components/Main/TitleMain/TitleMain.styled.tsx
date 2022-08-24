@@ -1,12 +1,7 @@
 import styled from "@emotion/styled";
+import { StyledTitleSection } from "styles/StyledReusable.styled";
 
-export const ProjectsTitle = styled.h2`
-  font-family: "monoton", "Times New Roman", Times, serif;
-  font-size: clamp(25px, 5vw, 33px);
-  font-weight: 500;
-  text-align: center;
-  letter-spacing: 3px;
-
+export const ProjectsTitle = styled(StyledTitleSection)`
   svg {
     margin: auto 0;
     width: 22px;
