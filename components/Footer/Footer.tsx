@@ -9,7 +9,7 @@ const Footer = () => {
   const currentYear = useGetCurrentYear();
   return (
     <>
-      <St.Footer>
+      <St.Footer id="contact">
         <StyledContainer>
           <St.FooterTitle>Contact</St.FooterTitle>
           <St.FormOuterWrapper>

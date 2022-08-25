@@ -10,10 +10,10 @@ const Navbar = () => {
       </St.LogoWrapper>
       <menu>
         <li>
-          <a href="#">Projects</a>
+          <a href="#projects">Projects</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="#contact">Contact</a>
         </li>
         <li>
           <a href="https://github.com/Allex191" target={"_blank"}>

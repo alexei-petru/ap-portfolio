@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import "@fontsource/monoton";
 
 export const Main = styled.main`
-  /* padding: 50px; */
+  margin-bottom: 50px;
 `;
 
 export const CardsSection = styled.div`

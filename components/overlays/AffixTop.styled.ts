@@ -19,7 +19,11 @@ export const StyledAffix = styled(Affix)`
   @media (max-width: 790px) {
     margin-right: -20px;
     button {
-    width: 60px !important;
+      width: 60px !important;
+    }
   }
+
+  @media (max-width: 450px) {
+    display: none;
   }
 `;

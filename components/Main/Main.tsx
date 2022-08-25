@@ -7,7 +7,7 @@ import TitleMain from "components/Main/TitleMain/TitleMain";
 
 const Main = () => {
   return (
-    <St.Main>
+    <St.Main id="projects">
       <StyledContainer>
         <TitleMain />
         <St.CardsSection>

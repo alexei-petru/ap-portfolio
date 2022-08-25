@@ -15,6 +15,7 @@ export const Header = styled.header<{ height: number }>`
       ? maxDeviceHeight + "px"
       : props.height + `px`};
   min-height: 680px;
+  margin-bottom: 50px;
 `;
 
 export const HeaderImageWrapper = styled.div`
