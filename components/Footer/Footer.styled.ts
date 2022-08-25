@@ -3,7 +3,7 @@ import { StyledTitleSection } from "styles/StyledReusable.styled";
 
 export const Footer = styled.footer``;
 
-export const FooterInnerWrapper = styled.div`
+export const FormOuterWrapper = styled.div`
   display: flex;
   justify-content: center;
   height: 500px;
@@ -40,3 +40,10 @@ export const Form = styled.form`
     color: black;
   }
 `;
+
+export const footerCopyright = styled.p`
+  text-align: center;
+  padding: 20px;
+`;
+
+
