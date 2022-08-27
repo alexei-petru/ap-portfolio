@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import "@fontsource/monoton";
 
 export const Main = styled.main`
-  padding: 50px;
+  margin-bottom: 50px;
 `;
 
 export const CardsSection = styled.div`
@@ -14,6 +14,10 @@ export const CardsSection = styled.div`
   align-content: center;
   grid-gap: 50px 0;
   background-color: black;
+
+  @media (max-width: 735px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const CardWrapper = styled.div`

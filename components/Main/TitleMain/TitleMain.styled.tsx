@@ -23,11 +23,3 @@ export const ProjectsInfoPopup = styled.div`
 export const BsInfoWrapper = styled.span`
   display: inline-flex;
 `;
-
-export const BsInfoText = styled.p`
-  svg {
-    margin-left: 2px;
-    fill: #f6756e;
-    font-size: 18px;
-  }
-`;

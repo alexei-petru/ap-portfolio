@@ -1,12 +1,13 @@
-import { Affix, Button, Transition } from "@mantine/core";
+import { Button, Transition } from "@mantine/core";
 import { useWindowScroll } from "@mantine/hooks";
+import { StyledAffix } from "./AffixTop.styled";
 
 function AffixTop() {
   const [scroll, scrollTo] = useWindowScroll();
 
   return (
     <>
-      <Affix position={{ bottom: 20, right: 20 }}>
+      <StyledAffix position={{ bottom: 20, right: 20 }}>
         <Transition transition="slide-up" mounted={scroll.y > 0}>
           {(transitionStyles) => (
             <Button
@@ -23,7 +24,7 @@ function AffixTop() {
             </Button>
           )}
         </Transition>
-      </Affix>
+      </StyledAffix>
     </>
   );
 }

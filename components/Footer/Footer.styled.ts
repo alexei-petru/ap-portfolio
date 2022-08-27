@@ -3,33 +3,34 @@ import { StyledTitleSection } from "styles/StyledReusable.styled";
 
 export const Footer = styled.footer``;
 
-export const FooterInnerWrapper = styled.div`
+export const FooterTitle = styled(StyledTitleSection)``;
+
+export const FormOuterWrapper = styled.div`
   display: flex;
   justify-content: center;
   height: 500px;
   width: 100%;
 `;
 
-export const FooterTitle = styled(StyledTitleSection)``;
-
-export const FormWrapper = styled.div`
+export const MapWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 400px;
   display: flex;
+  color: black;
   .leaflet-container {
     height: 400px;
     width: 50%;
     min-width: 300px;
   }
   .leaflet-control-zoom span {
-    color: black;
+    color: inherit;
   }
   .leaflet-popup-content {
-    color: black;
+    color: inherit;
   }
   .leaflet-popup-close-button span {
-    color: black;
+    color: inherit;
   }
 `;
 
@@ -39,4 +40,9 @@ export const Form = styled.form`
   textarea {
     color: black;
   }
+`;
+
+export const footerCopyright = styled.p`
+  text-align: center;
+  padding: 20px;
 `;

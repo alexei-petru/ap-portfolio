@@ -1,11 +1,15 @@
 import { Popover } from "@mantine/core";
 import * as St from "components/Header/Hero/Hero.styled";
+import MyPopoverDropDown from "components/UI/MyPopover/MyPopover";
+import { StyledPopover } from "components/UI/MyPopover/MyPopover.styled";
 import Image from "next/image";
 import { useState } from "react";
-import {
-  StyledPopover,
-  StyledPopoverDropdown,
-} from "styles/StyledReusable.styled";
+
+// const popoverContent: MyPopoverDropDownProps[] = {
+//   dropDownText: "string",
+//   buttonClose: " string",
+//   buttonInfo: " string,",
+// };
 
 const ApodDescription = () => {
   const [opened, setOpened] = useState(false);
@@ -32,15 +36,12 @@ const ApodDescription = () => {
           </St.ApodParagraphWrapper>
         </Popover.Target>
       </St.ApodDescription>
-
-      <StyledPopoverDropdown>
-        <St.ApodDropdownText>
-          Background Image is ofered by Nasa Apod "Astronomycal image of the day"
-          <St.ButtonApodDropdown >
-            Full Description
-          </St.ButtonApodDropdown>
-        </St.ApodDropdownText>
-      </StyledPopoverDropdown>
+      <MyPopoverDropDown
+        buttonInfoIsEnabled={true}
+        buttonInfoContent={"FullDescription"}
+      >
+        Background Image is ofered by Nasa Apod "Astronomy Picture of the Day"
+      </MyPopoverDropDown>
     </StyledPopover>
   );
 }; 

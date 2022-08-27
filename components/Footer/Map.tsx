@@ -4,10 +4,10 @@ import * as St from "components/Footer/Footer.styled";
 
 const Map = () => {
   type positionType = [number, number];
-  const mapCenter: positionType = [49.930961, 8.5871609];
+  const mapCenter: positionType = [49.930961, 8.5981609];
   const myPosition: positionType = [49.802843886930255, 8.603871231920898];
   return (
-    <St.FormWrapper>
+    <St.MapWrapper>
       <MapContainer center={mapCenter} zoom={9} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -21,7 +21,7 @@ const Map = () => {
           </Popup>
         </Marker>
       </MapContainer>
-    </St.FormWrapper>
+    </St.MapWrapper>
   );
 };
 
