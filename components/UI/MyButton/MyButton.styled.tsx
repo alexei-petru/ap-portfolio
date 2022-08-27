@@ -7,7 +7,7 @@ export const MyButtonWrapper = styled.div`
 
 export const MyButton = styled.button`
   background-color: #120449;
-  box-shadow: 0 2px 5px rgba(21, 0, 255, 0.5);
+  box-shadow: 0 2px 5px rgb(0 40 255 / 90%);
   padding: 5px;
   border-radius: 2px;
   font-size: 17px;
@@ -16,6 +16,6 @@ export const MyButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #220596;
+    background-color: #20009f;
   }
 `;

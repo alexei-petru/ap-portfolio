@@ -7,21 +7,19 @@ export const StyledPopover = styled(mantinePopover)``;
 export const StyledPopoverDropdown = styled(mantinePopover.Dropdown)`
   background-color: ${({ theme }) =>
     theme.colors.popoverDropDownBackgroundColor[0]};
-  p {
-    padding: 5px;
-    border-radius: 5px;
-    max-width: 298px;
-    font-size: 17px;
-    font-weight: 400;
-    font-family: "roboto";
-    z-index: 99;
-    background-color: inherit;
-  }
 `;
 
 export const PopoverDropdownText = styled.p`
   color: white;
   text-align: center;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  max-width: 298px;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "roboto";
+  z-index: 99;
+  background-color: inherit;
 `;
 
 export const PopoverButtonInfo = styled(MyButton)`
@@ -32,6 +30,11 @@ export const PopoverDropdownButtonClose = styled(MyButton)`
   margin-left: auto;
   padding: 0 3px;
   background-color: #7c0000;
+  box-shadow: 0 2px 5px rgb(255 15 15 / 54%);
+  border-radius: 2px;
+  padding: 0 3px;
+  margin-bottom: 4px;
+
   :hover {
     background-color: #b00101;
   }
