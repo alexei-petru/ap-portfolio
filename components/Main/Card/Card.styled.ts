@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
 
-export const Card = styled.div`
+type CardProps = {
+  thumbnail: string;
+};
+
+export const Card = styled.div<CardProps>`
   position: relative;
   max-width: 100%;
   width: 250px;
@@ -9,8 +13,8 @@ export const Card = styled.div`
   background-color: #ecf0f1;
   background: hsla(0, 0%, 100%, 0.3);
   border-radius: 0.2rem;
-  user-select: text; 
-  transition: 0.25s ease-in-out; 
+  user-select: text;
+  transition: 0.25s ease-in-out;
   box-shadow: 5px 3px 30px black;
   overflow: hidden;
 
@@ -29,7 +33,7 @@ export const Card = styled.div`
     bottom: 0;
     left: 0;
     filter: blur(20px) brightness(0.75);
-    background: url(${(props) => props["data-thumbnail"]}) no-repeat top/ 250%;
+    background: url(${(props) => props.thumbnail}) no-repeat top/ 250%;
   }
 `;
 
@@ -127,19 +131,22 @@ export const ButtonsWrapper = styled.div<cardButtonsProps>`
   }
 `;
 
+const gitLock = "github-lock.png";
+const gitOpen = "github.png";
+
 export const LinkGit = styled.a<cardButtonsProps>`
   background-color: gray;
-  background: url(${(props) =>
-      props.isDisabled ? "github-lock.png" : "github.png"})
+  background: url(${(props) => (props.isDisabled ? gitLock : gitOpen)})
     no-repeat center / contain;
   color: red;
   margin-left: ${(props) =>
     props.isCardHover ? "0px" : "calc(0px - var(--btn-size))"};
 `;
 
+const liveLock = "github-lock.png";
+const liveOpen = "github.png";
 export const LinkLive = styled.a<cardButtonsProps>`
-  background: url(${(props) =>
-      props.isDisabled ? "live-lock.png" : "live.png"})
+  background: url(${(props) => (props.isDisabled ? liveLock : liveOpen)})
     no-repeat center / contain;
   color: green;
   margin-right: ${(props) =>

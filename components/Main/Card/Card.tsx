@@ -22,7 +22,7 @@ const ProjectCard = ({
     <St.Card
       onMouseEnter={() => setIsCardHover(true)}
       onMouseLeave={() => setIsCardHover(false)}
-      data-thumbnail={thumbnail}
+      thumbnail={thumbnail}
     >
       <St.CardContent>
         <St.CardThumbnail>

@@ -24,7 +24,15 @@
     //theos prefered rules
     "noUncheckedIndexedAccess": true,
     "incremental": false,
-    "strict": true
+    "strict": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "lint": {
+          "validProperties": ["background"]
+        }
+      }
+    ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
   "exclude": ["node_modules", ".next"]
