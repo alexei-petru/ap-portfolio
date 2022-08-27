@@ -28,6 +28,7 @@ export default function App(props: AppProps) {
         theme={{
           colors: {
             black: ["#000000", "#181818", "#26262618"],
+            popoverDropDownBackgroundColor: ["#020309"],
           },
           colorScheme: "dark",
         }}

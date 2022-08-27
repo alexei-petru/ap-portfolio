@@ -2,7 +2,7 @@ import { Tuple, DefaultMantineColor } from "@mantine/core";
 
 type ExtendedCustomColors =
   | "primaryColorName"
-  | "secondaryColorName"
+  | "popoverDropDownBackgroundColor"
   | DefaultMantineColor;
 
 declare module "@mantine/core" {

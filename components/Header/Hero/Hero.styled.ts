@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import "@fontsource/monoton";
-import { Button } from "@mantine/core";
 
 export const Hero = styled.section`
   display: grid;
@@ -40,21 +39,6 @@ export const ApodDescription = styled.div`
 export const ApodParagraph = styled.p`
   margin-top: -50px;
   z-index: 1;
-`;
-
-export const ApodDropdownText = styled.p`
-  text-align: center;
-`;
-
-export const ButtonApodDropdown = styled(Button<any>)`
-  margin-top: 5px;
-  margin-left: auto;
-  background-color: #120449;
-  box-shadow: 0 2px 5px rgba(21, 0, 255, 0.5);
-
-  &:hover {
-    background-color: #220596;
-  }
 `;
 
 export const UserDescription = styled.h1`
