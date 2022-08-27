@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
@@ -14,6 +15,7 @@
     "@mantine/core": "^5.2.0",
     "@mantine/hooks": "^5.2.0",
     "@mantine/next": "^5.2.0",
+    "@next/eslint-plugin-next": "^12.2.5",
     "leaflet": "^1.8.0",
     "next": "latest",
     "react": "^18.2.0",
@@ -26,6 +28,9 @@
     "@types/node": "^18.7.8",
     "@types/react": "^18.0.17",
     "@types/styled-components": "^5.1.26",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.2.5",
+    "eslint-config-prettier": "^8.5.0",
     "npm": "^8.18.0",
     "typescript": "^4.7.4"
   }
