@@ -12,6 +12,7 @@ const HeroBackground = () => {
         objectFit="cover"
         objectPosition={"center"}
         src={nasaImage}
+        alt="apod Image"
       />
     </St.HeaderImageWrapper>
   );

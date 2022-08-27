@@ -34,7 +34,7 @@ const ProjectCard = ({
           <St.CardDescription>{description}</St.CardDescription>
           <St.CardTagsWrapper>
             {tags.map((tag) => (
-              <St.CardTag>{tag}</St.CardTag>
+              <St.CardTag key={tag}>{tag}</St.CardTag>
             ))}
           </St.CardTagsWrapper>
         </St.CardTextWrapper>

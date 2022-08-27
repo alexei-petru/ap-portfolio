@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes } from "react";
 import * as St from "./MyButton.styled";
 
-interface myButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
+type myButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 const MyButton = ({ children, ...rest }: myButtonProps) => {
   return (

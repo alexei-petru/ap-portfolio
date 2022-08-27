@@ -29,6 +29,7 @@ const ApodDescription = () => {
           height={68}
           src={"/planet.png"}
           priority
+          alt="apod description"
         />
         <Popover.Target>
           <St.ApodParagraphWrapper onClick={() => setOpened((prev) => !prev)}>
@@ -40,10 +41,10 @@ const ApodDescription = () => {
         buttonInfoIsEnabled={true}
         buttonInfoContent={"FullDescription"}
       >
-        Background Image is ofered by Nasa Apod "Astronomy Picture of the Day"
+        Background Image is ofered by Nasa Apod `&quot;`Astronomy Picture of the Day`&quot;`
       </MyPopoverDropDown>
     </StyledPopover>
   );
-}; 
- 
+};
+
 export default ApodDescription;

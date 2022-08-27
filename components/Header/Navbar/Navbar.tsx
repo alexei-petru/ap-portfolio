@@ -16,7 +16,11 @@ const Navbar = () => {
           <a href="#contact">Contact</a>
         </li>
         <li>
-          <a href="https://github.com/Allex191" target={"_blank"}>
+          <a
+            rel="noreferrer"
+            href="https://github.com/Allex191"
+            target={"_blank"}
+          >
             <AiFillGithub />
           </a>
         </li>
