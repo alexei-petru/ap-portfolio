@@ -1,4 +1,4 @@
-export const HERO_AP_DESCRIPTION = [
+export const HERO_AP_DESCRIPTION: string[] = [
   "Hello ",
   "my ",
   "name ",
@@ -8,7 +8,6 @@ export const HERO_AP_DESCRIPTION = [
   "and ",
   "i ",
   "am ",
-  ,
   "self-taught",
   "frontend ",
   "developer.",
@@ -24,7 +23,7 @@ export const CARDS_INFO = [
     urlGit: "https://github.com/Allex191/real-idea-landing-page",
     urlLive: "https://allex191.github.io/real-idea-landing-page/",
   },
-  { 
+  {
     title: "Warehouse App",
     description:
       "A  cross platform mobile app for warehouse with useful statistics",
