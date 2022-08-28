@@ -14,7 +14,7 @@ const MyInput = ({ labelDescription, ...props }: MyInputProps) => {
           {labelDescription}
         </St.MyInputLabel>
       )}
-      <St.MyInput {...props} />
+      <St.MyInput maxLength={1000} {...props} />
     </St.MyInputWrapper>
   );
 };

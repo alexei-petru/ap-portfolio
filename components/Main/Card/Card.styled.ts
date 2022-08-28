@@ -17,6 +17,7 @@ export const Card = styled.div<CardProps>`
   transition: 0.25s ease-in-out;
   box-shadow: 5px 3px 30px black;
   overflow: hidden;
+  font: var(--text-regular-small);
 
   &:hover {
     transform: translateY(-10px);
@@ -38,6 +39,7 @@ export const Card = styled.div<CardProps>`
 `;
 
 export const CardContent = styled.div`
+  font: inherit;
   height: 100%;
 `;
 
@@ -71,20 +73,20 @@ export const CardTextWrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
   color: #ecf0f1;
   justify-items: center;
+  padding-top: 12px;
 `;
 
 export const CardTitle = styled.div`
-  font-size: 24px;
-  font-weight: 500;
   text-align: center;
+  font: var(--text-medium-large);
+  margin-bottom: 12px;
 `;
 
 export const CardDescription = styled.div`
   color: rgba(#ecf0f1, 0.8);
-  font-size: 1rem;
-  padding: 0.5rem 0;
-  font-weight: 400;
   text-align: start;
+  /* font: inherit; */
+  margin-bottom: 5px;
 `;
 
 export const CardTagsWrapper = styled.div`

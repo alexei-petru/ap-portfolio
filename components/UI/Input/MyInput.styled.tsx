@@ -13,4 +13,6 @@ export const MyInputLabel = styled.label`
 export const MyInput = styled.input`
   padding: 5px;
   border-radius: 5px;
+  color: black;
+  font: var(--text-regular-small);
 `;

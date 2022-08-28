@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import "@fontsource/monoton";
 
 export const Main = styled.main`
   margin-bottom: 50px;

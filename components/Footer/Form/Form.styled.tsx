@@ -8,4 +8,14 @@ export const Form = styled.form`
   background-color: gray;
   padding: 10px 20px;
   border-radius: 5px;
+  min-width: 300px;
+  max-width: 350px;
+  height: var(--contact-item-size);
+  background: #120449;
+  background: linear-gradient(15deg, #3e7134 15%, #120449 92%);
+
+  @media (max-width: 685px) {
+    margin-bottom: 70px;
+    /* margin-left: -18px; */
+  } ;
 `;

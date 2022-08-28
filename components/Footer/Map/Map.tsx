@@ -1,6 +1,6 @@
 import React from "react";
 import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
-import * as St from "components/Footer/Footer.styled";
+import * as St from "components/Footer/Map/Map.styled";
 
 const Map = () => {
   type positionType = [number, number];

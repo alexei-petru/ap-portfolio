@@ -15,9 +15,7 @@ export const PopoverDropdownText = styled.p`
   padding-bottom: 5px;
   border-radius: 5px;
   max-width: 298px;
-  font-size: 17px;
-  font-weight: 400;
-  font-family: "roboto";
+  font: var(--text-regular-pre-large);
   z-index: 99;
   background-color: inherit;
 `;
@@ -33,7 +31,8 @@ export const PopoverDropdownButtonClose = styled(MyButton)`
   box-shadow: 0 2px 5px rgb(255 15 15 / 54%);
   border-radius: 2px;
   padding: 0 3px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+  margin-top: -3px;
 
   :hover {
     background-color: #b00101;

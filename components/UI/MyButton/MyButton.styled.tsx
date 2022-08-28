@@ -10,9 +10,7 @@ export const MyButton = styled.button`
   box-shadow: 0 2px 5px rgb(0 40 255 / 90%);
   padding: 5px;
   border-radius: 2px;
-  font-size: 17px;
-  font-weight: 400;
-  font-family: "roboto";
+  font: var(--text-regular-pre-large);
   cursor: pointer;
 
   &:hover {

@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import "@fontsource/monoton";
 
 export const Hero = styled.section`
   display: grid;
@@ -43,16 +42,14 @@ export const ApodParagraph = styled.p`
 
 export const UserDescription = styled.h1`
   z-index: 1;
-  font-size: clamp(16px, 5vw, 38px);
+  font: var(--title-regular-large);
   grid-row: 5 / span 7;
   grid-column: 3 / span 5;
-  font-family: "monoton", "Times New Roman", Times, serif;
   text-align: center;
   transform: scale(0.9);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  font-weight: 400;
   letter-spacing: 0.5px;
-  word-spacing: 3px;
+  word-spacing: 7px;
 
   @media (max-width: 842px) {
     grid-column: 3 / span 6;
