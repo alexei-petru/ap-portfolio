@@ -140,7 +140,6 @@ export const LinkGit = styled.a<cardButtonsProps>`
   background-color: gray;
   background: url(${(props) => (props.isDisabled ? gitLock : gitOpen)})
     no-repeat center / contain;
-  color: red;
   margin-left: ${(props) =>
     props.isCardHover ? "0px" : "calc(0px - var(--btn-size))"};
 `;

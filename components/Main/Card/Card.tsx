@@ -18,6 +18,7 @@ const ProjectCard = ({
   urlLive,
 }: CardPropsType) => {
   const [isCardHover, setIsCardHover] = useState(false);
+
   return (
     <St.Card
       onMouseEnter={() => setIsCardHover(true)}
@@ -44,12 +45,16 @@ const ProjectCard = ({
             target={`${urlGit === "#" ? "_parent" : "_blank"}`}
             isCardHover={isCardHover}
             isDisabled={urlGit === "#"}
+            onFocus={() => setIsCardHover(true)}
+            onBlur={() => setIsCardHover(false)}
           />
           <St.LinkLive
             href={`${urlLive === "#" ? "javascript:void(0)" : urlLive}`}
             target={`${urlLive === "#" ? "_parent" : "_blank"}`}
             isCardHover={isCardHover}
             isDisabled={urlLive === "#"}
+            onFocus={() => setIsCardHover(true)}
+            onBlur={() => setIsCardHover(false)}
           />
         </St.ButtonsWrapper>
       </St.CardContent>

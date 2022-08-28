@@ -18,4 +18,6 @@ export const MapWrapper = styled.div`
   .leaflet-popup-close-button span {
     color: inherit;
   }
+  .leaflet-popup-content-wrapper {
+  }
 `;
