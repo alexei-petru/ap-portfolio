@@ -21,9 +21,8 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    //theos prefered rules
+    "incremental": true,
     "noUncheckedIndexedAccess": true,
-    "incremental": false,
     "strict": true,
     "plugins": [
       {

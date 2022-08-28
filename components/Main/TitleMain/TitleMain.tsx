@@ -25,7 +25,10 @@ function MainTitle() {
           </Popover.Target>
         </St.ProjectsTitle>
       </St.ProjectsTitleWrapper>
-      <MyPopoverDropDown buttonInfoIsEnabled={false}>
+      <MyPopoverDropDown
+        onClickClose={() => setOpened(false)}
+        buttonInfoIsEnabled={false}
+      >
         All projects are fully designed and coded by Alexei Petru
       </MyPopoverDropDown>
     </StyledPopover>

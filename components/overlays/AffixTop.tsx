@@ -18,10 +18,10 @@ function AffixTop() {
               color={"black.0"}
             >
               <Image
-                style={{ width: "100%", height: "100%" }}
                 src="/work-in-progress.png"
                 alt="work in progress"
-                layout="fill"
+                width={"100%"}
+                height={"90px"}
               />
             </Button>
           )}

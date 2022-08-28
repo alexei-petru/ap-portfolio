@@ -54,6 +54,10 @@ export const UserDescription = styled.h1`
   letter-spacing: 0.5px;
   word-spacing: 3px;
 
+  @media (max-width: 842px) {
+    grid-column: 3 / span 6;
+  }
+
   @media (max-width: 512px) {
     font-size: clamp(16px, 6vw, 38px);
     grid-row: 5 / span 7;

@@ -40,8 +40,10 @@ const ApodDescription = () => {
       <MyPopoverDropDown
         buttonInfoIsEnabled={true}
         buttonInfoContent={"FullDescription"}
+        onClickClose={() => setOpened(false)}
       >
-        Background Image is ofered by Nasa Apod `&quot;`Astronomy Picture of the Day`&quot;`
+        Background Image is ofered by Nasa Apod &quot;Astronomy Picture of the
+        Day&quot;
       </MyPopoverDropDown>
     </StyledPopover>
   );

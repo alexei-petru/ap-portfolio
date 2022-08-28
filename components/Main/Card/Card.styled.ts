@@ -143,8 +143,8 @@ export const LinkGit = styled.a<cardButtonsProps>`
     props.isCardHover ? "0px" : "calc(0px - var(--btn-size))"};
 `;
 
-const liveLock = "github-lock.png";
-const liveOpen = "github.png";
+const liveLock = "live-lock.png";
+const liveOpen = "live.png";
 export const LinkLive = styled.a<cardButtonsProps>`
   background: url(${(props) => (props.isDisabled ? liveLock : liveOpen)})
     no-repeat center / contain;
