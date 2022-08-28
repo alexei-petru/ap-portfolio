@@ -9,8 +9,8 @@ interface MyTexarea extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 const MyTexarea = ({ labelDescription, ...props }: MyTexarea) => {
   return (
     <St.MyTexareaWrapper>
-      {props.label && <label htmlFor={props.name}>{labelDescription}</label>}
-      <textarea {...props} />
+      {props.label && <St.MyTextareaLabel htmlFor={props.name}>{labelDescription}</St.MyTextareaLabel>}
+      <St.MyTextarea {...props} />
     </St.MyTexareaWrapper>
   );
 };

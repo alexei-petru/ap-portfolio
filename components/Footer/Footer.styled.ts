@@ -5,19 +5,18 @@ export const Footer = styled.footer``;
 
 export const FooterTitle = styled(StyledTitleSection)``;
 
-export const FormOuterWrapper = styled.div`
+export const FooterInnerWrapper = styled.div`
   display: flex;
-  justify-content: center;
-  height: 500px;
-  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 100px;
 `;
 
 export const MapWrapper = styled.div`
   position: relative;
-  width: 100%;
   height: 400px;
   display: flex;
   color: black;
+  margin-right: 20px;
   .leaflet-container {
     height: 400px;
     width: 50%;

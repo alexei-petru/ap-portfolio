@@ -12,10 +12,10 @@ const Footer = () => {
       <St.Footer id="contact">
         <StyledContainer>
           <St.FooterTitle>Contact</St.FooterTitle>
-          <St.FormOuterWrapper>
+          <St.FooterInnerWrapper>
             <Map />
             <Form />
-          </St.FormOuterWrapper>
+          </St.FooterInnerWrapper>
           <St.footerCopyright>
             {`Designed and developed with ❤ by Alexei Petru. © ${currentYear}`}
           </St.footerCopyright>

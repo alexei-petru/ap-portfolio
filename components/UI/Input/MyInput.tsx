@@ -9,8 +9,12 @@ interface MyInputProps extends InputHTMLAttributes<HTMLInputElement> {
 const MyInput = ({ labelDescription, ...props }: MyInputProps) => {
   return (
     <St.MyInputWrapper>
-      {props.label && <label htmlFor={props.type}>{labelDescription}</label>}
-      <input {...props} />
+      {props.label && (
+        <St.MyInputLabel htmlFor={props.type}>
+          {labelDescription}
+        </St.MyInputLabel>
+      )}
+      <St.MyInput {...props} />
     </St.MyInputWrapper>
   );
 };
