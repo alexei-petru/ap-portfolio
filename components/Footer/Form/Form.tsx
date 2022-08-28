@@ -13,7 +13,7 @@ const Form = () => {
       <MyInput label={true} type={"text"} labelDescription={"Subject"} />
       <MyTexarea
         label={true}
-        labelDescription={"Your Message"}
+        labelDescription={"Message"}
         name={"textarea"}
         cols={30}
         rows={10}

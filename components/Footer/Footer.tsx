@@ -13,6 +13,11 @@ const Footer = () => {
         <StyledContainer>
           <St.FooterTitle>Contact</St.FooterTitle>
           <St.FooterInnerWrapper>
+            <St.StyledImage
+              alt=""
+              src={"/ufo-background.png"}
+              layout={"fill"}
+            />
             <Map />
             <Form />
             <St.footerCopyright>
