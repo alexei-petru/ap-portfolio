@@ -3,13 +3,13 @@ import * as St from "./MyInput.styled";
 
 interface MyInputProps extends InputHTMLAttributes<HTMLInputElement> {
   labelDescription: string;
-  label: boolean;
+  isLabel: boolean;
 }
 
 const MyInput = ({ labelDescription, ...props }: MyInputProps) => {
   return (
     <St.MyInputWrapper>
-      {props.label && (
+      {props.isLabel && (
         <St.MyInputLabel htmlFor={props.type}>
           {labelDescription}
         </St.MyInputLabel>

@@ -142,6 +142,7 @@ export const LinkGit = styled.a<cardButtonsProps>`
     no-repeat center / contain;
   margin-left: ${(props) =>
     props.isCardHover ? "0px" : "calc(0px - var(--btn-size))"};
+  pointer-events: ${(props) => (props.isDisabled ? "none" : "auto")};
 `;
 
 const liveLock = "live-lock.png";
@@ -152,4 +153,5 @@ export const LinkLive = styled.a<cardButtonsProps>`
   color: green;
   margin-right: ${(props) =>
     props.isCardHover ? "0px" : "calc(0px - var(--btn-size))"};
+  pointer-events: ${(props) => (props.isDisabled ? "none" : "auto")};
 `;

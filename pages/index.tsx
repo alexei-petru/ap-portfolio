@@ -12,10 +12,6 @@ export default function Home() {
       <Head>
         <title>A.P. Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css"
-        />
       </Head>
       <AffixTop />
       <Header />

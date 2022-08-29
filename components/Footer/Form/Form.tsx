@@ -9,10 +9,10 @@ const Form = () => {
   return (
     <St.Form>
       <ContactMessage />
-      <MyInput label={true} type={"email"} labelDescription={"Email"} />
-      <MyInput label={true} type={"text"} labelDescription={"Subject"} />
+      <MyInput isLabel={true} type={"email"} labelDescription={"Email"} />
+      <MyInput isLabel={true} type={"text"} labelDescription={"Subject"} />
       <MyTexarea
-        label={true}
+        isLabel={true}
         labelDescription={"Message"}
         name={"textarea"}
         cols={30}

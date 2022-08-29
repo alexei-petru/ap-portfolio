@@ -9,7 +9,12 @@ export default class _Document extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

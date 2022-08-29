@@ -41,7 +41,7 @@ const ProjectCard = ({
         </St.CardTextWrapper>
         <St.ButtonsWrapper isCardHover={isCardHover}>
           <St.LinkGit
-            href={`${urlGit === "#" ? "javascript:void(0)" : urlGit}`}
+            href={urlGit}
             target={`${urlGit === "#" ? "_parent" : "_blank"}`}
             isCardHover={isCardHover}
             isDisabled={urlGit === "#"}
@@ -49,7 +49,7 @@ const ProjectCard = ({
             onBlur={() => setIsCardHover(false)}
           />
           <St.LinkLive
-            href={`${urlLive === "#" ? "javascript:void(0)" : urlLive}`}
+            href={urlLive}
             target={`${urlLive === "#" ? "_parent" : "_blank"}`}
             isCardHover={isCardHover}
             isDisabled={urlLive === "#"}

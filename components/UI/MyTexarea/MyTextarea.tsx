@@ -3,13 +3,13 @@ import * as St from "./MyTextarea.styled";
 
 interface MyTexarea extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   labelDescription: string;
-  label: boolean;
+  isLabel: boolean;
 }
 
 const MyTexarea = ({ labelDescription, ...props }: MyTexarea) => {
   return (
     <St.MyTexareaWrapper>
-      {props.label && (
+      {props.isLabel && (
         <St.MyTextareaLabel htmlFor={props.name}>
           {labelDescription}
         </St.MyTextareaLabel>
