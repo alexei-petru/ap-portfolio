@@ -8,7 +8,13 @@
 _______
 
 ### _To Do_
-* add __work in progress img__ to be bottom rith side fixed
+* email api
+* refactor nth-of-type hero
+* 404 page 
+* change css variables to constants
 * header with __dynamic apod images__
-* popper and arrow for __apod description__
-* create __footer form__
+* particles hero/main
+* animations navbar/hero-userImg/form-send
+* improve overall design
+
+

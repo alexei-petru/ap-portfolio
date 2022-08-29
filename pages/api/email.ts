@@ -1,15 +1,5 @@
-type handlerProps = {
-  req: string;
-  res: {
-    status: (arg0: number) => {
-      json: (arg0: Record<string, unknown>) => void;
-    };
-  };
-};
+import { NextApiRequest, NextApiResponse } from "next";
 
-export default function handler(
-//   req: handlerProps["req"],
-  res: handlerProps["res"]
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ name: "John Doe" });
 }

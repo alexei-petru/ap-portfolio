@@ -42,7 +42,7 @@ const ApodDescription = () => {
         buttonInfoContent={"FullDescription"}
         onClickClose={() => setOpened(false)}
       >
-        Background Image is ofered by Nasa Apod &quot;Astronomy Picture of the
+        Background Image is offered by Nasa Apod &quot;Astronomy Picture of the
         Day&quot;
       </MyPopoverDropDown>
     </StyledPopover>
