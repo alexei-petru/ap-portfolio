@@ -15,6 +15,7 @@ _______
 * header with __dynamic apod images__
 * particles hero/main
 * animations navbar/hero-userImg/form-send
+* add contact info popover "feel free to contact...."
 * improve overall design
 
 
