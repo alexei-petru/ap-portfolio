@@ -1,26 +1,20 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import Joi from "joi";
+import { emailSchemaValidation } from "utils/schemas";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const { inputs } = req.body;
     console.log("SRV_REQ:", inputs);
 
-    const schema = Joi.object({
-      email: Joi.string().email(),
-      subject: Joi.string().alphanum().min(3).max(46).required(),
-      message: Joi.string().min(3).max(10000).required(),
+    const { error } = emailSchemaValidation.validate(inputs, {
+      abortEarly: false,
     });
-    // const { rawEmail, error: emailError } = schema.validate(inputs.email);
-    // const { rawSubject, error: subjectError } = schema.validate(inputs.subject);
-    // const { rawMessage, error: messageError } = schema.validate(inputs.message);
-    // console.log("emailError", emailError);
-    // console.log("subjectError", subjectError);
-    // console.log("messageError", messageError);
-    const { error, value } = schema.validate(inputs, { abortEarly: false });
 
+    const validatedObj = {
+      errors: error,
+      isFormValid: !error,
+    };
     console.log("ERROR", error?.details);
-
-    res.status(200).json("testing");
+    res.status(200).json(validatedObj);
   }
 }

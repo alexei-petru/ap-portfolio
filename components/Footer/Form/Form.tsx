@@ -6,11 +6,7 @@ import ContactMessage from "../ContactMessage/ContactMessage";
 import * as St from "./Form.styled";
 
 const Form = () => {
-  const [srvResponse, setSrvResponse] = useState({
-    srvMessage: "",
-    srvSubject: "",
-    srvEmail: "",
-  });
+  const [srvResponse, setSrvResponse] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
@@ -31,7 +27,9 @@ const Form = () => {
       },
     });
     const responseData: any = await response.json();
-    setSrvResponse(responseData);
+
+    const formMessage = responseData.isFormValid ? "Valid" : "Invalid";
+    setSrvResponse(formMessage);
     console.log("client:", responseData);
   };
   return (

@@ -31,7 +31,10 @@
           "validProperties": ["background"]
         }
       }
-    ]
+    ],
+    //mby disable?
+    "strictNullChecks": true,
+    "noImplicitAny": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
   "exclude": ["node_modules", ".next"]

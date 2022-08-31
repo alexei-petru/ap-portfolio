@@ -1,9 +1,15 @@
 import { PopoverProps } from "@mantine/core";
 import * as St from "./MyPopover.styled";
 
-export interface MyPopoverDropDownProps extends PopoverProps {
-  buttonInfoIsEnabled: boolean;
-  buttonInfoContent?: string | null;
+export interface MyPopoverDropDownPropsEnabled extends PopoverProps {
+  buttonInfoIsEnabled: true;
+  buttonInfoContent: string;
+  onClickClose: () => void;
+}
+
+export interface MyPopoverDropDownPropsDisabled extends PopoverProps {
+  buttonInfoIsEnabled: false;
+  buttonInfoContent?: null;
   onClickClose: () => void;
 }
 
@@ -12,7 +18,7 @@ const MyPopoverDropDown = ({
   buttonInfoContent,
   children,
   onClickClose,
-}: MyPopoverDropDownProps) => {
+}: MyPopoverDropDownPropsEnabled | MyPopoverDropDownPropsDisabled) => {
   return (
     <St.StyledPopoverDropdown>
       <St.PopoverDropdownButtonClose onClick={() => onClickClose()}>

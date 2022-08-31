@@ -15,6 +15,7 @@ const MyTexarea = ({ labelDescription, ...props }: MyTexarea) => {
         </St.MyTextareaLabel>
       )}
       <St.MyTextarea maxLength={5000} {...props} />
+      <p style={{ fontSize: "15px", color: "red", marginTop: "-5px" }}>error</p>
     </St.MyTexareaWrapper>
   );
 };
