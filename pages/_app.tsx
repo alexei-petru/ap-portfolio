@@ -6,8 +6,8 @@ import { Global, ThemeProvider } from "@emotion/react";
 
 const theme = {
   colors: {
-    primary: "hotpink",
-    secondary: "red",
+    primary: "black",
+    secondary: "white",
     popoverDropDownBackgroundColor: "#020309",
   },
 };

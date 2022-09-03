@@ -16,7 +16,7 @@ export const StyledAffix = styled(Affix)`
     margin-right: 10px;
   }
 
-  @media (max-width: 790px) {
+  @media (max-width: 1030px) {
     margin-right: -20px;
     button {
       width: 60px !important;

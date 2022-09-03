@@ -14,7 +14,7 @@ export const Form = styled.form`
   background: #120449;
   background: linear-gradient(15deg, #3e7134 15%, #120449 92%);
 
-  @media (max-width: 685px) {
+  @media (max-width: 735px) {
     margin-bottom: 70px;
     /* margin-left: -18px; */
   } ;

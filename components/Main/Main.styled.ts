@@ -12,7 +12,6 @@ export const CardsSection = styled.div`
   justify-items: center;
   align-content: center;
   grid-gap: 50px 0;
-  background-color: black;
 
   @media (max-width: 735px) {
     grid-template-columns: 1fr;

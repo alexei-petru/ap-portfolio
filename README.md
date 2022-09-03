@@ -1,6 +1,6 @@
-## Portfolio v0.1
+## Portfolio v0.5
 
-### nextJs, styled-components, firebase,
+### nextJs, Tyspescript, styled-components, APOD_API, Nodemailer
 
 ## Starter demo https://ap-portfolio-ten.vercel.app/
 
@@ -11,8 +11,8 @@
 #### High-Priority
 
 - email api
-- refactor nth-of-type hero
 - change to zod validator
+- refactor nth-of-type hero
 - 404 page
 - change apod to header
 

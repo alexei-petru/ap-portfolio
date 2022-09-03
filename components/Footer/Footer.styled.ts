@@ -11,12 +11,17 @@ export const FooterInnerWrapper = styled.div`
   justify-content: space-around;
   height: 565px;
   align-items: center;
-  @media (max-width: 685px) {
+
+  @media (max-width: 885px) {
+    padding: 40px;
+  }
+
+  @media (max-width: 735px) {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
     justify-content: space-between;
-    height: calc(var(--contact-item-size) * 2 + 90px);
+    height: calc(var(--contact-item-size) * 2 + 125px);
   }
   /* :before {
     content: " ";

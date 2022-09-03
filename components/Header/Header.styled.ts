@@ -1,10 +1,5 @@
 import styled from "@emotion/styled";
-import {
-  headerBackgroundColor,
-  headerBackgroundFilter,
-  maxDeviceHeight,
-} from "constants/constants";
-headerBackgroundColor;
+import { headerBackgroundFilter, maxDeviceHeight } from "constants/constants";
 
 export const Header = styled.header<{ height: number }>`
   display: flex;
