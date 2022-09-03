@@ -12,6 +12,7 @@
 
 - email api
 - refactor nth-of-type hero
+- change to zod validator
 - 404 page
 - change apod to header
 

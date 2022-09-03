@@ -2,8 +2,15 @@ import { GlobalStyle } from "styles/GlobalStyle";
 
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { MantineProvider } from "@mantine/core";
-import { Global } from "@emotion/react";
+import { Global, ThemeProvider } from "@emotion/react";
+
+const theme = {
+  colors: {
+    primary: "hotpink",
+    secondary: "red",
+    popoverDropDownBackgroundColor: "#020309",
+  },
+};
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -17,21 +24,10 @@ export default function App(props: AppProps) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-
-      <MantineProvider
-        // withGlobalStyles
-        // withNormalizeCSS
-        theme={{
-          colors: {
-            black: ["#000000", "#181818", "#26262618"],
-            popoverDropDownBackgroundColor: ["#020309"],
-          },
-          colorScheme: "dark",
-        }}
-      >
+      <ThemeProvider theme={theme}>
         <Global styles={GlobalStyle} />
         <Component {...pageProps} />
-      </MantineProvider>
+      </ThemeProvider>
     </>
   );
 }

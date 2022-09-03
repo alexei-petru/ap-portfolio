@@ -6,7 +6,7 @@ export const StyledPopover = styled(mantinePopover)``;
 
 export const StyledPopoverDropdown = styled(mantinePopover.Dropdown)`
   background-color: ${({ theme }) =>
-    theme.colors.popoverDropDownBackgroundColor[0]};
+    theme.colors.popoverDropDownBackgroundColor};
 `;
 
 export const PopoverDropdownText = styled.p`

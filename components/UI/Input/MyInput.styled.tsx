@@ -4,6 +4,7 @@ export const MyInputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  border: 2px solid ${({ theme }) => theme.colors.secondary};
 `;
 
 export const MyInputLabel = styled.label`
