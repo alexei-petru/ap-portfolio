@@ -1,65 +1,90 @@
 import MyInput from "components/UI/Input/MyInput";
 import { MyButton } from "components/UI/MyButton/MyButton.styled";
 import MyTexarea from "components/UI/MyTexarea/MyTextarea";
+import { emailResponseType } from "pages/api/email/email";
 import React, { useState } from "react";
+import { getInputsValidation } from "utils/getInputsValidation";
 import ContactMessage from "../ContactMessage/ContactMessage";
 import * as St from "./Form.styled";
 
+export type inputsType = {
+  email: string;
+  subject: string;
+  message: string;
+};
+
 const Form = () => {
-  const [srvResponse, setSrvResponse] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [isMessageSended, setIsMessageSended] = useState<null | boolean>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [inputs, setInputs] = useState({
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  const sumbitInputsValues = async (e: any) => {
+  const sumbitInputsValues = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await fetch("/api/email", {
-      method: "POST",
-      body: JSON.stringify({
-        inputs: {
-          email,
-          subject,
-          message,
-        },
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const responseData: any = await response.json();
+    try {
+      const { validationErrors, isInputsValid } = getInputsValidation(inputs);
+      if (isInputsValid) {
+        setIsLoading(true);
 
-    const formMessage = responseData.isFormValid ? "Valid" : "Invalid";
-    setSrvResponse(formMessage);
-    console.log("client:", responseData);
+        const response = await fetch("/api/email/email", {
+          method: "POST",
+          body: JSON.stringify({ inputs }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const responseData: Promise<emailResponseType> = await response.json();
+
+        setIsMessageSended((await responseData).isEmailSended);
+        setIsLoading(false);
+
+        console.log("client isInputsValid", isInputsValid);
+      } else if (validationErrors) {
+        console.log("validationErrors", validationErrors);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   return (
     <St.Form onSubmit={sumbitInputsValues}>
       <ContactMessage />
       <MyInput
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        value={inputs.email}
+        onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
         isLabel={true}
         type={"email"}
         labelDescription={"Email"}
+        required
       />
       <MyInput
-        value={subject}
-        onChange={(e) => setSubject(e.target.value)}
+        value={inputs.subject}
+        onChange={(e) => setInputs({ ...inputs, subject: e.target.value })}
         isLabel={true}
         type={"text"}
         labelDescription={"Subject"}
+        // minLength={3}
+        maxLength={1000}
+        required
       />
       <MyTexarea
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
+        value={inputs.message}
+        onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
         isLabel={true}
         labelDescription={"Message"}
         name={"textarea"}
+        required
         cols={30}
         rows={10}
+        // minLength={3}
+        maxLength={30000}
       />
-      <MyButton>Send Message</MyButton>
-      <ul>{`Respone : ${srvResponse}`}</ul>
+      <MyButton>Send Message {isLoading && <span>loading...</span>}</MyButton>
+      {isMessageSended && <p>Message have been send</p>}
     </St.Form>
   );
 };

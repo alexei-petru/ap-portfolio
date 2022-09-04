@@ -9,7 +9,7 @@
 ### _To Do_
 
 #### High-Priority
-
+- loader leaflet
 - email api
 - change to zod validator
 - refactor nth-of-type hero

@@ -15,7 +15,7 @@ const Map = () => {
         />
         <Marker position={myPosition}>
           <Popup>
-            I am here :) <br />
+            I am here :&#41; <br />
             Pfungstadt is a town of 25,117 inhabitants, in the district of
             Darmstadt-Dieburg in the state of Hesse, Germany.
           </Popup>

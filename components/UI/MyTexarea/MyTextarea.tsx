@@ -11,11 +11,11 @@ const MyTexarea = ({ labelDescription, ...props }: MyTexarea) => {
     <St.MyTexareaWrapper>
       {props.isLabel && (
         <St.MyTextareaLabel htmlFor={props.name}>
-          {labelDescription}
+          {labelDescription} 
         </St.MyTextareaLabel>
       )}
-      <St.MyTextarea maxLength={5000} {...props} />
-      <p style={{ fontSize: "15px", color: "red", marginTop: "-5px" }}>error</p>
+      <St.MyTextarea {...props} />
+      {/* <p style={{ fontSize: "15px", color: "red", marginTop: "-5px" }}>error</p> */}
     </St.MyTexareaWrapper>
   );
 };
