@@ -5,6 +5,8 @@ import { emailResponseType } from "pages/api/email/email";
 import React, { useState } from "react";
 import { getInputsValidation } from "utils/getInputsValidation";
 import ContactMessage from "../ContactMessage/ContactMessage";
+import AlienSvg from "components/Footer/Form/AlienSvg";
+
 import * as St from "./Form.styled";
 
 export type inputsType = {
@@ -17,14 +19,14 @@ const Form = () => {
   const [isMessageSended, setIsMessageSended] = useState<null | boolean>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const [emailInput, setEmailInput] = useState({ text: "" });
-  const [subjectInput, setSubjectInput] = useState({ text: "" });
-  const [messageInput, setMessageInput] = useState({ text: "" });
+  const [emailInputText, setEmailInput] = useState("");
+  const [subjectInputText, setSubjectInput] = useState("");
+  const [messageInputText, setMessageInput] = useState("");
 
   const inputsText = {
-    email: emailInput.text,
-    subject: subjectInput.text,
-    message: messageInput.text,
+    email: emailInputText,
+    subject: emailInputText,
+    message: emailInputText,
   };
 
   const sumbitInputsValues = async (e: React.FormEvent) => {
@@ -61,33 +63,32 @@ const Form = () => {
       <ContactMessage />
 
       <MyInput
-        value={emailInput.text}
-        onChange={(e) => setEmailInput({ ...emailInput, text: e.target.value })}
+        value={emailInputText}
+        onChange={(e) => setEmailInput(e.target.value)}
         isLabel={true}
         type={"email"}
         labelDescription={"Email"}
       />
       <MyInput
-        value={subjectInput.text}
-        onChange={(e) =>
-          setSubjectInput({ ...subjectInput, text: e.target.value })
-        }
+        value={subjectInputText}
+        onChange={(e) => setSubjectInput(e.target.value)}
         isLabel={true}
         type={"text"}
         labelDescription={"Subject"}
       />
       <MyTexarea
-        value={messageInput.text}
-        onChange={(e) =>
-          setMessageInput({ ...messageInput, text: e.target.value })
-        }
+        value={messageInputText}
+        onChange={(e) => setMessageInput(e.target.value)}
         isLabel={true}
         labelDescription={"Message"}
         name={"textarea"}
         cols={30}
         rows={10}
       />
-      <MyButton>Send Message {isLoading && <span>loading...</span>}</MyButton>
+      <MyButton>
+        Send Message {isLoading && <span>loading...</span>}
+        <AlienSvg />
+      </MyButton>
       {isMessageSended && <p>Message have been send</p>}
     </St.Form>
   );

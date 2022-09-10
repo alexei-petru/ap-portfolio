@@ -10,7 +10,7 @@ export const FooterInnerWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   height: 565px;
-  align-items: center;
+  align-items: start;
 
   @media (max-width: 885px) {
     padding: 40px;
@@ -54,7 +54,7 @@ export const StyledImage = styled(Image)`
 
 export const footerCopyright = styled.p`
   text-align: center;
-  padding: 25px 0 7px;
+  padding-bottom: 16px;
   font: var(--text-regular-small);
   position: absolute;
   bottom: 6px;

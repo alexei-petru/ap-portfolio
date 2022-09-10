@@ -1,4 +1,5 @@
 import React from "react";
+import MyErrorMessage from "../MyErrorMessage/MyErrorMessage";
 import * as St from "./MyTextarea.styled";
 //
 interface IMyTexarea
@@ -19,7 +20,7 @@ const MyTexarea = ({ labelDescription, ...props }: IMyTexarea) => {
         </St.MyTextareaLabel>
       )}
       <St.MyTextarea {...props} />
-      {/* <p style={{ fontSize: "15px", color: "red", marginTop: "-5px" }}>error</p> */}
+      <MyErrorMessage text={"error message"} />
     </St.MyTexareaWrapper>
   );
 };

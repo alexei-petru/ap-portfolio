@@ -29,6 +29,7 @@
 - add contact info popover "feel free to contact...."
 - improve overall design
 - disable padding container form 
+- add footer copyright white space
 
 
 #### bugs not understandable

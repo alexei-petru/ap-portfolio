@@ -1,4 +1,5 @@
-import React, { InputHTMLAttributes } from "react";
+import { InputHTMLAttributes } from "react";
+import MyErrorMessage from "../MyErrorMessage/MyErrorMessage";
 import * as St from "./MyInput.styled";
 
 interface MyInputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -15,6 +16,7 @@ const MyInput = ({ labelDescription, ...props }: MyInputProps) => {
         </St.MyInputLabel>
       )}
       <St.MyInput maxLength={1000} {...props} />
+      <MyErrorMessage text={"input must be valid"} />
     </St.MyInputWrapper>
   );
 };
