@@ -1,5 +1,5 @@
 import { PopoverProps } from "@mantine/core";
-import * as St from "./MyPopover.styled";
+import * as St from "./MyPopoverDropdown.styled";
 
 export interface MyPopoverDropDownPropsEnabled extends PopoverProps {
   buttonInfoIsEnabled: true;

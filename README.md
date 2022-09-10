@@ -11,6 +11,7 @@
 #### High-Priority
 - loader leaflet
 - email api
+- repatcha/hcaptcha 
 - change to zod validator
 - refactor nth-of-type hero
 - 404 page
@@ -24,6 +25,11 @@
 - animations navbar/hero-userImg/form-send
 
 #### Low-Priority
-
+- ufo animation form
 - add contact info popover "feel free to contact...."
 - improve overall design
+- disable padding container form 
+
+
+#### bugs not understandable
+*  //bug with react minlength not working?   value={inputs.message} myTextarea

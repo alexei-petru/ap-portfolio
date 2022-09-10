@@ -51,15 +51,15 @@ const Form = () => {
   };
 
   return (
-    <St.Form onSubmit={sumbitInputsValues}>
+    <St.Form onSubmit={sumbitInputsValues} noValidate>
       <ContactMessage />
+
       <MyInput
         value={inputs.email}
         onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
         isLabel={true}
         type={"email"}
         labelDescription={"Email"}
-        required
       />
       <MyInput
         value={inputs.subject}
@@ -67,9 +67,6 @@ const Form = () => {
         isLabel={true}
         type={"text"}
         labelDescription={"Subject"}
-        // minLength={3}
-        maxLength={1000}
-        required
       />
       <MyTexarea
         value={inputs.message}
@@ -77,11 +74,8 @@ const Form = () => {
         isLabel={true}
         labelDescription={"Message"}
         name={"textarea"}
-        required
         cols={30}
         rows={10}
-        // minLength={3}
-        maxLength={30000}
       />
       <MyButton>Send Message {isLoading && <span>loading...</span>}</MyButton>
       {isMessageSended && <p>Message have been send</p>}

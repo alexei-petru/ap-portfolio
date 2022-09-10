@@ -1,7 +1,7 @@
 import { Popover } from "@mantine/core";
 import * as St from "components/Header/Hero/Hero.styled";
-import MyPopoverDropDown from "components/UI/MyPopover/MyPopover";
-import { StyledPopover } from "components/UI/MyPopover/MyPopover.styled";
+import MyPopoverDropDown from "components/UI/MyPopoverDropdown/MyPopoverDropdown";
+import { StyledPopover } from "components/UI/MyPopoverDropdown/MyPopoverDropdown.styled";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -12,15 +12,15 @@ import { useState } from "react";
 // };
 
 const ApodDescription = () => {
-  const [opened, setOpened] = useState(false);
+  const [isPopoverOpended, setIsPopoverOpended] = useState(false);
 
   return (
     <StyledPopover
       transition={"fade"}
       transitionDuration={450}
       withArrow
-      opened={opened}
-      onChange={setOpened}
+      opened={isPopoverOpended}
+      onChange={setIsPopoverOpended}
     >
       <St.ApodDescription>
         <Image
@@ -32,7 +32,9 @@ const ApodDescription = () => {
           alt="apod description"
         />
         <Popover.Target>
-          <St.ApodParagraphWrapper onClick={() => setOpened((prev) => !prev)}>
+          <St.ApodParagraphWrapper
+            onClick={() => setIsPopoverOpended((prev) => !prev)}
+          >
             <St.ApodParagraph>APOD Dynamic Image</St.ApodParagraph>
           </St.ApodParagraphWrapper>
         </Popover.Target>
@@ -40,7 +42,7 @@ const ApodDescription = () => {
       <MyPopoverDropDown
         buttonInfoIsEnabled={true}
         buttonInfoContent={"FullDescription"}
-        onClickClose={() => setOpened(false)}
+        onClickClose={() => setIsPopoverOpended(false)}
       >
         Background Image is offered by Nasa Apod &quot;Astronomy Picture of the
         Day&quot;

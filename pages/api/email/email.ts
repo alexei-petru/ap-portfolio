@@ -22,15 +22,12 @@ export default async function handler(
 
     let isEmailSended: sendEmailResponseType = false;
 
-    try {
-      if (isInputsValid) {
-        isEmailSended = await sendInputsToEmail(inputs);
-        console.log("isEmailSended server",isEmailSended)
-      }
-    } catch (error) {
-      console.log(error);
-    } finally {
-      res.status(200).json({ isEmailSended });
+    if (isInputsValid) {
+      // isEmailSended = await sendInputsToEmail(inputs);
+      //fake response
+      isEmailSended = true;
+      console.log("isEmailSended server", isEmailSended);
     }
+    res.status(200).json({ isEmailSended });
   }
 }

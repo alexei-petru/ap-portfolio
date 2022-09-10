@@ -1,6 +1,6 @@
 import { Popover } from "@mantine/core";
-import MyPopoverDropDown from "components/UI/MyPopover/MyPopover";
-import { StyledPopover } from "components/UI/MyPopover/MyPopover.styled";
+import MyPopoverDropDown from "components/UI/MyPopoverDropdown/MyPopoverDropdown";
+import { StyledPopover } from "components/UI/MyPopoverDropdown/MyPopoverDropdown.styled";
 import { useState } from "react";
 import { BsInfoCircle } from "react-icons/bs";
 import * as St from "./TitleMain.styled";

@@ -1,17 +1,21 @@
-import React, { TextareaHTMLAttributes } from "react";
+import React from "react";
 import * as St from "./MyTextarea.styled";
-
-interface MyTexarea extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+//
+interface IMyTexarea
+  extends React.DetailedHTMLProps<
+    React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+    HTMLTextAreaElement
+  > {
   labelDescription: string;
   isLabel: boolean;
 }
 
-const MyTexarea = ({ labelDescription, ...props }: MyTexarea) => {
+const MyTexarea = ({ labelDescription, ...props }: IMyTexarea) => {
   return (
     <St.MyTexareaWrapper>
       {props.isLabel && (
         <St.MyTextareaLabel htmlFor={props.name}>
-          {labelDescription} 
+          {labelDescription}
         </St.MyTextareaLabel>
       )}
       <St.MyTextarea {...props} />

@@ -19,3 +19,9 @@ export const Form = styled.form`
     /* margin-left: -18px; */
   } ;
 `;
+
+export const buttonsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
