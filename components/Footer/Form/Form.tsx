@@ -16,22 +16,28 @@ export type inputsType = {
 const Form = () => {
   const [isMessageSended, setIsMessageSended] = useState<null | boolean>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [inputs, setInputs] = useState({
-    email: "",
-    subject: "",
-    message: "",
-  });
+
+  const [emailInput, setEmailInput] = useState({ text: "" });
+  const [subjectInput, setSubjectInput] = useState({ text: "" });
+  const [messageInput, setMessageInput] = useState({ text: "" });
+
+  const inputsText = {
+    email: emailInput.text,
+    subject: subjectInput.text,
+    message: messageInput.text,
+  };
 
   const sumbitInputsValues = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const { validationErrors, isInputsValid } = getInputsValidation(inputs);
+      const { validationErrors, isInputsValid } =
+        getInputsValidation(inputsText);
       if (isInputsValid) {
         setIsLoading(true);
 
         const response = await fetch("/api/email/email", {
           method: "POST",
-          body: JSON.stringify({ inputs }),
+          body: JSON.stringify({ inputsText }),
           headers: {
             "Content-Type": "application/json",
           },
@@ -55,22 +61,26 @@ const Form = () => {
       <ContactMessage />
 
       <MyInput
-        value={inputs.email}
-        onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
+        value={emailInput.text}
+        onChange={(e) => setEmailInput({ ...emailInput, text: e.target.value })}
         isLabel={true}
         type={"email"}
         labelDescription={"Email"}
       />
       <MyInput
-        value={inputs.subject}
-        onChange={(e) => setInputs({ ...inputs, subject: e.target.value })}
+        value={subjectInput.text}
+        onChange={(e) =>
+          setSubjectInput({ ...subjectInput, text: e.target.value })
+        }
         isLabel={true}
         type={"text"}
         labelDescription={"Subject"}
       />
       <MyTexarea
-        value={inputs.message}
-        onChange={(e) => setInputs({ ...inputs, message: e.target.value })}
+        value={messageInput.text}
+        onChange={(e) =>
+          setMessageInput({ ...messageInput, text: e.target.value })
+        }
         isLabel={true}
         labelDescription={"Message"}
         name={"textarea"}
