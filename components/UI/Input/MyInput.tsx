@@ -1,13 +1,13 @@
-import { InputHTMLAttributes } from "react";
 import MyErrorMessage from "../MyErrorMessage/MyErrorMessage";
 import * as St from "./MyInput.styled";
 
-interface MyInputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface MyInputProps extends React.ComponentPropsWithoutRef<"input"> {
   labelDescription: string;
   isLabel: boolean;
+  isError: string;
 }
 
-const MyInput = ({ labelDescription, ...props }: MyInputProps) => {
+const MyInput = ({ labelDescription, isError, ...props }: MyInputProps) => {
   return (
     <St.MyInputWrapper>
       {props.isLabel && (
@@ -16,7 +16,7 @@ const MyInput = ({ labelDescription, ...props }: MyInputProps) => {
         </St.MyInputLabel>
       )}
       <St.MyInput maxLength={1000} {...props} />
-      <MyErrorMessage text={"input must be valid"} />
+      {isError && <MyErrorMessage text={isError} />}
     </St.MyInputWrapper>
   );
 };

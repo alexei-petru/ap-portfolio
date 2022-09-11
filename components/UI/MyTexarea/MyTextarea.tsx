@@ -2,16 +2,13 @@ import React from "react";
 import MyErrorMessage from "../MyErrorMessage/MyErrorMessage";
 import * as St from "./MyTextarea.styled";
 //
-interface IMyTexarea
-  extends React.DetailedHTMLProps<
-    React.TextareaHTMLAttributes<HTMLTextAreaElement>,
-    HTMLTextAreaElement
-  > {
+interface IMyTexarea extends React.ComponentPropsWithoutRef<"textarea"> {
   labelDescription: string;
   isLabel: boolean;
+  isError: string;
 }
 
-const MyTexarea = ({ labelDescription, ...props }: IMyTexarea) => {
+const MyTexarea = ({ labelDescription, isError, ...props }: IMyTexarea) => {
   return (
     <St.MyTexareaWrapper>
       {props.isLabel && (
@@ -20,7 +17,7 @@ const MyTexarea = ({ labelDescription, ...props }: IMyTexarea) => {
         </St.MyTextareaLabel>
       )}
       <St.MyTextarea {...props} />
-      <MyErrorMessage text={"error message"} />
+      {isError && <MyErrorMessage text={isError} />}
     </St.MyTexareaWrapper>
   );
 };

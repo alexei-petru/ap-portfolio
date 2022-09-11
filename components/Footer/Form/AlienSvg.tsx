@@ -31,13 +31,13 @@ const AlienSvg = () => {
         d="M32.4837 10.849C33.977 11.5154 34.5228 12.3316 34.0012 13.1182C33.4795 13.9048 31.933 14.5972 29.7019 15.0432C28.5972 15.2641 27.3577 15.4178 26.0541 15.4955C24.7505 15.5733 23.4084 15.5736 22.1044 15.4965C19.4708 15.3407 17.1524 14.8788 15.6591 14.2124C14.9197 13.8825 14.4051 13.5122 14.1447 13.1229C13.8844 12.7335 13.8833 12.3327 14.1416 11.9432C14.3999 11.5538 14.9126 11.1833 15.6502 10.853C16.3879 10.5227 17.3361 10.239 18.4409 10.0182C19.5456 9.79734 20.7851 9.64365 22.0887 9.56588C23.3923 9.48812 24.7344 9.4878 26.0384 9.56495C27.3424 9.6421 28.5827 9.79521 29.6886 10.0155C30.7945 10.2359 31.7443 10.5191 32.4837 10.849V10.849Z"
         fill="#B3B3B3"
         stroke="black"
-        stroke-width="0.140158"
+        strokeWidth="0.140158"
       />
       <path
         d="M31.1666 11.5347C31.7747 11.806 32.1978 12.1105 32.412 12.4307C32.6261 12.7508 32.6269 13.0805 32.4145 13.4007C32.2021 13.721 31.7806 14.0256 31.1739 14.2973C30.5673 14.5689 29.7875 14.8021 28.8791 14.9837C27.9706 15.1653 26.9513 15.2917 25.8793 15.3557C24.8073 15.4196 23.7036 15.4199 22.6312 15.3564C21.5589 15.293 20.5389 15.1671 19.6295 14.9859C18.7201 14.8047 17.939 14.5718 17.331 14.3005C16.7229 14.0292 16.2998 13.7248 16.0856 13.4046C15.8715 13.0844 15.8707 12.7548 16.0831 12.4345C16.2955 12.1142 16.7171 11.8096 17.3237 11.538C17.9303 11.2664 18.7101 11.0331 19.6186 10.8515C20.527 10.6699 21.5463 10.5435 22.6183 10.4796C23.6903 10.4156 24.794 10.4153 25.8664 10.4788C26.9387 10.5422 27.9587 10.6681 28.8681 10.8493C29.7775 11.0305 30.5586 11.2634 31.1666 11.5347V11.5347Z"
         fill="white"
         stroke="black"
-        stroke-width="0.140158"
+        strokeWidth="0.140158"
       />
       <g filter="url(#filter0_f_209_676)">
         <path
@@ -229,17 +229,17 @@ const AlienSvg = () => {
       </g>
       <g opacity="0.512" filter="url(#filter24_f_209_676)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M31.0527 10.9915L51.6077 51.0118L8.53989 50.7616L17.4381 13.7411C21.4112 10.6078 26.1301 9.45395 31.0524 10.9896L31.0527 10.9915Z"
           fill="white"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M31.0527 10.9915L51.6077 51.0118L8.53989 50.7616L17.4381 13.7411C21.4112 10.6078 26.1301 9.45395 31.0524 10.9896L31.0527 10.9915Z"
           stroke="black"
-          stroke-width="0.0265"
+          strokeWidth="0.0265"
         />
       </g>
       <defs>
@@ -250,9 +250,9 @@ const AlienSvg = () => {
           width="18.735"
           height="7.05861"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -271,9 +271,9 @@ const AlienSvg = () => {
           width="18.7351"
           height="7.05861"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -292,9 +292,9 @@ const AlienSvg = () => {
           width="1.31151"
           height="0.962299"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -313,9 +313,9 @@ const AlienSvg = () => {
           width="1.29446"
           height="0.945252"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -334,9 +334,9 @@ const AlienSvg = () => {
           width="1.22678"
           height="0.951142"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -355,9 +355,9 @@ const AlienSvg = () => {
           width="1.1893"
           height="0.91367"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -376,9 +376,9 @@ const AlienSvg = () => {
           width="1.13474"
           height="0.879826"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -397,9 +397,9 @@ const AlienSvg = () => {
           width="1.10008"
           height="0.845165"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -418,9 +418,9 @@ const AlienSvg = () => {
           width="1.01467"
           height="0.786761"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -439,9 +439,9 @@ const AlienSvg = () => {
           width="0.983673"
           height="0.755768"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -460,9 +460,9 @@ const AlienSvg = () => {
           width="0.788983"
           height="0.611737"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -481,9 +481,9 @@ const AlienSvg = () => {
           width="0.764884"
           height="0.587638"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -502,9 +502,9 @@ const AlienSvg = () => {
           width="0.834505"
           height="0.647036"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -523,9 +523,9 @@ const AlienSvg = () => {
           width="0.809015"
           height="0.621545"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -544,9 +544,9 @@ const AlienSvg = () => {
           width="0.774416"
           height="0.600374"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -565,9 +565,9 @@ const AlienSvg = () => {
           width="0.750761"
           height="0.576719"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -586,9 +586,9 @@ const AlienSvg = () => {
           width="1.00785"
           height="0.781438"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -607,9 +607,9 @@ const AlienSvg = () => {
           width="0.977063"
           height="0.750653"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -628,9 +628,9 @@ const AlienSvg = () => {
           width="1.49506"
           height="1.15928"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -649,9 +649,9 @@ const AlienSvg = () => {
           width="1.4494"
           height="1.11361"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -670,9 +670,9 @@ const AlienSvg = () => {
           width="1.25489"
           height="0.972904"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -691,9 +691,9 @@ const AlienSvg = () => {
           width="1.21656"
           height="0.934573"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -712,9 +712,9 @@ const AlienSvg = () => {
           width="0.474214"
           height="0.367586"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -733,9 +733,9 @@ const AlienSvg = () => {
           width="0.459699"
           height="0.353101"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -754,9 +754,9 @@ const AlienSvg = () => {
           width="43.9387"
           height="41.5563"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -776,8 +776,8 @@ const AlienSvg = () => {
           y2="6.30921"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFC800" />
-          <stop offset="1" stop-color="#C57101" />
+          <stop stopColor="#FFC800" />
+          <stop offset="1" stopColor="#C57101" />
         </linearGradient>
         <radialGradient
           id="paint1_radial_209_676"
@@ -787,8 +787,8 @@ const AlienSvg = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(23.3606 22.1261) rotate(-73.3485) scale(40.5978 12.774)"
         >
-          <stop stop-color="#570000" />
-          <stop offset="1" stop-color="#CE0000" />
+          <stop stopColor="#570000" />
+          <stop offset="1" stopColor="#CE0000" />
         </radialGradient>
         <linearGradient
           id="paint2_linear_209_676"
@@ -798,8 +798,8 @@ const AlienSvg = () => {
           y2="21.1568"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#570000" />
-          <stop offset="1" stop-color="#FF0000" />
+          <stop stopColor="#570000" />
+          <stop offset="1" stopColor="#FF0000" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_209_676"
@@ -809,8 +809,8 @@ const AlienSvg = () => {
           y2="7.31425"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFC800" />
-          <stop offset="1" stop-color="#C57101" />
+          <stop stopColor="#FFC800" />
+          <stop offset="1" stopColor="#C57101" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_209_676"
@@ -820,8 +820,8 @@ const AlienSvg = () => {
           y2="7.75126"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_209_676"
@@ -831,8 +831,8 @@ const AlienSvg = () => {
           y2="6.60013"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFC800" />
-          <stop offset="1" stop-color="#C57101" />
+          <stop stopColor="#FFC800" />
+          <stop offset="1" stopColor="#C57101" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_209_676"
@@ -842,8 +842,8 @@ const AlienSvg = () => {
           y2="6.94486"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_209_676"
@@ -853,8 +853,8 @@ const AlienSvg = () => {
           y2="6.89713"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFC800" />
-          <stop offset="1" stop-color="#C57101" />
+          <stop stopColor="#FFC800" />
+          <stop offset="1" stopColor="#C57101" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_209_676"
@@ -864,8 +864,8 @@ const AlienSvg = () => {
           y2="7.216"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint9_linear_209_676"
@@ -875,8 +875,8 @@ const AlienSvg = () => {
           y2="8.57927"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFC800" />
-          <stop offset="1" stop-color="#C57101" />
+          <stop stopColor="#FFC800" />
+          <stop offset="1" stopColor="#C57101" />
         </linearGradient>
         <linearGradient
           id="paint10_linear_209_676"
@@ -886,8 +886,8 @@ const AlienSvg = () => {
           y2="8.86439"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint11_linear_209_676"
@@ -897,8 +897,8 @@ const AlienSvg = () => {
           y2="11.7765"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFC800" />
-          <stop offset="1" stop-color="#C57101" />
+          <stop stopColor="#FFC800" />
+          <stop offset="1" stopColor="#C57101" />
         </linearGradient>
         <linearGradient
           id="paint12_linear_209_676"
@@ -908,8 +908,8 @@ const AlienSvg = () => {
           y2="11.9982"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint13_linear_209_676"
@@ -919,8 +919,8 @@ const AlienSvg = () => {
           y2="13.9036"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFC800" />
-          <stop offset="1" stop-color="#C57101" />
+          <stop stopColor="#FFC800" />
+          <stop offset="1" stopColor="#C57101" />
         </linearGradient>
         <linearGradient
           id="paint14_linear_209_676"
@@ -930,8 +930,8 @@ const AlienSvg = () => {
           y2="14.1381"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint15_linear_209_676"
@@ -941,8 +941,8 @@ const AlienSvg = () => {
           y2="16.6706"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFC800" />
-          <stop offset="1" stop-color="#C57101" />
+          <stop stopColor="#FFC800" />
+          <stop offset="1" stopColor="#C57101" />
         </linearGradient>
         <linearGradient
           id="paint16_linear_209_676"
@@ -952,8 +952,8 @@ const AlienSvg = () => {
           y2="16.8882"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint17_linear_209_676"
@@ -963,8 +963,8 @@ const AlienSvg = () => {
           y2="15.9289"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFC800" />
-          <stop offset="1" stop-color="#C57101" />
+          <stop stopColor="#FFC800" />
+          <stop offset="1" stopColor="#C57101" />
         </linearGradient>
         <linearGradient
           id="paint18_linear_209_676"
@@ -974,8 +974,8 @@ const AlienSvg = () => {
           y2="16.2121"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint19_linear_209_676"
@@ -985,8 +985,8 @@ const AlienSvg = () => {
           y2="12.7069"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFC800" />
-          <stop offset="1" stop-color="#C57101" />
+          <stop stopColor="#FFC800" />
+          <stop offset="1" stopColor="#C57101" />
         </linearGradient>
         <linearGradient
           id="paint20_linear_209_676"
@@ -996,8 +996,8 @@ const AlienSvg = () => {
           y2="13.127"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint21_linear_209_676"
@@ -1007,8 +1007,8 @@ const AlienSvg = () => {
           y2="9.06755"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFC800" />
-          <stop offset="1" stop-color="#C57101" />
+          <stop stopColor="#FFC800" />
+          <stop offset="1" stopColor="#C57101" />
         </linearGradient>
         <linearGradient
           id="paint22_linear_209_676"
@@ -1018,8 +1018,8 @@ const AlienSvg = () => {
           y2="9.42018"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint23_linear_209_676"
@@ -1029,8 +1029,8 @@ const AlienSvg = () => {
           y2="16.3226"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFC800" />
-          <stop offset="1" stop-color="#C57101" />
+          <stop stopColor="#FFC800" />
+          <stop offset="1" stopColor="#C57101" />
         </linearGradient>
         <linearGradient
           id="paint24_linear_209_676"
@@ -1040,8 +1040,8 @@ const AlienSvg = () => {
           y2="16.4558"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

@@ -1,4 +1,9 @@
+import { css, keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+import MyErrorMessage from "components/UI/MyErrorMessage/MyErrorMessage";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { BsCheckCircle } from "react-icons/bs";
+import { VscError } from "react-icons/vsc";
 
 export const Form = styled.form`
   display: flex;
@@ -24,4 +29,62 @@ export const buttonsWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+`;
+
+interface FormSubmitTypes {
+  isMessageSended?: boolean | null;
+  color?: string;
+}
+
+export const FormStatus = styled.div<FormSubmitTypes>`
+  display: flex;
+  justify-content: ${(props) =>
+    props.isMessageSended === null ? "flex-start" : "space-between"};
+  justify-content: space-between;
+  width: 100%;
+`;
+
+const isMessageSendedStyle = css`
+  height: 25px;
+  width: 25px;
+`;
+
+export const BsCheck = styled(
+  ({ isMessageSended, color, ...rest }: FormSubmitTypes) => (
+    <BsCheckCircle {...rest} />
+  )
+)`
+  ${isMessageSendedStyle}
+  fill: #07ca21;
+  display: ${(props) =>
+    props.isMessageSended === true ? "inline-block" : "none"};
+`;
+
+export const VscErr = styled(
+  ({ isMessageSended, ...rest }: FormSubmitTypes) => <VscError {...rest} />
+)`
+  ${isMessageSendedStyle}
+  fill: #ca0707;
+  display: ${(props) =>
+    props.isMessageSended === false ? "inline-block" : "none"};
+`;
+
+const spin = keyframes`
+    100% { 
+        transform:rotate(360deg); 
+    } 
+`;
+
+export const AiOutlineLoading3Quart = styled(AiOutlineLoading3Quarters)`
+  animation: ${spin} 0.9s ease infinite;
+  fill: blue;
+  ${isMessageSendedStyle}
+  /* padding: 5px; */
+`;
+
+export const FormDeliverMessage = styled(MyErrorMessage)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: ${(props) => props.color};
 `;

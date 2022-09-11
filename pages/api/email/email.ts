@@ -1,15 +1,17 @@
 import { inputsType } from "components/Footer/Form/Form";
 import { NextApiRequest, NextApiResponse } from "next";
 import { getInputsValidation } from "utils/getInputsValidation";
-import { sendInputsToEmail } from "./sendInputsToEmail";
-import { sendEmailResponseType } from "./sendInputsToEmail";
+import {
+  sendEmailResponseType,
+  sendInputsToEmail,
+} from "./sendInputsToEmail";
 
 export type emailResponseType = {
   isEmailSended: sendEmailResponseType;
 };
 
-interface Iinputs {
-  inputs: inputsType;
+interface IinputsText {
+  inputsText: inputsType;
 }
 
 export default async function handler(
@@ -17,16 +19,13 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "POST") {
-    const { inputs }: Iinputs = req.body;
-    const { isInputsValid } = getInputsValidation(inputs);
+    const { inputsText }: IinputsText = req.body;
+    const { isInputsValid } = getInputsValidation(inputsText);
 
     let isEmailSended: sendEmailResponseType = false;
 
     if (isInputsValid) {
-      // isEmailSended = await sendInputsToEmail(inputs);
-      //fake response
-      isEmailSended = true;
-      console.log("isEmailSended server", isEmailSended);
+      isEmailSended = await sendInputsToEmail(inputsText);
     }
     res.status(200).json({ isEmailSended });
   }

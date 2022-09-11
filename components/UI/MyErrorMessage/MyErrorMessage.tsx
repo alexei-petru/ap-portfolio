@@ -6,11 +6,11 @@ interface MyErrorMessageProps
     React.ParamHTMLAttributes<HTMLParagraphElement>,
     HTMLParagraphElement
   > {
-  text: string;
+  text?: string;
 }
 
-const MyErrorMessage = ({ text, ...props }: MyErrorMessageProps) => {
-  return <St.ErrorMessage {...props}>{text}</St.ErrorMessage>;
+const MyErrorMessage = ({ children, text, ...props }: MyErrorMessageProps) => {
+  return <St.ErrorMessage {...props}>{text || children}</St.ErrorMessage>;
 };
 
 export default MyErrorMessage;

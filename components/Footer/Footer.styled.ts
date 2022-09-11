@@ -12,15 +12,12 @@ export const FooterInnerWrapper = styled.div`
   height: 565px;
   align-items: start;
 
-  @media (max-width: 885px) {
-    padding: 40px;
-  }
-
   @media (max-width: 735px) {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
     justify-content: space-between;
+    align-items: center;
     height: calc(var(--contact-item-size) * 2 + 125px);
   }
   /* :before {
