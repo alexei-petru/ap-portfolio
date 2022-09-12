@@ -23,8 +23,8 @@ const testEmailTransporter = {
 };
 
 export const sendInputsToEmail = async (inputs: inputsType) => {
-  const transporter = nodemailer.createTransport(mainEmailTransporter);
-  // const transporter = nodemailer.createTransport(testEmailTransporter);
+  // const transporter = nodemailer.createTransport(mainEmailTransporter);
+  const transporter = nodemailer.createTransport(testEmailTransporter);
 
   const mainEmailOptions = {
     from: process.env.ZOHO_EMAIL_SEND,
@@ -51,8 +51,8 @@ export const sendInputsToEmail = async (inputs: inputsType) => {
   let response: sendEmailResponseType = false;
 
   try {
-    const info = await transporter.sendMail(mainEmailOptions);
-    // const info = await transporter.sendMail(testEmailOptions);
+    // const info = await transporter.sendMail(mainEmailOptions);
+    const info = await transporter.sendMail(testEmailOptions);
     if (info) {
       response = true;
     }

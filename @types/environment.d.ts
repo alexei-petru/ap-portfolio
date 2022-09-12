@@ -7,6 +7,7 @@ declare global {
       ETHERAL_PSW_APP_SEND: string;
       ZOHO_EMAIL_SEND: string;
       ZOHO_PSW_SEND: string;
+      HCAPTCHA_SITE_KEY: string;
     }
   }
 }

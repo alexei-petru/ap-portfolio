@@ -1,12 +1,12 @@
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 import AlienSvg from "components/Footer/Form/AlienSvg";
 import MyInput from "components/UI/Input/MyInput";
 import { MyButton } from "components/UI/MyButton/MyButton.styled";
 import MyTexarea from "components/UI/MyTexarea/MyTextarea";
 import { emailResponseType } from "pages/api/email/email";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { getInputsValidation } from "utils/getInputsValidation";
 import ContactMessage from "../ContactMessage/ContactMessage";
-
 import * as St from "./Form.styled";
 
 export type inputsType = {
@@ -19,6 +19,7 @@ const Form = () => {
   const [isMessageSended, setIsMessageSended] = useState<null | boolean>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isFormJustReseted, setIsFormJustReseted] = useState(false);
+  const [token, setToken] = useState<null | string>(null);
 
   const [emailInputText, setEmailInputText] = useState("");
   const [subjectInputText, setSubjectInputText] = useState("");
@@ -36,6 +37,8 @@ const Form = () => {
     message: "",
   });
 
+  const captchaRef = useRef<HCaptcha>(null);
+
   const resetInputTextFields = () => {
     setEmailInputText("");
     setSubjectInputText("");
@@ -48,6 +51,7 @@ const Form = () => {
       const { validationErrors, isInputsValid } =
         getInputsValidation(inputsText);
       if (isInputsValid) {
+        captchaRef.current && captchaRef.current.execute();
         setIsMessageSended(null);
         setIsLoading(true);
 
@@ -93,13 +97,22 @@ const Form = () => {
     // if (!isFormJustReseted) {
     //   setIsMessageSended(null);
     // }
+    setInputsErrors({ email: "", subject: "", message: "" });
     setIsMessageSended(null);
   }, [emailInputText, subjectInputText, messageInputText]);
+
+  const handleVerificationSuccess = (token, ekey) => {
+    console.log("token", token);
+    console.log("ekey", ekey);
+  };
+
+  useEffect(() => {
+    if (token) console.log(`hCaptcha Token: ${token}`);
+  }, [token]);
 
   return (
     <St.Form onSubmit={sumbitInputsValues} noValidate>
       <ContactMessage />
-
       <MyInput
         value={emailInputText}
         onChange={(e) => setEmailInputText(e.target.value)}
@@ -145,6 +158,11 @@ const Form = () => {
           </St.FormDeliverMessage>
         )}
       </St.FormStatus>
+      {/* <HCaptcha
+        sitekey={"ede863f0-f565-47cd-a488-5bd2f49904ef"}
+        onVerify={setToken}
+        ref={captchaRef}
+      /> */}
     </St.Form>
   );
 };

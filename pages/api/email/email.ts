@@ -1,10 +1,7 @@
 import { inputsType } from "components/Footer/Form/Form";
 import { NextApiRequest, NextApiResponse } from "next";
 import { getInputsValidation } from "utils/getInputsValidation";
-import {
-  sendEmailResponseType,
-  sendInputsToEmail,
-} from "./sendInputsToEmail";
+import { sendEmailResponseType, sendInputsToEmail } from "./sendInputsToEmail";
 
 export type emailResponseType = {
   isEmailSended: sendEmailResponseType;
@@ -27,6 +24,7 @@ export default async function handler(
     if (isInputsValid) {
       isEmailSended = await sendInputsToEmail(inputsText);
     }
+    console.log(process.env.TEST_EMAIL);
     res.status(200).json({ isEmailSended });
   }
 }

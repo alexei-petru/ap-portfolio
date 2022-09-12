@@ -9,10 +9,8 @@
 ### _To Do_
 
 #### High-Priority
-- loader leaflet
-- email api
+- implement long response time form
 - repatcha/hcaptcha 
-- change to zod validator
 - refactor nth-of-type hero
 - 404 page
 - change apod to header
