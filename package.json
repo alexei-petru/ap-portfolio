@@ -17,6 +17,7 @@
     "@mantine/hooks": "^5.2.0",
     "@mantine/next": "^5.2.0",
     "@types/hcaptcha__react-hcaptcha": "^0.1.5",
+    "hcaptcha": "^0.1.1",
     "leaflet": "^1.8.0",
     "next": "latest",
     "nodemailer": "^6.7.8",

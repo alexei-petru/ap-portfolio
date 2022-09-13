@@ -4,12 +4,14 @@ import Image from "next/image";
 
 export const Footer = styled.footer``;
 
-export const FooterTitle = styled(StyledTitleSection)``;
+export const FooterTitle = styled(StyledTitleSection)`
+  padding: 17px 0 25px 0;
+`;
 
 export const FooterInnerWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  height: 565px;
+  height: 590px;
   align-items: start;
 
   @media (max-width: 735px) {

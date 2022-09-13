@@ -30,7 +30,7 @@ export const GlobalStyle = css`
     --text-regular-small: 400 15px/17px var(--font-family-secondary);
 
     //sizes
-    --contact-item-size: 469px;
+    --contact-item-size: 518px;
   }
 
   html {

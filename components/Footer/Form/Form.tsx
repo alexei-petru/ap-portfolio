@@ -19,7 +19,7 @@ const Form = () => {
   const [isMessageSended, setIsMessageSended] = useState<null | boolean>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isFormJustReseted, setIsFormJustReseted] = useState(false);
-  const [token, setToken] = useState<null | string>(null);
+  const [formVerifyToken, setFormVerifyToken] = useState<null | string>(null);
 
   const [emailInputText, setEmailInputText] = useState("");
   const [subjectInputText, setSubjectInputText] = useState("");
@@ -52,23 +52,20 @@ const Form = () => {
         getInputsValidation(inputsText);
       setIsMessageSended(null);
       setIsLoading(true);
-      if (isInputsValid) {
-        captchaRef.current && captchaRef.current.execute();
 
+      if (isInputsValid) {
+        if (!formVerifyToken) {
+          captchaRef.current && captchaRef.current.execute();
+        }
         const response = await fetch("/api/email/email", {
           method: "POST",
-          body: JSON.stringify({ inputsText }),
+          body: JSON.stringify({ inputsText, formVerifyToken }),
           headers: {
             "Content-Type": "application/json",
           },
         });
         const responseData: Promise<emailResponseType> = await response.json();
         const isEmailSendedResponse = (await responseData).isEmailSended;
-        // setIsLoading(false);
-        // if (isEmailSendedResponse) {
-        //   resetInputTextFields();
-        //   setIsFormJustReseted(true);
-        // }
         setIsMessageSended(isEmailSendedResponse);
       } else if (validationErrors) {
         let errors = {};
@@ -87,6 +84,7 @@ const Form = () => {
       setIsMessageSended(false);
     } finally {
       setIsLoading(false);
+      setFormVerifyToken(null);
     }
   };
 
@@ -102,15 +100,6 @@ const Form = () => {
     setInputsErrors({ email: "", subject: "", message: "" });
     setIsMessageSended(null);
   }, [emailInputText, subjectInputText, messageInputText]);
-
-  const handleVerificationSuccess = (token, ekey) => {
-    console.log("token", token);
-    console.log("ekey", ekey);
-  };
-
-  useEffect(() => {
-    if (token) console.log(`hCaptcha Token: ${token}`);
-  }, [token]);
 
   return (
     <St.Form onSubmit={sumbitInputsValues} noValidate>
@@ -141,6 +130,13 @@ const Form = () => {
         rows={10}
         isError={inputsErrors.message}
       />
+      <HCaptcha
+        sitekey={"ede863f0-f565-47cd-a488-5bd2f49904ef"}
+        onVerify={setFormVerifyToken}
+        ref={captchaRef}
+        // size={"invisible"}
+        theme="dark"
+      />
       <St.FormStatus isMessageSended={isMessageSended}>
         <MyButton>
           Send Message
@@ -160,11 +156,6 @@ const Form = () => {
           </St.FormDeliverMessage>
         )}
       </St.FormStatus>
-      {/* <HCaptcha
-        sitekey={"ede863f0-f565-47cd-a488-5bd2f49904ef"}
-        onVerify={setToken}
-        ref={captchaRef}
-      /> */}
     </St.Form>
   );
 };

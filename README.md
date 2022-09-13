@@ -9,8 +9,9 @@
 ### _To Do_
 
 #### High-Priority
+- on form reset inputs do not change send state
 - implement long response time form
-- repatcha/hcaptcha 
+- repatcha/hcaptcha
 - refactor nth-of-type hero
 - 404 page
 - change apod to header
@@ -21,14 +22,16 @@
 - header with **dynamic apod images**
 - particles hero/main
 - animations navbar/hero-userImg/form-send
+- change env for diferent stages "sendInputsToEmail refactor"
 
 #### Low-Priority
+
 - ufo animation form
 - add contact info popover "feel free to contact...."
 - improve overall design
-- disable padding container form 
-- add footer copyright white space
-
+- disable padding container form
+-  footer copyright fix remove pos absolute
 
 #### bugs not understandable
-*  //bug with react minlength not working?   value={inputs.message} myTextarea
+
+- //bug with react minlength not working? value={inputs.message} myTextarea
