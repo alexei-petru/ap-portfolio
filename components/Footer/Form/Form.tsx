@@ -50,10 +50,10 @@ const Form = () => {
     try {
       const { validationErrors, isInputsValid } =
         getInputsValidation(inputsText);
+      setIsMessageSended(null);
+      setIsLoading(true);
       if (isInputsValid) {
         captchaRef.current && captchaRef.current.execute();
-        setIsMessageSended(null);
-        setIsLoading(true);
 
         const response = await fetch("/api/email/email", {
           method: "POST",
@@ -63,9 +63,8 @@ const Form = () => {
           },
         });
         const responseData: Promise<emailResponseType> = await response.json();
-
         const isEmailSendedResponse = (await responseData).isEmailSended;
-        setIsLoading(false);
+        // setIsLoading(false);
         // if (isEmailSendedResponse) {
         //   resetInputTextFields();
         //   setIsFormJustReseted(true);
@@ -85,6 +84,9 @@ const Form = () => {
       }
     } catch (error) {
       console.log(error);
+      setIsMessageSended(false);
+    } finally {
+      setIsLoading(false);
     }
   };
 

@@ -24,7 +24,6 @@ export default async function handler(
     if (isInputsValid) {
       isEmailSended = await sendInputsToEmail(inputsText);
     }
-    console.log(process.env.TEST_EMAIL);
     res.status(200).json({ isEmailSended });
   }
 }

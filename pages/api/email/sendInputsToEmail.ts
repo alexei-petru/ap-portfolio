@@ -11,6 +11,7 @@ const mainEmailTransporter = {
     user: process.env.ZOHO_EMAIL_SEND,
     pass: process.env.ZOHO_PSW_SEND,
   },
+  tls: { rejectUnauthorized: false },
 };
 
 const testEmailTransporter = {
@@ -20,17 +21,17 @@ const testEmailTransporter = {
     user: process.env.ETHERAL_LOGIN_APP_SEND,
     pass: process.env.ETHERAL_PSW_APP_SEND,
   },
+  tls: { rejectUnauthorized: false },
 };
 
 export const sendInputsToEmail = async (inputs: inputsType) => {
-  // const transporter = nodemailer.createTransport(mainEmailTransporter);
-  const transporter = nodemailer.createTransport(testEmailTransporter);
-
+  const transporter = nodemailer.createTransport(mainEmailTransporter);
+  // const transporter = nodemailer.createTransport(testEmailTransporter);
   const mainEmailOptions = {
     from: process.env.ZOHO_EMAIL_SEND,
     to: process.env.EMAIL_LOGIN_RECEIVE,
     subject: `a.p portfolio:${inputs.subject}`,
-    text: `${inputs.message} `,
+    text: `${inputs.message}`,
     html: `<h3>Subject:${inputs.subject} </h3>
     <h5>From ${inputs.email}</h5>
      <p>Message:${inputs.message} </p>
@@ -41,7 +42,7 @@ export const sendInputsToEmail = async (inputs: inputsType) => {
     from: inputs.email,
     to: process.env.ETHERAL_LOGIN_APP_SEND,
     subject: `a.p portfolio:${inputs.subject}`,
-    text: `${inputs.message} `,
+    text: `${inputs.message}`,
     html: `<h3>Subject:${inputs.subject} </h3>
     <h5>From ${inputs.email}</h5>
      <p>Message:${inputs.message} </p>
@@ -51,13 +52,12 @@ export const sendInputsToEmail = async (inputs: inputsType) => {
   let response: sendEmailResponseType = false;
 
   try {
-    // const info = await transporter.sendMail(mainEmailOptions);
-    const info = await transporter.sendMail(testEmailOptions);
+    const info = await transporter.sendMail(mainEmailOptions);
+    // const info = await transporter.sendMail(testEmailOptions);
     if (info) {
       response = true;
     }
   } catch (error) {
-    console.log("an Error ocurred", error);
     response = false;
   } finally {
     return response;
