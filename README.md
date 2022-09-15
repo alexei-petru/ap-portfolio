@@ -9,6 +9,7 @@
 ### _To Do_
 
 #### High-Priority
+
 - on form reset inputs do not change send state
 - implement long response time form
 - repatcha/hcaptcha
@@ -26,11 +27,12 @@
 
 #### Low-Priority
 
-- ufo animation form
+- ufo animation form yellow/blue/green/red fly
 - add contact info popover "feel free to contact...."
-- improve overall design
 - disable padding container form
--  footer copyright fix remove pos absolute
+- footer copyright fix remove pos absolute
+- skeleton footer captcha
+- improve overall design
 
 #### bugs not understandable
 

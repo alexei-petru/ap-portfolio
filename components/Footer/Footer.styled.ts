@@ -11,7 +11,7 @@ export const FooterTitle = styled(StyledTitleSection)`
 export const FooterInnerWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  height: 590px;
+  height: 600px;
   align-items: start;
 
   @media (max-width: 735px) {
@@ -20,7 +20,7 @@ export const FooterInnerWrapper = styled.div`
     /* align-items: center; */
     justify-content: space-between;
     align-items: center;
-    height: calc(var(--contact-item-size) * 2 + 125px);
+    height: calc(var(--contact-item-height) * 2 + 125px);
   }
   /* :before {
     content: " ";
@@ -53,8 +53,7 @@ export const StyledImage = styled(Image)`
 
 export const footerCopyright = styled.p`
   text-align: center;
-  padding-bottom: 16px;
   font: var(--text-regular-small);
   position: absolute;
-  bottom: 6px;
+  bottom: 10px;
 `;

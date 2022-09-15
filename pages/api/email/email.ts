@@ -13,7 +13,7 @@ interface formReqI {
   formVerifyToken: string;
 }
 
-const getTokenValidity = async (token) => {
+const getTokenValidity = async (token: string) => {
   const SECRET_KEY = process.env.HCAPTCHA_SECRET_PSW;
   let response = false;
 
@@ -39,12 +39,11 @@ export default async function handler(
     const { inputsText, formVerifyToken }: formReqI = req.body;
     const { isInputsValid } = getInputsValidation(inputsText);
 
-    const isTokenValid = getTokenValidity(formVerifyToken);
+    const isTokenValid = await getTokenValidity(formVerifyToken);
 
-    let isEmailSended: sendEmailResponseType = false;
-    if (isInputsValid) {
+    let isEmailSended: sendEmailResponseType = true;
+    if (isInputsValid && isTokenValid) {
       // isEmailSended = await sendInputsToEmail(inputsText);
-      isEmailSended = true;
     }
     res.status(200).json({ isEmailSended });
   }

@@ -3,6 +3,7 @@ import AlienSvg from "components/Footer/Form/AlienSvg";
 import MyInput from "components/UI/Input/MyInput";
 import { MyButton } from "components/UI/MyButton/MyButton.styled";
 import MyTexarea from "components/UI/MyTexarea/MyTextarea";
+import Joi from "joi";
 import { emailResponseType } from "pages/api/email/email";
 import React, { useEffect, useRef, useState } from "react";
 import { getInputsValidation } from "utils/getInputsValidation";
@@ -13,6 +14,46 @@ export type inputsType = {
   email: string;
   subject: string;
   message: string;
+};
+
+const sendFormDataToSrv = async (
+  inputsText: inputsType,
+  formVerifyToken: string
+) => {
+  const response = await fetch("/api/email/email", {
+    method: "POST",
+    body: JSON.stringify({ inputsText, formVerifyToken }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const responseData: Promise<emailResponseType> = await response.json();
+  const isEmailSendedResponse = (await responseData).isEmailSended;
+
+  return isEmailSendedResponse;
+};
+
+const updateErrorsMessages = (
+  validationErrors: Joi.ValidationErrorItem[],
+  setInputsErrors: React.Dispatch<
+    React.SetStateAction<{
+      email: string;
+      subject: string;
+      message: string;
+    }>
+  >,
+  inputsErrors: inputsType
+) => {
+  let errors = {};
+  for (const object of validationErrors) {
+    if (object.context?.key) {
+      errors[object.context.key] = object.message;
+    }
+    setInputsErrors({
+      ...inputsErrors,
+      ...errors,
+    });
+  }
 };
 
 const Form = () => {
@@ -37,6 +78,8 @@ const Form = () => {
     message: "",
   });
 
+  const captchaError: null | boolean = null;
+
   const captchaRef = useRef<HCaptcha>(null);
 
   const resetInputTextFields = () => {
@@ -54,30 +97,21 @@ const Form = () => {
       setIsLoading(true);
 
       if (isInputsValid) {
+        // let hCaptchaExecuteResponse;
         if (!formVerifyToken) {
-          captchaRef.current && captchaRef.current.execute();
+          captchaRef.current && captchaRef.current.execute({ async: true });
+          console.log("formVerifyToken", formVerifyToken);
+        } else {
+          const isEmailSended = await sendFormDataToSrv(
+            inputsText,
+            formVerifyToken
+          );
+          setIsMessageSended(isEmailSended);
         }
-        const response = await fetch("/api/email/email", {
-          method: "POST",
-          body: JSON.stringify({ inputsText, formVerifyToken }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        const responseData: Promise<emailResponseType> = await response.json();
-        const isEmailSendedResponse = (await responseData).isEmailSended;
-        setIsMessageSended(isEmailSendedResponse);
+
+        setFormVerifyToken(null);
       } else if (validationErrors) {
-        let errors = {};
-        for (const object of validationErrors) {
-          if (object.context?.key) {
-            errors[object.context.key] = object.message;
-          }
-          setInputsErrors({
-            ...inputsErrors,
-            ...errors,
-          });
-        }
+        updateErrorsMessages(validationErrors, setInputsErrors, inputsErrors);
       }
     } catch (error) {
       console.log(error);
@@ -134,7 +168,6 @@ const Form = () => {
         sitekey={"ede863f0-f565-47cd-a488-5bd2f49904ef"}
         onVerify={setFormVerifyToken}
         ref={captchaRef}
-        // size={"invisible"}
         theme="dark"
       />
       <St.FormStatus isMessageSended={isMessageSended}>

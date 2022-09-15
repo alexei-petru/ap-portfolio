@@ -15,7 +15,7 @@ export const Form = styled.form`
   border-radius: 5px;
   min-width: 300px;
   max-width: 335px;
-  height: var(--contact-item-size);
+  height: var(--contact-item-height);
   background: #120449;
   background: linear-gradient(15deg, #3e7134 15%, #120449 92%);
 

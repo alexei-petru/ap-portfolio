@@ -2,11 +2,12 @@ import styled from "@emotion/styled";
 
 export const MapWrapper = styled.div`
   position: relative;
-  height: var(--contact-item-size);
+  height: var(--contact-item-height);
   display: flex;
   color: black;
   .leaflet-container {
-    width: 50%;
+    width: var(--contact-item-width);
+    height: var(--contact-item-height);
     min-width: 300px;
   }
   .leaflet-control-zoom span {
