@@ -1,5 +1,6 @@
 import { css, keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 import MyErrorMessage from "components/UI/MyErrorMessage/MyErrorMessage";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { BsCheckCircle } from "react-icons/bs";
@@ -78,8 +79,7 @@ const spin = keyframes`
 export const AiOutlineLoading3Quart = styled(AiOutlineLoading3Quarters)`
   animation: ${spin} 0.9s ease infinite;
   fill: blue;
-  ${isMessageSendedStyle}
-  /* padding: 5px; */
+  ${isMessageSendedStyle}/* padding: 5px; */
 `;
 
 export const FormDeliverMessage = styled(MyErrorMessage)`

@@ -2,7 +2,7 @@
 
 ### nextJs, Tyspescript, styled-components, APOD_API, Nodemailer
 
-## Starter demo https://ap-portfolio-ten.vercel.app/
+## Starter demo v0.1 https://ap-portfolio-ten.vercel.app/
 
 ---
 
@@ -10,17 +10,17 @@
 
 #### High-Priority
 
-- on form reset inputs do not change send state
-- implement long response time form
-- repatcha/hcaptcha
+- write tests form
 - refactor nth-of-type hero
+- header with dynamic apod images
 - 404 page
 - change apod to header
+- implement long response time form
+- hCaptcha onClose functionality
 
 #### Medium-Priority
 
 - change css variables to constants
-- header with **dynamic apod images**
 - particles hero/main
 - animations navbar/hero-userImg/form-send
 - change env for diferent stages "sendInputsToEmail refactor"

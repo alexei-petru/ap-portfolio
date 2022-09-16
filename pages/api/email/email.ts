@@ -14,21 +14,20 @@ interface formReqI {
 }
 
 const getTokenValidity = async (token: string) => {
-  const SECRET_KEY = process.env.HCAPTCHA_SECRET_PSW;
-  let response = false;
+  const SECRET_KEY = process.env.HCAPTCHA_SECRET_PSW!;
+  let response: boolean = false;
+  const SITE_KEY = process.env.HCAPTCHA_SITE_KEY;
 
-  if (SECRET_KEY) {
-    verify(SECRET_KEY, token)
-      .then((data) => {
-        if (data.success === true) {
-          console.log("success!", data);
-        } else {
-          console.log("verification failed");
-        }
-      })
-      .catch(console.error);
+  try {
+    const verifyData = await verify(SECRET_KEY, token, undefined, SITE_KEY);
+    if (verifyData.success === true) {
+      response = true;
+    }
+  } catch (error) {
+    response = false;
+  } finally {
+    return response;
   }
-  return response;
 };
 
 export default async function handler(
@@ -41,9 +40,9 @@ export default async function handler(
 
     const isTokenValid = await getTokenValidity(formVerifyToken);
 
-    let isEmailSended: sendEmailResponseType = true;
+    let isEmailSended: sendEmailResponseType = false;
     if (isInputsValid && isTokenValid) {
-      // isEmailSended = await sendInputsToEmail(inputsText);
+      isEmailSended = await sendInputsToEmail(inputsText);
     }
     res.status(200).json({ isEmailSended });
   }

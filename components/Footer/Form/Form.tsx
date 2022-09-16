@@ -56,11 +56,23 @@ const updateErrorsMessages = (
   }
 };
 
+const useEraseInputsErrorsOnInputsChange = (
+  setInputsErrors,
+  emailInputText,
+  subjectInputText,
+  messageInputText
+) => {
+  useEffect(() => {
+    setInputsErrors({ email: "", subject: "", message: "" });
+  }, [emailInputText, subjectInputText, messageInputText]);
+};
+
 const Form = () => {
   const [isMessageSended, setIsMessageSended] = useState<null | boolean>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [isFormJustReseted, setIsFormJustReseted] = useState(false);
   const [formVerifyToken, setFormVerifyToken] = useState<null | string>(null);
+
+  let isFormJustReseted = useRef(false);
 
   const [emailInputText, setEmailInputText] = useState("");
   const [subjectInputText, setSubjectInputText] = useState("");
@@ -78,7 +90,7 @@ const Form = () => {
     message: "",
   });
 
-  const captchaError: null | boolean = null;
+  // const captchaError: null | boolean = null;
 
   const captchaRef = useRef<HCaptcha>(null);
 
@@ -88,8 +100,13 @@ const Form = () => {
     setMessageInputText("");
   };
 
+  const showHCaptcha = (captchaRef: React.RefObject<HCaptcha>) => {
+    captchaRef.current && captchaRef.current.execute({ async: true });
+  };
+
   const sumbitInputsValues = async (e: React.FormEvent) => {
     e.preventDefault();
+
     try {
       const { validationErrors, isInputsValid } =
         getInputsValidation(inputsText);
@@ -97,10 +114,8 @@ const Form = () => {
       setIsLoading(true);
 
       if (isInputsValid) {
-        // let hCaptchaExecuteResponse;
         if (!formVerifyToken) {
-          captchaRef.current && captchaRef.current.execute({ async: true });
-          console.log("formVerifyToken", formVerifyToken);
+          showHCaptcha(captchaRef);
         } else {
           const isEmailSended = await sendFormDataToSrv(
             inputsText,
@@ -108,13 +123,11 @@ const Form = () => {
           );
           setIsMessageSended(isEmailSended);
         }
-
         setFormVerifyToken(null);
       } else if (validationErrors) {
         updateErrorsMessages(validationErrors, setInputsErrors, inputsErrors);
       }
     } catch (error) {
-      console.log(error);
       setIsMessageSended(false);
     } finally {
       setIsLoading(false);
@@ -122,16 +135,28 @@ const Form = () => {
     }
   };
 
-  useEffect(() => {
-    // setInputsErrors({ email: "", subject: "", message: "" });
-    // if (emailInputText || subjectInputText || messageInputText) {
-    //   setIsFormJustReseted(false);
-    // }
+  useEraseInputsErrorsOnInputsChange(
+    setInputsErrors,
+    emailInputText,
+    subjectInputText,
+    messageInputText
+  );
 
-    // if (!isFormJustReseted) {
-    //   setIsMessageSended(null);
-    // }
-    setInputsErrors({ email: "", subject: "", message: "" });
+  // useEffect(() => {
+  //   // isFormJustReseted.current = false;
+  //   if (isMessageSended && !isFormJustReseted.current) {
+  //     resetInputTextFields();
+  //     isFormJustReseted.current = true;
+  //     return;
+  //   }
+  //   if (!isFormJustReseted.current) {
+  //     setIsMessageSended(null);
+  //     return;
+  //   }
+  //   // isFormJustReseted.current = false;
+  // }, [isMessageSended, emailInputText, subjectInputText, messageInputText]);
+
+  useEffect(() => {
     setIsMessageSended(null);
   }, [emailInputText, subjectInputText, messageInputText]);
 
@@ -169,6 +194,7 @@ const Form = () => {
         onVerify={setFormVerifyToken}
         ref={captchaRef}
         theme="dark"
+        // onClose={}
       />
       <St.FormStatus isMessageSended={isMessageSended}>
         <MyButton>
