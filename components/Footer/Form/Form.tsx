@@ -5,7 +5,7 @@ import { MyButton } from "components/UI/MyButton/MyButton.styled";
 import MyTexarea from "components/UI/MyTexarea/MyTextarea";
 import Joi from "joi";
 import { emailResponseType } from "pages/api/email/email";
-import React, { Dispatch, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { getInputsValidation } from "utils/getInputsValidation";
 import ContactMessage from "../ContactMessage/ContactMessage";
 import * as St from "./Form.styled";
@@ -20,16 +20,21 @@ const sendFormDataToSrv = async (
   inputsText: inputsType,
   formVerifyToken: string
 ) => {
-  const response = await fetch("/api/email/email", {
+  const controller = new AbortController();
+  const options = {
     method: "POST",
     body: JSON.stringify({ inputsText, formVerifyToken }),
+    signal: controller.signal,
     headers: {
       "Content-Type": "application/json",
     },
-  });
+  };
+
+  const response = await fetch("/api/email/email", options);
+  setTimeout(() => controller.abort(), 40000);
   const responseData: Promise<emailResponseType> = await response.json();
   const isEmailSendedResponse = (await responseData).isEmailSended;
-
+  console.log("responseData", responseData);
   return isEmailSendedResponse;
 };
 
@@ -66,8 +71,6 @@ const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [formVerifyToken, setFormVerifyToken] = useState<null | string>(null);
 
-  let isFormJustReseted = useRef(false);
-
   const [emailInputText, setEmailInputText] = useState("");
   const [subjectInputText, setSubjectInputText] = useState("");
   const [messageInputText, setMessageInputText] = useState("");
@@ -83,8 +86,6 @@ const Form = () => {
     subject: "",
     message: "",
   });
-
-  // const captchaError: null | boolean = null;
 
   const captchaRef = useRef<HCaptcha>(null);
 
@@ -116,6 +117,8 @@ const Form = () => {
             formVerifyToken
           );
           setIsMessageSended(isEmailSended);
+
+          if (isEmailSended) resetInputTextFields();
         }
         setFormVerifyToken(null);
       } else if (validationErrors) {
@@ -136,30 +139,15 @@ const Form = () => {
     messageInputText
   );
 
-  // useEffect(() => {
-  //   // isFormJustReseted.current = false;
-  //   if (isMessageSended && !isFormJustReseted.current) {
-  //     resetInputTextFields();
-  //     isFormJustReseted.current = true;
-  //     return;
-  //   }
-  //   if (!isFormJustReseted.current) {
-  //     setIsMessageSended(null);
-  //     return;
-  //   }
-  //   // isFormJustReseted.current = false;
-  // }, [isMessageSended, emailInputText, subjectInputText, messageInputText]);
-
-  useEffect(() => {
-    setIsMessageSended(null);
-  }, [emailInputText, subjectInputText, messageInputText]);
-
   return (
     <St.Form onSubmit={sumbitInputsValues} noValidate>
       <ContactMessage />
       <MyInput
         value={emailInputText}
-        onChange={(e) => setEmailInputText(e.target.value)}
+        onChange={(e) => {
+          setIsMessageSended(null);
+          setEmailInputText(e.target.value);
+        }}
         isLabel={true}
         type={"email"}
         labelDescription={"Email"}
@@ -167,7 +155,10 @@ const Form = () => {
       />
       <MyInput
         value={subjectInputText}
-        onChange={(e) => setSubjectInputText(e.target.value)}
+        onChange={(e) => {
+          setIsMessageSended(null);
+          setSubjectInputText(e.target.value);
+        }}
         isLabel={true}
         type={"text"}
         labelDescription={"Subject"}
@@ -175,7 +166,10 @@ const Form = () => {
       />
       <MyTexarea
         value={messageInputText}
-        onChange={(e) => setMessageInputText(e.target.value)}
+        onChange={(e) => {
+          setIsMessageSended(null);
+          setMessageInputText(e.target.value);
+        }}
         isLabel={true}
         labelDescription={"Message"}
         name={"textarea"}
