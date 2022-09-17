@@ -41,9 +41,17 @@ export default async function handler(
     const isTokenValid = await getTokenValidity(formVerifyToken);
 
     let isEmailSended: sendEmailResponseType = false;
+
     if (isInputsValid && isTokenValid) {
-      isEmailSended = await sendInputsToEmail(inputsText);
+      await new Promise<void>(async (resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 40000);
+        isEmailSended = await sendInputsToEmail(inputsText);
+        resolve();
+      });
     }
+
     res.status(200).json({ isEmailSended });
   }
 }
