@@ -5,7 +5,7 @@ import { MyButton } from "components/UI/MyButton/MyButton.styled";
 import MyTexarea from "components/UI/MyTexarea/MyTextarea";
 import Joi from "joi";
 import { emailResponseType } from "pages/api/email/email";
-import React, { useEffect, useRef, useState } from "react";
+import React, { Dispatch, useEffect, useRef, useState } from "react";
 import { getInputsValidation } from "utils/getInputsValidation";
 import ContactMessage from "../ContactMessage/ContactMessage";
 import * as St from "./Form.styled";
@@ -35,13 +35,7 @@ const sendFormDataToSrv = async (
 
 const updateErrorsMessages = (
   validationErrors: Joi.ValidationErrorItem[],
-  setInputsErrors: React.Dispatch<
-    React.SetStateAction<{
-      email: string;
-      subject: string;
-      message: string;
-    }>
-  >,
+  setInputsErrors: React.Dispatch<React.SetStateAction<inputsType>>,
   inputsErrors: inputsType
 ) => {
   let errors = {};
@@ -57,10 +51,10 @@ const updateErrorsMessages = (
 };
 
 const useEraseInputsErrorsOnInputsChange = (
-  setInputsErrors,
-  emailInputText,
-  subjectInputText,
-  messageInputText
+  setInputsErrors: React.Dispatch<React.SetStateAction<inputsType>>,
+  emailInputText: string,
+  subjectInputText: string,
+  messageInputText: string
 ) => {
   useEffect(() => {
     setInputsErrors({ email: "", subject: "", message: "" });

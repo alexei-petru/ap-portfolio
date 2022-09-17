@@ -9,18 +9,16 @@
 ### _To Do_
 
 #### High-Priority
-
-- write tests form
-- refactor nth-of-type hero
 - header with dynamic apod images
-- 404 page
-- change apod to header
+- refactor nth-of-type hero
+- write tests form
 - implement long response time form
+- change apod to header
+- 404 page
 - hCaptcha onClose functionality
+- change css variables to constants
 
 #### Medium-Priority
-
-- change css variables to constants
 - particles hero/main
 - animations navbar/hero-userImg/form-send
 - change env for diferent stages "sendInputsToEmail refactor"
