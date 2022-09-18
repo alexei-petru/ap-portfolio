@@ -49,11 +49,9 @@ const isMessageSendedStyle = css`
   width: 25px;
 `;
 
-export const BsCheck = styled(
-  ({ isMessageSended, color, ...rest }: FormSubmitTypes) => (
-    <BsCheckCircle {...rest} />
-  )
-)`
+export const BsCheck = styled(({ ...rest }: FormSubmitTypes) => (
+  <BsCheckCircle {...rest} />
+))`
   ${isMessageSendedStyle}
   fill: #07ca21;
   display: ${(props) =>
@@ -61,7 +59,7 @@ export const BsCheck = styled(
 `;
 
 export const VscErr = styled(
-  ({ isMessageSended, ...rest }: FormSubmitTypes) => <VscError {...rest} />
+  ({...rest }: FormSubmitTypes) => <VscError {...rest} />
 )`
   ${isMessageSendedStyle}
   fill: #ca0707;
