@@ -10,7 +10,7 @@ export const StyledPopoverDropdown = styled(mantinePopover.Dropdown)`
     z-index: 99;
 `;
 
-export const PopoverDropdownText = styled.p`
+export const PopoverDropdownText = styled.div`
   color: white;
   text-align: center;
   padding-bottom: 5px;

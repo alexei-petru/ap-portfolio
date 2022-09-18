@@ -34,7 +34,6 @@ const sendFormDataToSrv = async (
   setTimeout(() => controller.abort(), 40000);
   const responseData: Promise<emailResponseType> = await response.json();
   const isEmailSendedResponse = (await responseData).isEmailSended;
-  console.log("responseData", responseData);
   return isEmailSendedResponse;
 };
 
@@ -199,7 +198,7 @@ const Form = () => {
         {isMessageSended === true && (
           <St.FormDeliverMessage color="#00c700">
             <St.BsCheck isMessageSended={isMessageSended} />
-            delivered
+            message sent
           </St.FormDeliverMessage>
         )}
       </St.FormStatus>

@@ -10,13 +10,18 @@
 
 #### High-Priority
 
-- header with dynamic apod images
+- add loading when parsing from APOD API
+- navbar fullwidth cover
+- display cards app status : created/working/upcoming
+- detect header background image light dominant color and exclude it with canvas
+  or select an interval of images by date
 - refactor nth-of-type hero
 - write tests form
 - change apod to header
 - 404 page
 - hCaptcha onClose functionality
 - change css variables to constants
+- add Redux
 
 #### Medium-Priority
 

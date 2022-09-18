@@ -4,6 +4,7 @@ import MyPopoverDropDown from "components/UI/MyPopoverDropdown/MyPopoverDropdown
 import { StyledPopover } from "components/UI/MyPopoverDropdown/MyPopoverDropdown.styled";
 import Image from "next/image";
 import { useState } from "react";
+import { IApodData } from "../Header";
 
 // const popoverContent: MyPopoverDropDownProps[] = {
 //   dropDownText: "string",
@@ -11,7 +12,11 @@ import { useState } from "react";
 //   buttonInfo: " string,",
 // };
 
-const ApodDescription = () => {
+interface IApodDescriptionProps extends React.PropsWithChildren {
+  headerBackgroundData: IApodData;
+}
+
+const ApodDescription = ({ headerBackgroundData }: IApodDescriptionProps) => {
   const [isPopoverOpended, setIsPopoverOpended] = useState(false);
 
   return (
@@ -41,11 +46,19 @@ const ApodDescription = () => {
       </St.ApodDescription>
       <MyPopoverDropDown
         buttonInfoIsEnabled={true}
-        buttonInfoContent={"FullDescription"}
+        buttonInfoContent={"FullScreen Image HD"}
+        buttonUrl={headerBackgroundData.hdurl}
         onClickClose={() => setIsPopoverOpended(false)}
       >
-        Background Image is offered by Nasa Apod &quot;Astronomy Picture of the
-        Day&quot;
+        <p>
+          Background Image is offered by &quot;Nasa&nbsp;APOD&quot; and is
+          called:
+          <br />
+          {`${headerBackgroundData.title}`}
+        </p>
+        {headerBackgroundData.copyright && (
+          <p>{`Copyright: ${headerBackgroundData.copyright}`}</p>
+        )}
       </MyPopoverDropDown>
     </StyledPopover>
   );

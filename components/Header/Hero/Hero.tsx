@@ -3,7 +3,7 @@ import * as St from "components/Header/Hero/Hero.styled";
 import { HERO_AP_DESCRIPTION } from "data/localData";
 import Image from "next/image";
 
-const Hero = () => {
+const Hero = ({ headerBackgroundData }) => {
   return (
     <St.Hero>
       <St.AvatarWrapper>
@@ -23,7 +23,7 @@ const Hero = () => {
           </span>
         ))}
       </St.UserDescription>
-      <ApodDescription />
+      <ApodDescription headerBackgroundData={headerBackgroundData} />
     </St.Hero>
   );
 };
