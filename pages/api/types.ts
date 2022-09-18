@@ -13,4 +13,3 @@ export interface IApodApiResponse {
   isError: boolean;
   data: IApodData | any;
 }
-// 
