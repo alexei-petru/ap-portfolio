@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { IServerResponse } from "../types";
+import { IApodApiResponse } from "../types";
 
 export default async function handler(
   req: NextApiRequest,
@@ -9,7 +9,7 @@ export default async function handler(
     const apiKey = process.env.APOD_KEY;
     const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
-    const serverResponse: IServerResponse = {
+    const serverResponse: IApodApiResponse = {
       isError: true,
       data: {},
     };

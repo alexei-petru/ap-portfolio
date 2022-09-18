@@ -5,7 +5,7 @@ import * as St from "./Header.styled";
 import HeaderBackground from "components/Header/HeaderBackground";
 import { useViewportSize } from "@mantine/hooks";
 import { useEffect, useState } from "react";
-import { IServerResponse } from "pages/api/types";
+import { IApodApiResponse } from "pages/api/types";
 import { apodLocalImage } from "data/localData";
 
 export interface IApodData {
@@ -26,7 +26,7 @@ const Header = () => {
     const getBackgroundImage = async () => {
       try {
         const response = await fetch("/api/headerBackground/headerBackground");
-        const responseData: IServerResponse = await response.json();
+        const responseData: IApodApiResponse = await response.json();
         const data: IApodData = responseData.data;
         if (data.url && data["media_type"] === "image") {
           setHeaderBackgroundData(data);

@@ -10,7 +10,7 @@ export interface MyPopoverDropDownPropsEnabled extends PopoverProps {
 
 export interface MyPopoverDropDownPropsDisabled extends PopoverProps {
   buttonInfoIsEnabled: false;
-  buttonUrl: null;
+  buttonUrl?: null;
   buttonInfoContent?: null;
   onClickClose: () => void;
 }
