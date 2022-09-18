@@ -60,7 +60,7 @@ export const CARDS_INFO = [
       "Firebase",
       "Styled-Components",
     ],
-    thumbnail: "/random-movie.png",
+    thumbnail: "/random-movie.jpeg",
     urlGit: "#",
     urlLive: "#",
   },

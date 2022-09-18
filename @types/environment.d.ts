@@ -8,6 +8,7 @@ declare global {
       ZOHO_EMAIL_SEND: string;
       ZOHO_PSW_SEND: string;
       HCAPTCHA_SITE_KEY: string;
+      APOD_KEY: string;
     }
   }
 }

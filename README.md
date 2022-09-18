@@ -9,16 +9,18 @@
 ### _To Do_
 
 #### High-Priority
+
 - header with dynamic apod images
 - refactor nth-of-type hero
 - write tests form
-- implement long response time form
 - change apod to header
 - 404 page
 - hCaptcha onClose functionality
 - change css variables to constants
 
 #### Medium-Priority
+
+- clockify api
 - particles hero/main
 - animations navbar/hero-userImg/form-send
 - change env for diferent stages "sendInputsToEmail refactor"

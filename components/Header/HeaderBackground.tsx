@@ -1,9 +1,25 @@
 import Image from "next/image";
-import React from "react";
+import { IServerResponse } from "pages/api/types";
+import React, { useEffect } from "react";
 import { nasaImage } from "../../constants/constants";
 import * as St from "./Header.styled";
 
-const HeroBackground = () => {
+
+
+const HeaderBackground = () => {
+  useEffect(() => {
+    const getBackgroundImage = async () => {
+      const response = await fetch("/api/headerBackground/headerBackground");
+      const responseData: IServerResponse = await response.json();
+      console.log("responseData", responseData);
+    };
+    try {
+      getBackgroundImage();
+    } catch (error) {
+      console.log("error", error);
+    }
+  }, []);
+
   return (
     <St.HeaderImageWrapper>
       <Image
@@ -18,4 +34,4 @@ const HeroBackground = () => {
   );
 };
 
-export default HeroBackground;
+export default HeaderBackground;

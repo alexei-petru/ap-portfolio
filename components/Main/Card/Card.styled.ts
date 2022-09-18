@@ -33,8 +33,8 @@ export const Card = styled.div<CardProps>`
     right: 0;
     bottom: 0;
     left: 0;
-    filter: blur(20px) brightness(0.75);
-    background: url(${(props) => props.thumbnail}) no-repeat top/ 250%;
+    filter: blur(35px) brightness(0.75);
+    background: url(${(props) => props.thumbnail}) repeat center / 300%;
   }
 `;
 
@@ -110,7 +110,7 @@ type cardButtonsProps = {
 
 export const ButtonsWrapper = styled.div<cardButtonsProps>`
   --btn-size: 49px;
-  top: calc(50% - calc(var(--btn-size)) / 2);
+  top: calc(45% - calc(var(--btn-size)) / 2);
   position: absolute;
   display: flex;
   justify-content: space-between;

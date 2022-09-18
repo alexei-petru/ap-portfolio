@@ -31,7 +31,7 @@ export const GlobalStyle = css`
 
     //sizes
     --contact-item-height: 552px;
-    --contact-item-width: 335px;
+    --contact-item-width: 341px;
   }
 
   html {
