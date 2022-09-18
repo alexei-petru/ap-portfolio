@@ -2,8 +2,13 @@ import ApodDescription from "components/Header/Hero/ApodDescription";
 import * as St from "components/Header/Hero/Hero.styled";
 import { HERO_AP_DESCRIPTION } from "data/localData";
 import Image from "next/image";
+import { IApodData } from "../Header";
 
-const Hero = ({ headerBackgroundData }) => {
+interface IHeroProps extends React.PropsWithChildren {
+  headerBackgroundData: IApodData;
+}
+
+const Hero = ({ headerBackgroundData }: IHeroProps) => {
   return (
     <St.Hero>
       <St.AvatarWrapper>
