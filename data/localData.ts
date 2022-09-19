@@ -23,11 +23,10 @@ export const apodLocalImage = {
 export const CARDS_INFO = [
   {
     title: "A.P portfolio",
-    description: "First Version of personal portfolio",
+    description: "First version of personal portfolio",
     tags: [
       "NextJS",
       "Typescript",
-      "Redux-toolkit",
       "Styled-Components",
       "Nodemailer",
       "Hcaptcha",

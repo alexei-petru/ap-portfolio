@@ -1,5 +1,10 @@
 import styled from "@emotion/styled";
-import { headerBackgroundFilter, maxDeviceHeight } from "constants/constants";
+import { maxDeviceHeight } from "constants/constants";
+import {
+  var_headerBackgroundFilter,
+  var_headerNavbarBackgroundColor,
+  var_HeaderNavbarHeight,
+} from "constants/cssVariables";
 
 export const Header = styled.header<{ height: number }>`
   display: flex;
@@ -14,10 +19,21 @@ export const Header = styled.header<{ height: number }>`
 `;
 
 export const HeaderImageWrapper = styled.div`
-  filter: ${headerBackgroundFilter};
+  filter: ${var_headerBackgroundFilter};
   position: absolute;
   height: 100%;
   width: 100%;
   max-width: 2440px;
   z-index: 1;
+`;
+
+export const HeaderNavbarBackground = styled.div`
+  width: 100%;
+  height: ${var_HeaderNavbarHeight};
+  background-color: ${var_headerNavbarBackgroundColor};
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 `;

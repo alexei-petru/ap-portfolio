@@ -1,8 +1,8 @@
-## Portfolio v0.5
+## Portfolio v0.7
 
 ### nextJs, Tyspescript, styled-components, APOD_API, Nodemailer
 
-## Starter demo v0.1 https://ap-portfolio-ten.vercel.app/
+## Live Demo https://ap-portfolio-ten.vercel.app/
 
 ---
 

@@ -18,7 +18,7 @@ const HeaderBackground = ({
           style={{ zIndex: "0" }}
           layout="fill"
           objectFit="cover"
-          objectPosition={"top"}
+          objectPosition={"center"}
           src={headerBackgroundImage.url}
           alt={headerBackgroundImage.title}
         />

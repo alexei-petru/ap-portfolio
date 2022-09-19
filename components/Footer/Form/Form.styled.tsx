@@ -1,6 +1,7 @@
 import { css, keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import MyErrorMessage from "components/UI/MyErrorMessage/MyErrorMessage";
+import { var_ContactItemHeight, var_ContactItemWidth } from "constants/cssVariables";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { BsCheckCircle } from "react-icons/bs";
 import { VscError } from "react-icons/vsc";
@@ -14,8 +15,8 @@ export const Form = styled.form`
   padding: 10px 20px;
   border-radius: 5px;
   min-width: 300px;
-  max-width: var(--contact-item-width);
-  height: var(--contact-item-height);
+  max-width: ${var_ContactItemWidth};
+  height: ${var_ContactItemHeight};
   background: #120449;
   background: linear-gradient(15deg, #3e7134 15%, #120449 92%);
 

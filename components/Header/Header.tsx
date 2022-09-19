@@ -48,6 +48,7 @@ const Header = () => {
   return (
     <>
       <St.Header height={height}>
+        <St.HeaderNavbarBackground />
         <HeaderBackground headerBackgroundImage={headerBackgroundData} />
         <StyledContainer>
           <Navbar />

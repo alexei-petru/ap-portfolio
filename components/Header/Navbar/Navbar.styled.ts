@@ -1,5 +1,8 @@
 import styled from "@emotion/styled";
-import { headerNavbarBackgroundColor } from "../../../constants/constants";
+import {
+  var_headerNavbarBackgroundColor,
+  var_HeaderNavbarHeight,
+} from "constants/cssVariables";
 
 export const Navbar = styled.nav`
   position: relative;
@@ -7,9 +10,10 @@ export const Navbar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${headerNavbarBackgroundColor};
+  background-color: ${var_headerNavbarBackgroundColor};
   padding: 10px;
   margin-top: 0;
+  min-height: ${var_HeaderNavbarHeight};
 
   li {
     list-style: none;

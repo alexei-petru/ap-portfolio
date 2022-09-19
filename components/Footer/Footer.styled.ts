@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { StyledTitleSection } from "styles/StyledReusable.styled";
 import Image from "next/image";
+import { var_ContactItemHeight } from "constants/cssVariables";
 
 export const Footer = styled.footer``;
 
@@ -20,7 +21,7 @@ export const FooterInnerWrapper = styled.div`
     /* align-items: center; */
     justify-content: space-between;
     align-items: center;
-    height: calc(var(--contact-item-height) * 2 + 125px);
+    height: calc(${var_ContactItemHeight} * 2 + 125px);
   }
   /* :before {
     content: " ";
