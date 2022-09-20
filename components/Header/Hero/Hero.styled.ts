@@ -19,27 +19,6 @@ export const AvatarWrapper = styled.div`
   overflow: hidden;
 `;
 
-export const ApodParagraphWrapper = styled.div``;
-
-export const ApodDescription = styled.div`
-  z-index: 1;
-  grid-row: 10 / span 1;
-  grid-column: 1 / span 3;
-  cursor: pointer;
-
-  @media (max-width: 512px) {
-    z-index: 1;
-    grid-row: 10 / span 1;
-    grid-column: 2 / span 4;
-    cursor: pointer;
-  }
-`;
-
-export const ApodParagraph = styled.p`
-  margin-top: -50px;
-  z-index: 1;
-`;
-
 export const UserDescription = styled.h1`
   z-index: 1;
   font: var(--title-regular-large);

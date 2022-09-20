@@ -11,10 +11,9 @@
 #### High-Priority
 
 - add loading when parsing from APOD API
-- navbar fullwidth cover
+- animations navbar/hero-userImg
+- particles hero/main
 - display cards app status : created/working/upcoming
-- detect header background image light dominant color and exclude it with canvas
-  or select an interval of images by date
 - refactor nth-of-type hero
 - write tests form
 - change apod to header
@@ -25,9 +24,9 @@
 
 #### Medium-Priority
 
+- detect header background image light dominant color and exclude it with canvas
+  or select an interval of images by date
 - clockify api
-- particles hero/main
-- animations navbar/hero-userImg/form-send
 - change env for diferent stages "sendInputsToEmail refactor"
 
 #### Low-Priority

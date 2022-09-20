@@ -1,8 +1,7 @@
 import { Popover } from "@mantine/core";
-import * as St from "components/Header/Hero/Hero.styled";
+import * as St from "components/Header/Hero/ApodDescription.styled";
 import MyPopoverDropDown from "components/UI/MyPopoverDropdown/MyPopoverDropdown";
 import { StyledPopover } from "components/UI/MyPopoverDropdown/MyPopoverDropdown.styled";
-import Image from "next/image";
 import { useState } from "react";
 import { IApodData } from "../Header";
 
@@ -18,6 +17,7 @@ interface IApodDescriptionProps extends React.PropsWithChildren {
 
 const ApodDescription = ({ headerBackgroundData }: IApodDescriptionProps) => {
   const [isPopoverOpended, setIsPopoverOpended] = useState(false);
+  const isBackgroundImageLoading = headerBackgroundData.url ? false : true;
 
   return (
     <StyledPopover
@@ -28,11 +28,11 @@ const ApodDescription = ({ headerBackgroundData }: IApodDescriptionProps) => {
       onChange={setIsPopoverOpended}
     >
       <St.ApodDescription>
-        <Image
-          style={{ opacity: 0.5 }}
+        <St.ApodDescriptionImage
+          isBackgroundImageLoading={isBackgroundImageLoading}
           width={94}
           height={68}
-          src={"/planet.png"}
+          src={"/planet-purple.png"}
           priority
           alt="apod description"
         />
@@ -50,14 +50,19 @@ const ApodDescription = ({ headerBackgroundData }: IApodDescriptionProps) => {
         buttonUrl={headerBackgroundData.hdurl}
         onClickClose={() => setIsPopoverOpended(false)}
       >
-        <p>
-          Background Image is offered by &quot;Nasa&nbsp;APOD&quot; and is
-          called:
-          <br />
-          {`${headerBackgroundData.title}`}
-        </p>
-        {headerBackgroundData.copyright && (
-          <p>{`Copyright: ${headerBackgroundData.copyright}`}</p>
+        {!isBackgroundImageLoading && <p>Loading...</p>}
+        {isBackgroundImageLoading && (
+          <div>
+            <p>
+              Background Image is offered by &quot;Nasa&nbsp;APOD&quot; and is
+              called:
+              <br />
+              {`${headerBackgroundData.title}`}
+            </p>
+            {headerBackgroundData.copyright && (
+              <p>{`Copyright: ${headerBackgroundData.copyright}`}</p>
+            )}
+          </div>
         )}
       </MyPopoverDropDown>
     </StyledPopover>
