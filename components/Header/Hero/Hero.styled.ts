@@ -17,6 +17,26 @@ export const AvatarWrapper = styled.div`
   grid-row: 5 / span 7;
   grid-column: 9 / span 2;
   overflow: hidden;
+  animation-name: slide-in-elliptic-bottom-fwd;
+  animation-duration: 2.2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+
+  @keyframes slide-in-elliptic-bottom-fwd {
+    0% {
+      transform: translateY(600px) rotateX(30deg) scale(0);
+      transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0) rotateX(0) scale(1);
+      transform-origin: 50% -1400px;
+      opacity: 1;
+    }
+  }
 `;
 
 export const UserDescription = styled.h1`
@@ -98,30 +118,6 @@ export const UserDescription = styled.h1`
 
   span:nth-of-type(12) {
     animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(13) {
-    animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(14) {
-    animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(15) {
-    animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(16) {
-    animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(17) {
-    animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(18) {
-    animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
   @keyframes fade-in {

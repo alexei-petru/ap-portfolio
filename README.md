@@ -10,13 +10,13 @@
 
 #### High-Priority
 
-- add loading when parsing from APOD API
 - animations navbar/hero-userImg
 - particles hero/main
 - display cards app status : created/working/upcoming
 - refactor nth-of-type hero
 - write tests form
 - change apod to header
+- overall optimization
 - 404 page
 - hCaptcha onClose functionality
 - change css variables to constants

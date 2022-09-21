@@ -2,9 +2,9 @@ import { Popover } from "@mantine/core";
 import * as St from "components/Header/Hero/ApodDescription.styled";
 import MyPopoverDropDown from "components/UI/MyPopoverDropdown/MyPopoverDropdown";
 import { StyledPopover } from "components/UI/MyPopoverDropdown/MyPopoverDropdown.styled";
+import Image from "next/image";
 import { useState } from "react";
 import { IApodData } from "../Header";
-
 // const popoverContent: MyPopoverDropDownProps[] = {
 //   dropDownText: "string",
 //   buttonClose: " string",
@@ -28,14 +28,17 @@ const ApodDescription = ({ headerBackgroundData }: IApodDescriptionProps) => {
       onChange={setIsPopoverOpended}
     >
       <St.ApodDescription>
-        <St.ApodDescriptionImage
+        <St.ApodDescriptionWrapper
           isBackgroundImageLoading={isBackgroundImageLoading}
-          width={94}
-          height={68}
-          src={"/planet-purple.png"}
-          priority
-          alt="apod description"
-        />
+        >
+          <Image
+            width={96}
+            height={68}
+            src={"/planet-purple.png"}
+            priority
+            alt="apod description"
+          />
+        </St.ApodDescriptionWrapper>
         <Popover.Target>
           <St.ApodParagraphWrapper
             onClick={() => setIsPopoverOpended((prev) => !prev)}
@@ -50,8 +53,8 @@ const ApodDescription = ({ headerBackgroundData }: IApodDescriptionProps) => {
         buttonUrl={headerBackgroundData.hdurl}
         onClickClose={() => setIsPopoverOpended(false)}
       >
-        {!isBackgroundImageLoading && <p>Loading...</p>}
-        {isBackgroundImageLoading && (
+        {isBackgroundImageLoading && <p>Loading...</p>}
+        {!isBackgroundImageLoading && (
           <div>
             <p>
               Background Image is offered by &quot;Nasa&nbsp;APOD&quot; and is
