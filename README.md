@@ -10,23 +10,22 @@
 
 #### High-Priority
 
-- animations navbar/hero-userImg
-- particles hero/main
 - display cards app status : created/working/upcoming
-- refactor nth-of-type hero
+- src folder
 - write tests form
-- change apod to header
+- add Redux
 - overall optimization
+- particles hero/main
+- refactor nth-of-type hero
 - 404 page
 - hCaptcha onClose functionality
 - change css variables to constants
-- add Redux
 
 #### Medium-Priority
 
+- clockify api
 - detect header background image light dominant color and exclude it with canvas
   or select an interval of images by date
-- clockify api
 - change env for diferent stages "sendInputsToEmail refactor"
 
 #### Low-Priority
@@ -37,6 +36,7 @@
 - footer copyright fix remove pos absolute
 - skeleton footer captcha
 - improve overall design
+- change apod to header
 
 #### bugs not understandable
 

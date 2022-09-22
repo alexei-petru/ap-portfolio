@@ -53,7 +53,7 @@ const ApodDescription = ({ headerBackgroundData }: IApodDescriptionProps) => {
         buttonUrl={headerBackgroundData.hdurl}
         onClickClose={() => setIsPopoverOpended(false)}
       >
-        {isBackgroundImageLoading && <p>Loading...</p>}
+        {isBackgroundImageLoading && <p>Loading background image...</p>}
         {!isBackgroundImageLoading && (
           <div>
             <p>

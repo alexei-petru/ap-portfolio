@@ -23,7 +23,8 @@ export const AvatarWrapper = styled.div`
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;
-  animation-fill-mode: none;
+  animation-fill-mode: forwards;
+  opacity: 0;
 
   @keyframes slide-in-elliptic-bottom-fwd {
     0% {

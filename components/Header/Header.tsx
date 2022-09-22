@@ -22,6 +22,11 @@ export interface IApodData {
 const Header = () => {
   const { height } = useViewportSize();
 
+  const [headerBackgroundData, setHeaderBackgroundData] = useState({
+    title: "",
+    url: "",
+  });
+
   useEffect(() => {
     const getBackgroundImage = async () => {
       try {
@@ -39,11 +44,6 @@ const Header = () => {
     };
     getBackgroundImage();
   }, []);
-
-  const [headerBackgroundData, setHeaderBackgroundData] = useState({
-    title: "",
-    url: "",
-  });
 
   return (
     <>

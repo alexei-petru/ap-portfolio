@@ -20,6 +20,29 @@ export const apodLocalImage = {
   hdurl: "https://apod.nasa.gov/apod/image/2208/CygnusWall_Bogaerts_4143.jpg",
 };
 
+export const cardsDevStatusColors = {
+  justStarted: {
+    backgroundColor: "rgba(255, 255, 255, 0.85)",
+    textColor: "black",
+  },
+  prerelease: {
+    backgroundColor: "rgb(255, 255, 0, 0.85)",
+    textColor: "black",
+  },
+  release: {
+    backgroundColor: "rgba(0, 255, 0, 0.65)",
+    textColor: "black",
+  },
+  nextProject: {
+    backgroundColor: "rgb(245 80 80)",
+    textColor: "black",
+  },
+  pending: {
+    backgroundColor: "rgb(115 115 255 / 89%)",
+    textColor: "black",
+  },
+};
+
 export const CARDS_INFO = [
   {
     title: "A.P portfolio",
@@ -36,6 +59,13 @@ export const CARDS_INFO = [
     thumbnail: "/ap-portfolio.png",
     urlGit: "https://github.com/Allex191/ap-portfolio",
     urlLive: "#",
+    devStatus: {
+      text: "Prerelease v0.7",
+      colors: {
+        textColor: cardsDevStatusColors.prerelease.textColor,
+        backgroundColor: cardsDevStatusColors.prerelease.backgroundColor,
+      },
+    },
   },
   {
     title: "Real Idea",
@@ -45,6 +75,13 @@ export const CARDS_INFO = [
     thumbnail: "/real-idea.png",
     urlGit: "https://github.com/Allex191/real-idea-landing-page",
     urlLive: "https://allex191.github.io/real-idea-landing-page/",
+    devStatus: {
+      text: "Release v1.0",
+      colors: {
+        textColor: cardsDevStatusColors.release.textColor,
+        backgroundColor: cardsDevStatusColors.release.backgroundColor,
+      },
+    },
   },
   {
     title: "Encryptor",
@@ -55,6 +92,13 @@ export const CARDS_INFO = [
     urlGit:
       "https://github.com/Allex191/javascript-tutorials/tree/main/message-encryptor",
     urlLive: "#",
+    devStatus: {
+      text: "Release v1.0",
+      colors: {
+        textColor: cardsDevStatusColors.release.textColor,
+        backgroundColor: cardsDevStatusColors.release.backgroundColor,
+      },
+    },
   },
   {
     title: "*Warehouse App",
@@ -73,6 +117,13 @@ export const CARDS_INFO = [
     thumbnail: "/warehouse-app.png",
     urlGit: "#",
     urlLive: "#",
+    devStatus: {
+      text: "Next project",
+      colors: {
+        textColor: cardsDevStatusColors.nextProject.textColor,
+        backgroundColor: cardsDevStatusColors.nextProject.backgroundColor,
+      },
+    },
   },
   {
     title: "*Random Movie",
@@ -88,5 +139,12 @@ export const CARDS_INFO = [
     thumbnail: "/random-movie.jpeg",
     urlGit: "#",
     urlLive: "#",
+    devStatus: {
+      text: "Pending project",
+      colors: {
+        textColor: cardsDevStatusColors.pending.textColor,
+        backgroundColor: cardsDevStatusColors.pending.backgroundColor,
+      },
+    },
   },
 ];

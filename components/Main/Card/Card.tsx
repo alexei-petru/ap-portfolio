@@ -7,6 +7,10 @@ type CardPropsType = {
   thumbnail: string;
   urlGit: string;
   urlLive: string;
+  devStatus: {
+    text: string;
+    colors: { textColor: string; backgroundColor: string };
+  };
 };
 
 const ProjectCard = ({
@@ -16,6 +20,7 @@ const ProjectCard = ({
   tags,
   urlGit,
   urlLive,
+  devStatus,
 }: CardPropsType) => {
   const [isCardHover, setIsCardHover] = useState(false);
 
@@ -26,6 +31,11 @@ const ProjectCard = ({
       thumbnail={thumbnail}
     >
       <St.CardContent>
+        <St.ProjectStatusWrapper>
+          <St.ProjectStatus colors={devStatus.colors}>
+            {devStatus.text}
+          </St.ProjectStatus>
+        </St.ProjectStatusWrapper>
         <St.CardThumbnail>
           <St.CardImg src={thumbnail} />
         </St.CardThumbnail>

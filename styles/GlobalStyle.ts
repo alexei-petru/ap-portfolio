@@ -22,6 +22,7 @@ export const GlobalStyle = css`
     --text-medium-large: 500 22px /100% var(--font-family-secondary);
     --text-regular-pre-large: 400 17px / 25px var(--font-family-secondary);
     --text-regular-standart: 400 16px / 140% var(--font-family-secondary);
+    --text-regular-small-bold: 400 15px/17px var(--font-family-secondary);
     --text-regular-small: 400 15px/17px var(--font-family-secondary);
   }
 

@@ -21,6 +21,7 @@ const Main = () => {
                   thumbnail={project.thumbnail}
                   urlGit={project.urlGit}
                   urlLive={project.urlLive}
+                  devStatus={project.devStatus}
                 />
               </St.CardWrapper>
             );

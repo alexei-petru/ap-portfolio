@@ -9,9 +9,6 @@ export const ApodDescriptionWrapper = styled.div<IApodDescriptionWrapper>`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* 
- animation: shake-center-loading 2s ease normal none infinite;
-  /* animation: blink-1 0.6s both ; */
   animation: ${({ isBackgroundImageLoading }) =>
     isBackgroundImageLoading
       ? "shake-center-loading 2s ease normal none infinite;"
@@ -28,7 +25,6 @@ export const ApodDescriptionWrapper = styled.div<IApodDescriptionWrapper>`
       opacity: 0;
     }
   }
-
 
   @keyframes shake-center-loading {
     0% {
