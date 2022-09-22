@@ -61,6 +61,8 @@ export const ProjectStatus = styled.span<IProjectStatusProps>`
   color: ${({ colors }) => colors.textColor};
   font: var(--text-regular-small-bold);
   border-radius: 0 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    ${({ colors }) => colors.backgroundColor}  0px 0px 17px -3px;
 `;
 
 export const CardThumbnail = styled.div`

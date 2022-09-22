@@ -10,7 +10,6 @@
 
 #### High-Priority
 
-- display cards app status : created/working/upcoming
 - src folder
 - write tests form
 - add Redux
