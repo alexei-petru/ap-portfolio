@@ -12,7 +12,7 @@ export const ApodDescriptionWrapper = styled.div<IApodDescriptionWrapper>`
   animation: ${({ isBackgroundImageLoading }) =>
     isBackgroundImageLoading
       ? "shake-center-loading 2s ease normal none infinite;"
-      : "blink-1 0.6s 2.1s 1.5 both ;"};
+      : "blink-1 0.6s 2.15s 1.5 both ;"};
 
   @keyframes blink-1 {
     0%,

@@ -26,7 +26,7 @@ export const cardsDevStatusColors = {
     textColor: "black",
   },
   prerelease: {
-    backgroundColor: "rgb(255, 255, 0, 0.85)",
+    backgroundColor: "rgb(217 217 0 / 85%)",
     textColor: "black",
   },
   release: {

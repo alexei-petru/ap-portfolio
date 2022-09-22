@@ -10,7 +10,6 @@
 
 #### High-Priority
 
-- src folder
 - write tests form
 - add Redux
 - overall optimization
@@ -40,3 +39,4 @@
 #### bugs not understandable
 
 - //bug with react minlength not working? value={inputs.message} myTextarea
+- src folder??
