@@ -7,7 +7,7 @@ export const StyledPopover = styled(mantinePopover)``;
 export const StyledPopoverDropdown = styled(mantinePopover.Dropdown)`
   background-color: ${({ theme }) =>
     theme.colors.popoverDropDownBackgroundColor};
-    z-index: 99;
+  z-index: 99;
 `;
 
 export const PopoverDropdownText = styled.div`
@@ -26,14 +26,11 @@ export const PopoverButtonInfo = styled(MyButton)`
 `;
 
 export const PopoverDropdownButtonClose = styled(MyButton)`
-  margin-left: auto;
-  padding: 0 3px;
   background-color: #7c0000;
   box-shadow: 0 2px 5px rgb(255 15 15 / 54%);
   border-radius: 2px;
-  padding: 0 3px;
-  margin-bottom: 2px;
-  margin-top: -3px;
+  margin: -3px 0 2px auto;
+  padding: 0 5px;
 
   :hover {
     background-color: #b00101;

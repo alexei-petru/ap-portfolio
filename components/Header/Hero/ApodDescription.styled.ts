@@ -89,3 +89,7 @@ export const ApodParagraph = styled.p`
   margin-top: -50px;
   z-index: 1;
 `;
+
+export const ApodExternalLink = styled.a`
+  color: rgb(138 138 238);
+`;

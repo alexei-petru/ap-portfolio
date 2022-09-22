@@ -57,14 +57,18 @@ const ApodDescription = ({ headerBackgroundData }: IApodDescriptionProps) => {
         {!isBackgroundImageLoading && (
           <div>
             <p>
-              Background Image is offered by &quot;Nasa&nbsp;APOD&quot; and is
-              called:
+              Background Image is offered by
+              <St.ApodExternalLink href="https://apod.nasa.gov/apod/">
+              &nbsp;&quot;Nasa&nbsp;APOD&quot;&nbsp;
+              </St.ApodExternalLink>
+              and is called:
               <br />
-              {`${headerBackgroundData.title}`}
+              {`${headerBackgroundData.title}.`}
             </p>
             {headerBackgroundData.copyright && (
-              <p>{`Copyright: ${headerBackgroundData.copyright}`}</p>
+              <p>{`Copyright: ${headerBackgroundData.copyright}.`}</p>
             )}
+            {!headerBackgroundData.locale && <p>Is today image Beautiful?</p>}
           </div>
         )}
       </MyPopoverDropDown>

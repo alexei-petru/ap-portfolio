@@ -17,6 +17,7 @@ export interface IApodData {
   service_version?: string;
   title: string;
   url: string;
+  locale: boolean;
 }
 
 const Header = () => {
@@ -25,6 +26,7 @@ const Header = () => {
   const [headerBackgroundData, setHeaderBackgroundData] = useState({
     title: "",
     url: "",
+    locale: false,
   });
 
   useEffect(() => {
@@ -34,12 +36,12 @@ const Header = () => {
         const responseData: IServerResponse = await response.json();
         const data: IApodData = responseData.data;
         if (data.url && data["media_type"] === "image") {
-          setHeaderBackgroundData(data);
+          setHeaderBackgroundData({ ...data, locale: false });
         } else {
-          setHeaderBackgroundData(apodLocalImage);
+          setHeaderBackgroundData({ ...apodLocalImage, locale: true });
         }
       } catch (error) {
-        setHeaderBackgroundData(apodLocalImage);
+        setHeaderBackgroundData({ ...apodLocalImage, locale: true });
       }
     };
     getBackgroundImage();
