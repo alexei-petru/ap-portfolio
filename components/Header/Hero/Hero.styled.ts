@@ -40,7 +40,7 @@ export const AvatarWrapper = styled.div`
   }
 `;
 
-export const UserDescription = styled.h1`
+export const UserDescriptionWrapper = styled.h1`
   z-index: 1;
   font: var(--title-regular-large);
   grid-row: 5 / span 7;
@@ -66,61 +66,12 @@ export const UserDescription = styled.h1`
       transform: scale(1);
     }
   }
-
-  span {
-    display: inline-block;
-    opacity: 0;
-    filter: blur(4px);
-  }
-
-  span:nth-of-type(1) {
-    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(2) {
-    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(3) {
-    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(4) {
-    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(5) {
-    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(6) {
-    animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(7) {
-    animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(8) {
-    animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(9) {
-    animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(10) {
-    animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(11) {
-    animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(12) {
-    animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
+`;
+export const UserDescriptionWord = styled.span`
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+  
   @keyframes fade-in {
     100% {
       opacity: 1;

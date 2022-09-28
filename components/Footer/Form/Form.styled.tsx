@@ -1,7 +1,10 @@
 import { css, keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import MyErrorMessage from "components/UI/MyErrorMessage/MyErrorMessage";
-import { var_ContactItemHeight, var_ContactItemWidth } from "constants/cssVariables";
+import {
+  var_ContactItemHeight,
+  var_ContactItemWidth,
+} from "constants/cssVariables";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { BsCheckCircle } from "react-icons/bs";
 import { VscError } from "react-icons/vsc";
@@ -50,19 +53,17 @@ const isMessageSendedStyle = css`
   width: 25px;
 `;
 
-export const BsCheck = styled(
-  ({ isMessageSended, color, ...rest }: FormSubmitTypes) => (
-    <BsCheckCircle {...rest} />
-  )
-)`
+export const BsCheck = styled(({ ...rest }: FormSubmitTypes) => (
+  <BsCheckCircle {...rest} />
+))`
   ${isMessageSendedStyle}
   fill: #07ca21;
   display: ${(props) =>
     props.isMessageSended === true ? "inline-block" : "none"};
 `;
 
-export const VscErr = styled(
-  ({ isMessageSended, ...rest }: FormSubmitTypes) => <VscError {...rest} />
+export const ErrorMessage = styled(
+  ({  ...rest }: FormSubmitTypes) => <VscError {...rest} />
 )`
   ${isMessageSendedStyle}
   fill: #ca0707;

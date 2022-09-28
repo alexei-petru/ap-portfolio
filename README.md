@@ -11,13 +11,12 @@
 #### High-Priority
 
 - write tests form
-- add Redux
 - overall optimization
-- particles hero/main
-- refactor nth-of-type hero
 - 404 page
 - hCaptcha onClose functionality
+- particles hero/main
 - change css variables to constants
+- add Redux
 
 #### Medium-Priority
 

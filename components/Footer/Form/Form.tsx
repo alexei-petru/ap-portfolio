@@ -42,7 +42,7 @@ const updateErrorsMessages = (
   setInputsErrors: React.Dispatch<React.SetStateAction<inputsType>>,
   inputsErrors: inputsType
 ) => {
-  let errors = {};
+  const errors = {};
   for (const object of validationErrors) {
     if (object.context?.key) {
       errors[object.context.key] = object.message;
@@ -62,7 +62,7 @@ const useEraseInputsErrorsOnInputsChange = (
 ) => {
   useEffect(() => {
     setInputsErrors({ email: "", subject: "", message: "" });
-  }, [emailInputText, subjectInputText, messageInputText]);
+  }, [emailInputText, subjectInputText, messageInputText, setInputsErrors]);
 };
 
 const Form = () => {
@@ -191,7 +191,7 @@ const Form = () => {
         {isLoading && <St.AiOutlineLoading3Quart />}
         {isMessageSended === false && (
           <St.FormDeliverMessage>
-            <St.VscErr isMessageSended={isMessageSended} />
+            <St.ErrorMessage isMessageSended={isMessageSended} />
             error, try again
           </St.FormDeliverMessage>
         )}
