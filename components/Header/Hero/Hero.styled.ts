@@ -17,30 +17,30 @@ export const AvatarWrapper = styled.div`
   grid-row: 5 / span 7;
   grid-column: 9 / span 2;
   overflow: hidden;
-`;
+  animation-name: slide-in-elliptic-bottom-fwd;
+  animation-duration: 2.2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  opacity: 0;
 
-export const ApodParagraphWrapper = styled.div``;
-
-export const ApodDescription = styled.div`
-  z-index: 1;
-  grid-row: 10 / span 1;
-  grid-column: 1 / span 3;
-  cursor: pointer;
-
-  @media (max-width: 512px) {
-    z-index: 1;
-    grid-row: 10 / span 1;
-    grid-column: 2 / span 4;
-    cursor: pointer;
+  @keyframes slide-in-elliptic-bottom-fwd {
+    0% {
+      transform: translateY(600px) rotateX(30deg) scale(0);
+      transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0) rotateX(0) scale(1);
+      transform-origin: 50% -1400px;
+      opacity: 1;
+    }
   }
 `;
 
-export const ApodParagraph = styled.p`
-  margin-top: -50px;
-  z-index: 1;
-`;
-
-export const UserDescription = styled.h1`
+export const UserDescriptionWrapper = styled.h1`
   z-index: 1;
   font: var(--title-regular-large);
   grid-row: 5 / span 7;
@@ -66,85 +66,12 @@ export const UserDescription = styled.h1`
       transform: scale(1);
     }
   }
-
-  span {
-    display: inline-block;
-    opacity: 0;
-    filter: blur(4px);
-  }
-
-  span:nth-of-type(1) {
-    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(2) {
-    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(3) {
-    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(4) {
-    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(5) {
-    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(6) {
-    animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(7) {
-    animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(8) {
-    animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(9) {
-    animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(10) {
-    animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(11) {
-    animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(12) {
-    animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(13) {
-    animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(14) {
-    animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(15) {
-    animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(16) {
-    animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(17) {
-    animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
-  span:nth-of-type(18) {
-    animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-
+`;
+export const UserDescriptionWord = styled.span`
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+  
   @keyframes fade-in {
     100% {
       opacity: 1;

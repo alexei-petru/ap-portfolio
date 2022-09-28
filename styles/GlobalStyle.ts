@@ -7,11 +7,6 @@ import "@fontsource/monoton";
 
 export const GlobalStyle = css`
   :root {
-    // colors
-    --popover-DropDown-BackgroundColor: #020309;
-    --color-white: #fff;
-    --color-black: #000;
-
     //primary font
     --font-family-primary: "monoton", "Times New Roman", Times, serif;
     --title-regular-large: 400 clamp(16px, 5vw, 38px) var(--font-family-primary);
@@ -27,11 +22,8 @@ export const GlobalStyle = css`
     --text-medium-large: 500 22px /100% var(--font-family-secondary);
     --text-regular-pre-large: 400 17px / 25px var(--font-family-secondary);
     --text-regular-standart: 400 16px / 140% var(--font-family-secondary);
+    --text-regular-small-bold: 400 15px/17px var(--font-family-secondary);
     --text-regular-small: 400 15px/17px var(--font-family-secondary);
-
-    //sizes
-    --contact-item-height: 552px;
-    --contact-item-width: 341px;
   }
 
   html {

@@ -10,24 +10,19 @@
 
 #### High-Priority
 
-- add loading when parsing from APOD API
-- navbar fullwidth cover
-- display cards app status : created/working/upcoming
-- detect header background image light dominant color and exclude it with canvas
-  or select an interval of images by date
-- refactor nth-of-type hero
 - write tests form
-- change apod to header
+- overall optimization
 - 404 page
 - hCaptcha onClose functionality
+- particles hero/main
 - change css variables to constants
 - add Redux
 
 #### Medium-Priority
 
 - clockify api
-- particles hero/main
-- animations navbar/hero-userImg/form-send
+- detect header background image light dominant color and exclude it with canvas
+  or select an interval of images by date
 - change env for diferent stages "sendInputsToEmail refactor"
 
 #### Low-Priority
@@ -38,7 +33,9 @@
 - footer copyright fix remove pos absolute
 - skeleton footer captcha
 - improve overall design
+- change apod to header
 
 #### bugs not understandable
 
 - //bug with react minlength not working? value={inputs.message} myTextarea
+- src folder??

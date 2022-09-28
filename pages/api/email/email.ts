@@ -14,14 +14,20 @@ interface formReqI {
 }
 
 const getTokenValidity = async (token: string) => {
+<<<<<<< HEAD
   const SECRET_KEY = process.env.HCAPTCHA_SECRET_PSW || "";
+=======
+  const SECRET_KEY = process.env.HCAPTCHA_SECRET_PSW;
+>>>>>>> pre
   let response = false;
   const SITE_KEY = process.env.HCAPTCHA_SITE_KEY;
 
   try {
-    const verifyData = await verify(SECRET_KEY, token, undefined, SITE_KEY);
-    if (verifyData.success === true) {
-      response = true;
+    if (SECRET_KEY && SITE_KEY) {
+      const verifyData = await verify(SECRET_KEY, token, undefined, SITE_KEY);
+      if (verifyData.success === true) {
+        response = true;
+      }
     }
   } catch (error) {
     response = false;

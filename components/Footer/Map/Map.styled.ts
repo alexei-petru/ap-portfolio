@@ -1,13 +1,14 @@
 import styled from "@emotion/styled";
+import { var_ContactItemHeight, var_ContactItemWidth } from "constants/cssVariables";
 
 export const MapWrapper = styled.div`
   position: relative;
-  height: var(--contact-item-height);
+  height: ${var_ContactItemHeight};;
   display: flex;
   color: black;
   .leaflet-container {
-    width: var(--contact-item-width);
-    height: var(--contact-item-height);
+    width: ${var_ContactItemWidth};
+    height: ${var_ContactItemHeight};
     min-width: 300px;
   }
   .leaflet-control-zoom span {

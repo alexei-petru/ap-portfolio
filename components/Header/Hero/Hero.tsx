@@ -20,14 +20,21 @@ const Hero = ({ headerBackgroundData }: IHeroProps) => {
           alt="author image"
         />
       </St.AvatarWrapper>
-      <St.UserDescription>
+      <St.UserDescriptionWrapper>
         {HERO_AP_DESCRIPTION.map((word, i) => (
-          <span key={i + word}>
+          <St.UserDescriptionWord
+            style={{
+              animation: `fade-in 0.8s ${Math.trunc(i / 10)}.${
+                i % 10
+              }s forwards cubic-bezier(0.11, 0, 0.5, 0);`,
+            }}
+            key={i + word}
+          >
             {word}
             {"\u00A0"}
-          </span>
+          </St.UserDescriptionWord>
         ))}
-      </St.UserDescription>
+      </St.UserDescriptionWrapper>
       <ApodDescription headerBackgroundData={headerBackgroundData} />
     </St.Hero>
   );

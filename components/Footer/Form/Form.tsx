@@ -42,7 +42,11 @@ const updateErrorsMessages = (
   setInputsErrors: React.Dispatch<React.SetStateAction<inputsType>>,
   inputsErrors: inputsType
 ) => {
+<<<<<<< HEAD
   const errors: Record<string, string> = {};
+=======
+  const errors = {};
+>>>>>>> pre
   for (const object of validationErrors) {
     if (object.context?.key) {
       errors[object.context.key] = object.message;
@@ -191,7 +195,7 @@ const Form = () => {
         {isLoading && <St.AiOutlineLoading3Quart />}
         {isMessageSended === false && (
           <St.FormDeliverMessage>
-            <St.VscErr isMessageSended={isMessageSended} />
+            <St.ErrorMessage isMessageSended={isMessageSended} />
             error, try again
           </St.FormDeliverMessage>
         )}

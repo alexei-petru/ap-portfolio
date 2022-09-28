@@ -43,13 +43,35 @@ export const CardContent = styled.div`
   height: 100%;
 `;
 
+export const ProjectStatusWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+interface IProjectStatusProps {
+  colors: {
+    textColor: string;
+    backgroundColor: string;
+  };
+}
+
+export const ProjectStatus = styled.span<IProjectStatusProps>`
+  background-color: ${({ colors }) => colors.backgroundColor};
+  padding: 4px;
+  color: ${({ colors }) => colors.textColor};
+  font: var(--text-regular-small-bold);
+  border-radius: 0 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    ${({ colors }) => colors.backgroundColor}  0px 0px 17px -3px;
+`;
+
 export const CardThumbnail = styled.div`
   display: flex;
   height: 40%;
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0 1rem 0;
+  padding-top: 8px;
 `;
 
 export const CardImg = styled.img`

@@ -17,7 +17,6 @@ const Footer = () => {
               alt=""
               src={"/ufo-background.png"}
               layout={"fill"}
-              priority
             />
             <Map />
             <Form />
