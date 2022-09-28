@@ -14,11 +14,7 @@ interface formReqI {
 }
 
 const getTokenValidity = async (token: string) => {
-<<<<<<< HEAD
-  const SECRET_KEY = process.env.HCAPTCHA_SECRET_PSW || "";
-=======
   const SECRET_KEY = process.env.HCAPTCHA_SECRET_PSW;
->>>>>>> pre
   let response = false;
   const SITE_KEY = process.env.HCAPTCHA_SITE_KEY;
 
