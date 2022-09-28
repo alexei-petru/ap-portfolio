@@ -62,13 +62,8 @@ export const BsCheck = styled(({ ...rest }: FormSubmitTypes) => (
     props.isMessageSended === true ? "inline-block" : "none"};
 `;
 
-<<<<<<< HEAD
-export const VscErr = styled(
-  ({...rest }: FormSubmitTypes) => <VscError {...rest} />
-=======
 export const ErrorMessage = styled(
   ({  ...rest }: FormSubmitTypes) => <VscError {...rest} />
->>>>>>> pre
 )`
   ${isMessageSendedStyle}
   fill: #ca0707;

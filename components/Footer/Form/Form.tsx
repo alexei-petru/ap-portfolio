@@ -42,11 +42,7 @@ const updateErrorsMessages = (
   setInputsErrors: React.Dispatch<React.SetStateAction<inputsType>>,
   inputsErrors: inputsType
 ) => {
-<<<<<<< HEAD
   const errors: Record<string, string> = {};
-=======
-  const errors = {};
->>>>>>> pre
   for (const object of validationErrors) {
     if (object.context?.key) {
       errors[object.context.key] = object.message;
