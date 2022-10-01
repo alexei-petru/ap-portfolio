@@ -13,9 +13,6 @@ const HeaderBackground = ({
 }: IHeaderBackgroundProps) => {
   return (
     <St.HeaderImageWrapper>
-      {!headerBackgroundImage.url && (
-        <h1 style={{ zIndex: "100", color: "red" }}>Loading</h1>
-      )}
       {headerBackgroundImage.url && (
         <Image
           style={{ zIndex: "0" }}
