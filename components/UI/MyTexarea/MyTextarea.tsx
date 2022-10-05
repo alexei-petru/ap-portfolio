@@ -6,17 +6,16 @@ interface IMyTexarea extends React.ComponentPropsWithoutRef<"textarea"> {
   labelDescription: string;
   isLabel: boolean;
   isError: string;
+  id: string;
 }
 
-const MyTexarea = ({ labelDescription, isError, ...props }: IMyTexarea) => {
+const MyTexarea = ({ labelDescription, id, isError, ...props }: IMyTexarea) => {
   return (
     <St.MyTexareaWrapper>
       {props.isLabel && (
-        <St.MyTextareaLabel htmlFor={props.name}>
-          {labelDescription}
-        </St.MyTextareaLabel>
+        <St.MyTextareaLabel htmlFor={id}>{labelDescription}</St.MyTextareaLabel>
       )}
-      <St.MyTextarea {...props} />
+      <St.MyTextarea id={id} {...props} />
       {isError && <MyErrorMessage text={isError} />}
     </St.MyTexareaWrapper>
   );

@@ -139,7 +139,7 @@ const Form = () => {
   );
 
   return (
-    <St.Form onSubmit={sumbitInputsValues} noValidate>
+    <St.Form id="contact-form" onSubmit={sumbitInputsValues} noValidate>
       <ContactMessage />
       <MyInput
         value={emailInputText}
@@ -148,9 +148,10 @@ const Form = () => {
           setEmailInputText(e.target.value);
         }}
         isLabel={true}
-        type={"email"}
-        labelDescription={"Email"}
+        type="email"
+        labelDescription="Email"
         isError={inputsErrors.email}
+        id="contact-form-email"
       />
       <MyInput
         value={subjectInputText}
@@ -162,6 +163,7 @@ const Form = () => {
         type={"text"}
         labelDescription={"Subject"}
         isError={inputsErrors.subject}
+        id="contact-form-subject"
       />
       <MyTexarea
         value={messageInputText}
@@ -175,16 +177,18 @@ const Form = () => {
         cols={30}
         rows={10}
         isError={inputsErrors.message}
+        id="contact-form-message"
       />
       <HCaptcha
         sitekey={"ede863f0-f565-47cd-a488-5bd2f49904ef"}
         onVerify={setFormVerifyToken}
         ref={captchaRef}
         theme="dark"
+        id="hCaptcha"
         // onClose={}
       />
       <St.FormStatus isMessageSended={isMessageSended}>
-        <MyButton>
+        <MyButton id="contact-form-button-submit">
           Send Message
           <AlienSvg />
         </MyButton>
