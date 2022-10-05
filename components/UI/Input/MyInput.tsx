@@ -5,17 +5,16 @@ interface MyInputProps extends React.ComponentPropsWithoutRef<"input"> {
   labelDescription: string;
   isLabel: boolean;
   isError: string;
+  id: string;
 }
 
-const MyInput = ({ labelDescription, isError, ...props }: MyInputProps) => {
+const MyInput = ({ labelDescription, id, isError, ...props }: MyInputProps) => {
   return (
     <St.MyInputWrapper>
       {props.isLabel && (
-        <St.MyInputLabel htmlFor={props.type}>
-          {labelDescription}
-        </St.MyInputLabel>
+        <St.MyInputLabel htmlFor={id}>{labelDescription}</St.MyInputLabel>
       )}
-      <St.MyInput maxLength={1000} {...props} />
+      <St.MyInput id={id} maxLength={1000} {...props} />
       {isError && <MyErrorMessage text={isError} />}
     </St.MyInputWrapper>
   );
