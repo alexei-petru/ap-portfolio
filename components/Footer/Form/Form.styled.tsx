@@ -55,16 +55,18 @@ const isMessageSendedStyle = css`
 
 export const BsCheck = styled(({ ...rest }: FormSubmitTypes) => (
   <BsCheckCircle {...rest} />
-))`
+))
+`
   ${isMessageSendedStyle}
   fill: #07ca21;
-  display: ${(props) =>
-    props.isMessageSended === true ? "inline-block" : "none"};
+  display: ${(props) => {
+    return props.isMessageSended === true ? "inline-block" : "none";
+  }};
 `;
 
-export const ErrorMessage = styled(
-  ({  ...rest }: FormSubmitTypes) => <VscError {...rest} />
-)`
+export const ErrorMessage = styled(({ ...rest }: FormSubmitTypes) => (
+  <VscError {...rest} />
+))`
   ${isMessageSendedStyle}
   fill: #ca0707;
   display: ${(props) =>

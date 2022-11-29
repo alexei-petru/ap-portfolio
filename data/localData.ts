@@ -53,12 +53,27 @@ export const CARDS_INFO = [
       "Styled-Components",
       "Nodemailer",
       "Hcaptcha",
-      "APOD",
       "Backend",
     ],
     thumbnail: "/ap-portfolio.png",
     urlGit: "https://github.com/Allex191/ap-portfolio",
     urlLive: "#",
+    devStatus: {
+      text: "Prerelease v0.9",
+      colors: {
+        textColor: cardsDevStatusColors.prerelease.textColor,
+        backgroundColor: cardsDevStatusColors.prerelease.backgroundColor,
+      },
+    },
+  },
+
+  {
+    title: "A.P Skills Snake",
+    description: "My Dev Story in a snake game format",
+    tags: ["NextJs", "Typescript", "Styled-Components", "React", "Redux"],
+    thumbnail: "/ap-skills-snake.png",
+    urlGit: "https://github.com/Allex191/ap-skills-snake-game",
+    urlLive: "https://ap-skills-snake-game.vercel.app",
     devStatus: {
       text: "Prerelease v0.7",
       colors: {
@@ -67,6 +82,7 @@ export const CARDS_INFO = [
       },
     },
   },
+
   {
     title: "Real Idea",
     description:
@@ -125,26 +141,26 @@ export const CARDS_INFO = [
       },
     },
   },
-  {
-    title: "*Random Movie",
-    description: "React app for searching a good random movie",
-    tags: [
-      "Html/Css",
-      "React",
-      "Redux",
-      "Typescript",
-      "Firebase",
-      "Styled-Components",
-    ],
-    thumbnail: "/random-movie.jpeg",
-    urlGit: "#",
-    urlLive: "#",
-    devStatus: {
-      text: "Pending project",
-      colors: {
-        textColor: cardsDevStatusColors.pending.textColor,
-        backgroundColor: cardsDevStatusColors.pending.backgroundColor,
-      },
-    },
-  },
+  // {
+  //   title: "*Random Movie",
+  //   description: "React app for searching a good random movie",
+  //   tags: [
+  //     "Html/Css",
+  //     "React",
+  //     "Redux",
+  //     "Typescript",
+  //     "Firebase",
+  //     "Styled-Components",
+  //   ],
+  //   thumbnail: "/random-movie.jpeg",
+  //   urlGit: "#",
+  //   urlLive: "#",
+  //   devStatus: {
+  //     text: "Pending project",
+  //     colors: {
+  //       textColor: cardsDevStatusColors.pending.textColor,
+  //       backgroundColor: cardsDevStatusColors.pending.backgroundColor,
+  //     },
+  //   },
+  // },
 ];
