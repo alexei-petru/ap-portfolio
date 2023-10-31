@@ -45,6 +45,28 @@ export const cardsDevStatusColors = {
 
 export const CARDS_INFO = [
   {
+    title: "VersoMart",
+    description: "Eshop SSR App",
+    tags: [
+      "Angular",
+      "Typescript",
+      "angular-material",
+      "ngx-translate",
+      "angular-universal",
+      "scss",
+    ],
+    thumbnail: "/versomart.png",
+    urlGit: "https://github.com/alexei-petru/VersoMart",
+    urlLive: "https://versomart.vercel.app/en/auth/sign-up",
+    devStatus: {
+      text: "Prerelease v0.4",
+      colors: {
+        textColor: cardsDevStatusColors.prerelease.textColor,
+        backgroundColor: cardsDevStatusColors.prerelease.backgroundColor,
+      },
+    },
+  },
+  {
     title: "A.P portfolio",
     description: "First version of personal portfolio",
     tags: [
@@ -59,10 +81,10 @@ export const CARDS_INFO = [
     urlGit: "https://github.com/Allex191/ap-portfolio",
     urlLive: "#",
     devStatus: {
-      text: "Prerelease v0.9",
+      text: "Release v1",
       colors: {
-        textColor: cardsDevStatusColors.prerelease.textColor,
-        backgroundColor: cardsDevStatusColors.prerelease.backgroundColor,
+        textColor: cardsDevStatusColors.release.textColor,
+        backgroundColor: cardsDevStatusColors.release.backgroundColor,
       },
     },
   },

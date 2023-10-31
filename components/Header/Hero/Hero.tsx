@@ -26,7 +26,7 @@ const Hero = ({ headerBackgroundData }: IHeroProps) => {
             style={{
               animation: `fade-in 0.8s ${Math.trunc(i / 10)}.${
                 i % 10
-              }s forwards cubic-bezier(0.11, 0, 0.5, 0);`,
+              }s forwards cubic-bezier(0.11, 0, 0.5, 0)`,
             }}
             key={i + word}
           >

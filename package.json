@@ -6,16 +6,9 @@
     "start": "next start",
     "lint": "next lint",
     "test": "playwright test",
-
-  "//Runs the tests only on Desktop Chrome":"",
     "test:chrome": "playwright test --project=chromium",
-
-  "//Runs the tests in a specific file.":"",
-    "test:file":"playwright test example",
-
-  "//Runs the tests in debug mode.":"",
-   "test:debug": "playwright test --debug"
-   
+    "test:file": "playwright test example",
+    "test:debug": "playwright test --debug"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
