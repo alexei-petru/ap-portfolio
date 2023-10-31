@@ -55,7 +55,7 @@ export const CARDS_INFO = [
       "angular-universal",
       "scss",
     ],
-    thumbnail: "/versomart.png",
+    thumbnail: "/versomart.jpg",
     urlGit: "https://github.com/alexei-petru/VersoMart",
     urlLive: "https://versomart.vercel.app/en/auth/sign-up",
     devStatus: {
