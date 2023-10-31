@@ -5,4 +5,4 @@ export const var_headerBackgroundFilter = "blur(0px) brightness(0.3)";
 //sizes
 export const var_ContactItemHeight = "552px";
 export const var_ContactItemWidth = "341px";
-export const var_HeaderNavbarHeight = " 63px";
+export const var_HeaderNavbarHeight = "63px";

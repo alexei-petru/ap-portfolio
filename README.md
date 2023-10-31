@@ -10,6 +10,7 @@
 
 #### High-Priority
 
+- fix header height and overall design
 - overall optimization
 - particles hero/main
 - skills section

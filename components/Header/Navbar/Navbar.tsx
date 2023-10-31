@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <St.Navbar>
       <St.LogoWrapper>
-        <li>A.P.</li>
+        <li>A.P. Portfolio</li>
       </St.LogoWrapper>
       <menu>
         <li>
@@ -18,7 +18,7 @@ const Navbar = () => {
         <li>
           <a
             rel="noreferrer"
-            href="https://github.com/Allex191"
+            href="https://github.com/alexei-petru"
             target={"_blank"}
           >
             <AiFillGithub />
