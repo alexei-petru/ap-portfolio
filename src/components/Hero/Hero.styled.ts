@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { var_NavbarHeight } from "src/constants/cssVariables";
 import ApodDescription from "./ApodDescription";
 import { keyframes } from "@emotion/react";
+import { MAX_DEVICE_HEIGHT } from "src/constants/constants";
 
 const SlideInEllipticBottomAnimation = keyframes`
   0% {
@@ -17,6 +18,7 @@ const SlideInEllipticBottomAnimation = keyframes`
 
 export const Hero = styled.section`
   height: calc(100vh - ${var_NavbarHeight});
+  max-height: ${MAX_DEVICE_HEIGHT}px;
   display: grid;
   grid-template-columns: repeat(29, 1fr);
   grid-template-rows: repeat(29, 1fr);
@@ -42,12 +44,12 @@ export const AvatarWrapper = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletPortrait}) {
     grid-column: 22 / span 5;
-    grid-row: 3 / span 11;
+    grid-row: 2 / span 11;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileLarge}) {
     grid-column: 21 / span 5;
-    grid-row: 4 / span 11;
+    grid-row: 3 / span 11;
   }
 `;
 

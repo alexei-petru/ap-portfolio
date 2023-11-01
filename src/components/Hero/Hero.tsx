@@ -1,4 +1,3 @@
-import ApodDescription from "src/components/Hero/ApodDescription";
 import * as St from "src/components/Hero/Hero.styled";
 import { HERO_AP_DESCRIPTION } from "src/data/localData";
 import Image from "next/image";

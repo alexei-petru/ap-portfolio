@@ -29,7 +29,6 @@ const Navbar = () => {
       </St.Navbar>
     </StyledContainer>
   );
-  3;
 };
 
 export default Navbar;
