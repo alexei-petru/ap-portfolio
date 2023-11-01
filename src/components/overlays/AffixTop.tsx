@@ -22,6 +22,7 @@ function AffixTop() {
                 alt="work in progress"
                 width={"100%"}
                 height={"90px"}
+                priority
               />
             </Button>
           )}

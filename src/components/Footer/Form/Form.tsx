@@ -1,14 +1,14 @@
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import AlienSvg from "src/components/Footer/Form/AlienSvg";
-import MyInput from "src/components/UI/Input/MyInput";
-import { MyButton } from "src/components/UI/MyButton/MyButton.styled";
-import MyTexarea from "src/components/UI/MyTexarea/MyTextarea";
 import Joi from "joi";
 import { emailResponseType } from "src/pages/api/email/email";
 import React, { useEffect, useRef, useState } from "react";
 import { getInputsValidation } from "src/utils/getInputsValidation";
 import ContactMessage from "../ContactMessage/ContactMessage";
 import * as St from "./Form.styled";
+import MyInput from "src/components/shared/Input/MyInput";
+import MyButton from "src/components/shared/MyButton/MyButton";
+import MyTexarea from "src/components/shared/MyTexarea/MyTextarea";
 
 export type inputsType = {
   email: string;

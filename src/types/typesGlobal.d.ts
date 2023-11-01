@@ -1,3 +1,11 @@
+import "@emotion/react";
+import { AppTheme } from "./typesLocal";
+
+declare module "@emotion/react" {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface Theme extends AppTheme {}
+}
+
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
@@ -12,5 +20,3 @@ declare global {
     }
   }
 }
-
-export {};

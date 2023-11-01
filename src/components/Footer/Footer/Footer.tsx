@@ -1,7 +1,9 @@
 import { StyledContainer } from "src/styles/Container.styled";
 import * as St from "./Footer.styled";
 import dynamic from "next/dynamic";
-const Map = dynamic(() => import("src/components/Footer/Map/Map"), { ssr: false });
+const Map = dynamic(() => import("src/components/Footer/Map/Map"), {
+  ssr: false,
+});
 import { useGetCurrentYear } from "src/hooks/useGetCurrentYear";
 import Form from "src/components/Footer/Form/Form";
 
@@ -17,6 +19,7 @@ const Footer = () => {
               alt=""
               src={"/ufo-background.png"}
               layout={"fill"}
+              priority
             />
             <Map />
             <Form />
