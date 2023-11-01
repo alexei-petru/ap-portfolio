@@ -39,7 +39,7 @@ const Hero = ({
             </St.UserDescriptionWord>
           ))}
         </St.UserDescriptionWrapper>
-        <ApodDescription headerBackgroundData={headerBackgroundData} />
+        <St.ApodDescriptionSt headerBackgroundData={headerBackgroundData} />
       </St.Hero>
     </StyledContainer>
   );

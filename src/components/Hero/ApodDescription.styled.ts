@@ -13,16 +13,7 @@ export const ApodParagrap = styled.p`
 
 export const ApodDescription = styled.div`
   z-index: 1;
-  grid-row: 11 / span 2;
-  grid-column: 2 / span 2;
   cursor: pointer;
-
-  @media (max-width: 512px) {
-    z-index: 1;
-    grid-row: 7 / span 7;
-    grid-column: 3 / span 9;
-    cursor: pointer;
-  }
 `;
 
 export const ApodDescriptionInner = styled.div<avs>`

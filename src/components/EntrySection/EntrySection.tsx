@@ -1,10 +1,9 @@
+import { useEffect, useState } from "react";
+import { apodLocalImage } from "src/data/localData";
+import { IApodApiResponse } from "src/types/typesLocal";
 import Hero from "../Hero/Hero";
 import Navbar from "../Navbar/Navbar";
 import * as St from "./EntrySection.styled";
-import { useViewportSize } from "@mantine/hooks";
-import { useEffect, useState } from "react";
-import { IApodApiResponse } from "src/types/typesLocal";
-import { apodLocalImage } from "src/data/localData";
 import EntrySectionBackground from "./EntrySectionBackground";
 
 export interface IApodData {
@@ -20,8 +19,6 @@ export interface IApodData {
 }
 
 const EntrySection = () => {
-  const { height } = useViewportSize();
-
   const [entrySectionBackgroundData, setEntrySectionBackgroundData] = useState({
     title: "",
     url: "",
@@ -50,7 +47,7 @@ const EntrySection = () => {
 
   return (
     <>
-      <St.EntrySection height={height}>
+      <St.EntrySection>
         <EntrySectionBackground
           entrySectionBackgroundImage={entrySectionBackgroundData}
         />

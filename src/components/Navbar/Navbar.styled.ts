@@ -13,7 +13,7 @@ export const Navbar = styled.nav`
   background-color: ${var_NavbarBackgroundColor};
   padding: 10px;
   margin-top: 0;
-  min-height: ${var_NavbarHeight};
+  height: ${var_NavbarHeight};
 
   li {
     list-style: none;

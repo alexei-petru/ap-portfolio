@@ -19,5 +19,6 @@ export const APP_THEME = {
     laptopLarge: "1366px",
     desktopRegular: "1440px",
     desktopLarge: "1920px",
+    desktopQHD: "2440px",
   },
 } as const;

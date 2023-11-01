@@ -1,23 +1,37 @@
 import styled from "@emotion/styled";
+import { var_NavbarHeight } from "src/constants/cssVariables";
+import ApodDescription from "./ApodDescription";
+import { keyframes } from "@emotion/react";
+
+const SlideInEllipticBottomAnimation = keyframes`
+  0% {
+    transform: translateY(600px) rotateX(30deg) scale(0);
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotateX(0) scale(1);
+    transform-origin: 50% -1400px;
+    opacity: 1;
+}`;
 
 export const Hero = styled.section`
+  height: calc(100vh - ${var_NavbarHeight});
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  /* grid-template-rows: repeat(12, calc(100vh / 12)); */
-  max-height: 1080px;
-  height: 100%;
+  grid-template-columns: repeat(29, 1fr);
+  grid-template-rows: repeat(29, 1fr);
 `;
 
 export const AvatarWrapper = styled.div`
   z-index: 2;
   position: relative;
-  width: clamp(138px, 25vw, 220px);
+  width: clamp(155px, 25vw, 220px);
   aspect-ratio: 0.747;
   border-radius: 10%;
-  grid-row: 6 / span 7;
-  grid-column: 9 / span 2;
+  grid-column: 21 / span 5;
+  grid-row: 8 / span 11;
   overflow: hidden;
-  animation-name: slide-in-elliptic-bottom-fwd;
+  animation-name: ${SlideInEllipticBottomAnimation};
   animation-duration: 2.2s;
   animation-timing-function: ease;
   animation-delay: 0s;
@@ -26,49 +40,47 @@ export const AvatarWrapper = styled.div`
   animation-fill-mode: forwards;
   opacity: 0;
 
-  @keyframes slide-in-elliptic-bottom-fwd {
-    0% {
-      transform: translateY(600px) rotateX(30deg) scale(0);
-      transform-origin: 50% 100%;
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0) rotateX(0) scale(1);
-      transform-origin: 50% -1400px;
-      opacity: 1;
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletPortrait}) {
+    grid-column: 22 / span 5;
+    grid-row: 3 / span 11;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileLarge}) {
-    grid-row: 7 / span 7;
-    grid-column: 10 / span 2;
+    grid-column: 21 / span 5;
+    grid-row: 4 / span 11;
   }
 `;
 
 export const UserDescriptionWrapper = styled.h1`
   z-index: 1;
   font: var(--title-regular-large);
-  grid-row: 6 / span 7;
-  grid-column: 2 / span 6;
+  grid-column: 3 / span 15;
+  grid-row: 10 / span 11;
   text-align: center;
-  transform: scale(0.9);
+  transform: scale(1.1);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   letter-spacing: 0.5px;
   word-spacing: 7px;
+  font-size: clamp(30px, 8vw, 38px);
 
-  @media (max-width: 842px) {
-    grid-column: 3 / span 6;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
+    grid-column: 3 / span 15;
+    grid-row: 9 / span 11;
   }
 
-  @media (max-width: 512px) {
-    font-size: clamp(16px, 6vw, 38px);
-    grid-row: 5 / span 7;
-    grid-column: 5 / span 1;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletPortrait}) {
+    grid-column: 4 / span 24;
+    grid-row: 11 / span 11;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMedium}) {
+    grid-column: 4 / span 24;
+    grid-row: 11 / span 11;
   }
 
   @keyframes scale {
     100% {
-      transform: scale(1);
+      transform: scale(1.2);
     }
   }
 `;
@@ -83,4 +95,9 @@ export const UserDescriptionWord = styled.span`
       filter: blur(0);
     }
   }
+`;
+
+export const ApodDescriptionSt = styled(ApodDescription)`
+  grid-column: 2 / span 6;
+  grid-row: 26 / span 2;
 `;

@@ -2,15 +2,12 @@ import styled from "@emotion/styled";
 import { maxDeviceHeight } from "src/constants/constants";
 import { var_NavbarBackgroundFilter } from "src/constants/cssVariables";
 
-export const EntrySection = styled.header<{ height: number }>`
+export const EntrySection = styled.header`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 100%;
-  height: ${(props) =>
-    props.height > maxDeviceHeight
-      ? maxDeviceHeight + "px"
-      : props.height + `px`};
-  min-height: 680px;
+  height: 100vh;
+  max-height: ${maxDeviceHeight}px;
   margin-bottom: 50px;
 `;
 
@@ -19,6 +16,6 @@ export const EntrySectionImageWrapper = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-  max-width: 2440px;
+  max-width: ${({ theme }) => theme.breakpoints.desktopQHD};
   z-index: 1;
 `;

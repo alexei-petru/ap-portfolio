@@ -11,11 +11,14 @@ import { IApodData } from "../EntrySection/EntrySection";
 //   buttonInfo: " string,",
 // };
 
-interface IApodDescriptionProps extends React.PropsWithChildren {
+interface IApodDescriptionProps extends React.HTMLProps<any> {
   headerBackgroundData: IApodData;
 }
 
-const ApodDescription = ({ headerBackgroundData }: IApodDescriptionProps) => {
+const ApodDescription = ({
+  headerBackgroundData,
+  className,
+}: IApodDescriptionProps) => {
   const [isPopoverOpended, setIsPopoverOpended] = useState(false);
   const isBackgroundImageLoading = headerBackgroundData.url ? false : true;
 
@@ -27,7 +30,7 @@ const ApodDescription = ({ headerBackgroundData }: IApodDescriptionProps) => {
       opened={isPopoverOpended}
       onChange={setIsPopoverOpended}
     >
-      <St.ApodDescription>
+      <St.ApodDescription className={className}>
         <St.ApodDescriptionInner
           isBackgroundImageLoading={isBackgroundImageLoading}
         >
