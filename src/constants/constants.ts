@@ -1,6 +1,6 @@
-export const githubUrl = "https://github.com/Allex191";
+export const GITHUB_URL = "https://github.com/Allex191";
 
-export const maxDeviceHeight = 1080;
+export const MAX_DEVICE_HEIGHT = 1080;
 
 export const APP_THEME = {
   colors: {

@@ -11,9 +11,10 @@ export const Navbar = styled.nav`
   justify-content: space-between;
   align-items: center;
   background-color: ${var_NavbarBackgroundColor};
-  padding: 10px;
+  padding: 40px;
   margin-top: 0;
   height: ${var_NavbarHeight};
+  border-radius: 0 0 10px 10px;
 
   li {
     list-style: none;

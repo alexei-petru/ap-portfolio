@@ -21,8 +21,10 @@ const Footer = () => {
               layout={"fill"}
               priority
             />
-            <Map />
-            <Form />
+            <St.MapFooterWrapper>
+              <Map />
+              <Form />
+              </St.MapFooterWrapper>
             <St.footerCopyright>
               {`Designed and developed with ❤ by Alexei Petru. © ${currentYear}`}
             </St.footerCopyright>
