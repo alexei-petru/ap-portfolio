@@ -4,6 +4,7 @@
     "target": "esnext",
     "module": "esnext",
     "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
     "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
@@ -14,8 +15,15 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "typeRoots": ["./node_modules/@types"],
-    "lib": ["dom", "es2015", "es2016"],
+    "typeRoots": [
+      "./src/types/typesGlobal",
+      "./node_modules/@types"
+    ],
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016"
+    ],
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -28,7 +36,9 @@
       {
         "name": "typescript-styled-plugin",
         "lint": {
-          "validProperties": ["background"]
+          "validProperties": [
+            "background"
+          ]
         }
       }
     ],
@@ -36,6 +46,14 @@
     "strictNullChecks": true,
     "noImplicitAny": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
-  "exclude": ["node_modules", ".next"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "next.config.js"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next"
+  ]
 }

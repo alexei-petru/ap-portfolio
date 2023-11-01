@@ -1,6 +1,5 @@
 import { css, keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
-import MyErrorMessage from "src/components/UI/MyErrorMessage/MyErrorMessage";
 import {
   var_ContactItemHeight,
   var_ContactItemWidth,
@@ -8,6 +7,7 @@ import {
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { BsCheckCircle } from "react-icons/bs";
 import { VscError } from "react-icons/vsc";
+import MyErrorMessage from "src/components/shared/MyErrorMessage/MyErrorMessage";
 
 export const Form = styled.form`
   display: flex;
@@ -26,7 +26,7 @@ export const Form = styled.form`
   @media (max-width: 735px) {
     margin-bottom: 70px;
     /* margin-left: -18px; */
-  } ;
+  }
 `;
 
 export const buttonsWrapper = styled.div`
@@ -55,8 +55,7 @@ const isMessageSendedStyle = css`
 
 export const BsCheck = styled(({ ...rest }: FormSubmitTypes) => (
   <BsCheckCircle {...rest} />
-))
-`
+))`
   ${isMessageSendedStyle}
   fill: #07ca21;
   display: ${(props) => {

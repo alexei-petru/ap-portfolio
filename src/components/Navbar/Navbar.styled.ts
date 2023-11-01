@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import {
-  var_headerNavbarBackgroundColor,
-  var_HeaderNavbarHeight,
+  var_NavbarBackgroundColor,
+  var_NavbarHeight,
 } from "src/constants/cssVariables";
 
 export const Navbar = styled.nav`
@@ -10,10 +10,10 @@ export const Navbar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${var_headerNavbarBackgroundColor};
+  background-color: ${var_NavbarBackgroundColor};
   padding: 10px;
   margin-top: 0;
-  min-height: ${var_HeaderNavbarHeight};
+  min-height: ${var_NavbarHeight};
 
   li {
     list-style: none;
@@ -40,4 +40,15 @@ export const LogoWrapper = styled.nav`
     width: auto;
     height: 50px;
   }
+`;
+
+export const NavbarBackground = styled.div`
+  width: 100%;
+  height: ${var_NavbarHeight};
+  background-color: ${var_NavbarBackgroundColor};
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 `;

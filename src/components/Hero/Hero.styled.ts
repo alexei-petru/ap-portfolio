@@ -14,7 +14,7 @@ export const AvatarWrapper = styled.div`
   width: clamp(138px, 25vw, 220px);
   aspect-ratio: 0.747;
   border-radius: 10%;
-  grid-row: 5 / span 7;
+  grid-row: 6 / span 7;
   grid-column: 9 / span 2;
   overflow: hidden;
   animation-name: slide-in-elliptic-bottom-fwd;
@@ -38,13 +38,18 @@ export const AvatarWrapper = styled.div`
       opacity: 1;
     }
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileLarge}) {
+    grid-row: 7 / span 7;
+    grid-column: 10 / span 2;
+  }
 `;
 
 export const UserDescriptionWrapper = styled.h1`
   z-index: 1;
   font: var(--title-regular-large);
-  grid-row: 5 / span 7;
-  grid-column: 3 / span 5;
+  grid-row: 6 / span 7;
+  grid-column: 2 / span 6;
   text-align: center;
   transform: scale(0.9);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);

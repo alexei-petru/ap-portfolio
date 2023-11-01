@@ -3,14 +3,7 @@ import { GlobalStyle } from "src/styles/GlobalStyle";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { Global, ThemeProvider } from "@emotion/react";
-
-const theme = {
-  colors: {
-    primary: "black",
-    secondary: "white",
-    popoverDropDownBackgroundColor: "#020309",
-  },
-};
+import { APP_THEME } from "src/constants/constants";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -24,11 +17,10 @@ export default function App(props: AppProps) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={APP_THEME}>
         <Global styles={GlobalStyle} />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
   );
 }
-

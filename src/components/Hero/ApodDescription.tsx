@@ -1,10 +1,10 @@
 import { Popover } from "@mantine/core";
-import * as St from "src/components/Header/Hero/ApodDescription.styled";
-import MyPopoverDropDown from "src/components/UI/MyPopoverDropdown/MyPopoverDropdown";
-import { StyledPopover } from "src/components/UI/MyPopoverDropdown/MyPopoverDropdown.styled";
+import * as St from "src/components/Hero/ApodDescription.styled";
+import MyPopoverDropDown from "src/components/shared/MyPopoverDropdown/MyPopoverDropdown";
+import { StyledPopover } from "src/components/shared/MyPopoverDropdown/MyPopoverDropdown.styled";
 import Image from "next/image";
 import { useState } from "react";
-import { IApodData } from "../Header";
+import { IApodData } from "../EntrySection/EntrySection";
 // const popoverContent: MyPopoverDropDownProps[] = {
 //   dropDownText: "string",
 //   buttonClose: " string",
@@ -28,17 +28,17 @@ const ApodDescription = ({ headerBackgroundData }: IApodDescriptionProps) => {
       onChange={setIsPopoverOpended}
     >
       <St.ApodDescription>
-        <St.ApodDescriptionWrapper
+        <St.ApodDescriptionInner
           isBackgroundImageLoading={isBackgroundImageLoading}
         >
           <Image
             width={96}
             height={68}
             src={"/planet-purple.png"}
-            priority
+            priority={true}
             alt="apod description"
           />
-        </St.ApodDescriptionWrapper>
+        </St.ApodDescriptionInner>
         <Popover.Target>
           <St.ApodParagraphWrapper
             onClick={() => setIsPopoverOpended((prev) => !prev)}
@@ -59,7 +59,7 @@ const ApodDescription = ({ headerBackgroundData }: IApodDescriptionProps) => {
             <p>
               Background Image is offered by
               <St.ApodExternalLink href="https://apod.nasa.gov/apod/">
-              &nbsp;&quot;Nasa&nbsp;APOD&quot;&nbsp;
+                &nbsp;&quot;Nasa&nbsp;APOD&quot;&nbsp;
               </St.ApodExternalLink>
               and is called:
               <br />

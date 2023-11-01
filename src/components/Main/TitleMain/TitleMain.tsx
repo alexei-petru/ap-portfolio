@@ -1,9 +1,9 @@
 import { Popover } from "@mantine/core";
-import MyPopoverDropDown from "src/components/UI/MyPopoverDropdown/MyPopoverDropdown";
-import { StyledPopover } from "src/components/UI/MyPopoverDropdown/MyPopoverDropdown.styled";
 import { useState } from "react";
 import { BsInfoCircle } from "react-icons/bs";
 import * as St from "./TitleMain.styled";
+import { StyledPopover } from "src/components/shared/MyPopoverDropdown/MyPopoverDropdown.styled";
+import MyPopoverDropDown from "src/components/shared/MyPopoverDropdown/MyPopoverDropdown";
 
 function MainTitle() {
   const [opened, setOpened] = useState(false);
@@ -29,7 +29,8 @@ function MainTitle() {
         onClickClose={() => setOpened(false)}
         buttonInfoIsEnabled={false}
       >
-        All projects are fully designed and coded by Alexei Petru
+        All projects are fully coded by Alexei Petru, and almost all are fully
+        designed as well.
       </MyPopoverDropDown>
     </StyledPopover>
   );
