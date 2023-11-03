@@ -57,7 +57,7 @@ export const CARDS_INFO = [
     ],
     thumbnail: "/versomart.jpg",
     urlGit: "https://github.com/alexei-petru/VersoMart",
-    urlLive: "https://versomart-dd427b87b213.herokuapp.com/en/auth/sign-in",
+    urlLive: "https://versomart-dd427b87b213.herokuapp.com/en/auth/sign-up",
     devStatus: {
       text: "Prerelease v0.4",
       colors: {
