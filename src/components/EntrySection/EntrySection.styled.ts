@@ -8,8 +8,9 @@ export const EntrySection = styled.header`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  /* min-height: ${({ theme }) => theme.breakpoints.tabletPortrait};
   height: 100vh;
-  max-height: ${MAX_DEVICE_HEIGHT}px;
+  max-height: ${MAX_DEVICE_HEIGHT}px; */
   margin-bottom: 50px;
 `;
 

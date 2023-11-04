@@ -17,6 +17,8 @@ const SlideInEllipticBottomAnimation = keyframes`
 }`;
 
 export const Hero = styled.section`
+  position: relative;
+  min-height: 650px;
   height: calc(100vh - ${var_NavbarHeight});
   max-height: ${MAX_DEVICE_HEIGHT}px;
   display: grid;
@@ -25,7 +27,7 @@ export const Hero = styled.section`
 `;
 
 export const AvatarWrapper = styled.div`
-  z-index: 2;
+  z-index: 1;
   position: relative;
   width: clamp(155px, 25vw, 220px);
   aspect-ratio: 0.747;
@@ -49,7 +51,7 @@ export const AvatarWrapper = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileLarge}) {
     grid-column: 21 / span 5;
-    grid-row: 3 / span 11;
+    grid-row: 1 / span 11;
   }
 `;
 
@@ -63,21 +65,33 @@ export const UserDescriptionWrapper = styled.h1`
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   letter-spacing: 0.5px;
   word-spacing: 7px;
-  font-size: clamp(30px, 8vw, 38px);
+  font-size: clamp(27px, 8vw, 38px);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
     grid-column: 3 / span 15;
     grid-row: 9 / span 11;
+
+    @media (max-height: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
+      grid-column: 3 / span 15;
+      grid-row: 7 / span 11;
+    }
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletPortrait}) {
+    font-size: clamp(26px, 5vw, 36px);
     grid-column: 4 / span 24;
-    grid-row: 11 / span 11;
+    grid-row: 13 / span 11;
+
+    @media (max-height: ${({ theme }) => theme.breakpoints.tabletPortrait}) {
+      grid-column: 3 / span 25;
+      grid-row: 14 / span 10;
+    }
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMedium}) {
+    font-size: clamp(19px, 8vw, 25px);
     grid-column: 4 / span 24;
-    grid-row: 11 / span 11;
+    grid-row: 12 / span 11;
   }
 
   @keyframes scale {
