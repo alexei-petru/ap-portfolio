@@ -1,4 +1,3 @@
-import HCaptcha from "@hcaptcha/react-hcaptcha";
 import AlienSvg from "src/components/Footer/Form/AlienSvg";
 import Joi from "joi";
 import { emailResponseType } from "src/pages/api/email/email";
@@ -9,6 +8,7 @@ import * as St from "./Form.styled";
 import MyInput from "src/components/shared/Input/MyInput";
 import MyButton from "src/components/shared/MyButton/MyButton";
 import MyTexarea from "src/components/shared/MyTexarea/MyTextarea";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 export type inputsType = {
   email: string;

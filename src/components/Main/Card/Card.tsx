@@ -1,5 +1,7 @@
 import { useState } from "react";
 import * as St from "./Card.styled";
+import Image from "next/image";
+import { BREAKPOINTS_APP } from "src/constants/constants";
 type CardPropsType = {
   title: string;
   description: string;
@@ -36,10 +38,18 @@ const ProjectCard = ({
             {devStatus.text}
           </St.ProjectStatus>
         </St.ProjectStatusWrapper>
-        <St.CardThumbnail>
-          <St.CardImg src={thumbnail} />
-        </St.CardThumbnail>
-
+        <St.CardThumbnailWrapper>
+          <St.CardImg>
+            <Image
+              fill
+              alt={title}
+              quality={100}
+              src={thumbnail}
+              priority
+              sizes={`max-width: ${BREAKPOINTS_APP.laptopMedium} 100vw, 50vw`}
+            />
+          </St.CardImg>
+        </St.CardThumbnailWrapper>
         <St.CardTextWrapper>
           <St.CardTitle>{title}</St.CardTitle>
           <St.CardDescription>{description}</St.CardDescription>

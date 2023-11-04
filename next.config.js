@@ -4,6 +4,12 @@ module.exports = {
     emotion: true,
   },
   images: {
-    domains: ["apod.nasa.gov"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "apod.nasa.gov",
+      },
+    ],
   },
 };
+ 

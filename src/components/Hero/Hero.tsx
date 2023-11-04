@@ -3,6 +3,7 @@ import { HERO_AP_DESCRIPTION } from "src/data/localData";
 import Image from "next/image";
 import { IApodData } from "../EntrySection/EntrySection";
 import { StyledContainer } from "src/styles/Container.styled";
+import { BREAKPOINTS_APP } from "src/constants/constants";
 
 interface IHeroProps extends React.PropsWithChildren {
   entrySectionBackgroundData: IApodData;
@@ -16,8 +17,10 @@ const Hero = ({
       <St.Hero>
         <St.AvatarWrapper>
           <Image
-            objectFit="contain"
-            layout="fill"
+            sizes={`(max-width: ${BREAKPOINTS_APP.mobileMedium}) 100vw,
+             (max-width: ${BREAKPOINTS_APP.tabletLandscape}) 50vw,
+              33vw`}
+            fill
             src={"/me.jpg"}
             priority
             alt="author image"
