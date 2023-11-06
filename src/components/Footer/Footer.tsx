@@ -5,8 +5,16 @@ import Image from "next/image";
 import { useGetCurrentYear } from "src/hooks/useGetCurrentYear";
 import Form from "src/components/Footer/Form/Form";
 import { BREAKPOINTS_APP } from "src/constants/constants";
+import React from "react";
 
-const Footer = () => {
+interface FooterProps {
+  onLoaded?: () => void; // Specify that onLoaded is a function that doesn't take any arguments and doesn't return anything
+}
+
+const Footer: React.FC<FooterProps> = ({ onLoaded }) => {
+  React.useEffect(() => {
+    onLoaded && onLoaded();
+  }, [onLoaded]);
   const currentYear = useGetCurrentYear();
   return (
     <>
