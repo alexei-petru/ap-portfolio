@@ -6,7 +6,7 @@ export const ProjectsTitleWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 26px 0 42px 0;
+  margin-bottom: 50px;
 `;
 
 export const ProjectsTitle = styled(StyledTitleSection)`

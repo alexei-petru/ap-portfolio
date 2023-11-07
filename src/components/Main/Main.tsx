@@ -13,17 +13,16 @@ const Main = () => {
           <St.CardsSection>
             {CARDS_DATA.map((project) => {
               return (
-                <St.CardWrapper key={project.title}>
-                  <Card
-                    title={project.title}
-                    description={project.description}
-                    tags={project.tags}
-                    thumbnail={project.thumbnail}
-                    urlGit={project.urlGit}
-                    urlLive={project.urlLive}
-                    devStatus={project.devStatus}
-                  />
-                </St.CardWrapper>
+                <Card
+                  key={project.title}
+                  title={project.title}
+                  description={project.description}
+                  tags={project.tags}
+                  thumbnail={project.thumbnail}
+                  urlGit={project.urlGit}
+                  urlLive={project.urlLive}
+                  devStatus={project.devStatus}
+                />
               );
             })}
           </St.CardsSection>

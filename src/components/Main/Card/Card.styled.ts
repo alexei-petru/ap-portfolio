@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { CARD_SIZE } from "src/constants/constants";
 
 type CardProps = {
   thumbnail: string;
@@ -6,8 +7,9 @@ type CardProps = {
 
 export const Card = styled.div<CardProps>`
   position: relative;
-  max-width: 100%;
-  width: 250px;
+  width: ${CARD_SIZE.width}px;
+  height: ${CARD_SIZE.height}px;
+  z-index: 1;
   display: flex;
   flex-flow: column;
   background-color: #ecf0f1;
@@ -68,17 +70,17 @@ export const ProjectStatus = styled.span<IProjectStatusProps>`
 
 export const CardThumbnailWrapper = styled.div`
   display: flex;
-  height: 40%;
+  height: 45%;
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding-top: 8px;
+  padding: 20px;
 `;
 
-export const CardImg = styled.div`
-  width: 220px;
-  height: 150px;
-  object-fit: cover;
+export const CardImgWrapper = styled.div`
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 7px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   user-select: none;
 `;

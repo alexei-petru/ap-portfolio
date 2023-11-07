@@ -1,6 +1,9 @@
 export const GITHUB_URL = "https://github.com/Allex191";
 
-export const MAX_DEVICE_HEIGHT = 1080;
+export const MAX_SECTION_SIZE = {
+  height: 1080,
+  width: 2440,
+};
 
 export const BREAKPOINTS_APP = {
   mobileSmall: "360px",
@@ -24,3 +27,5 @@ export const APP_THEME = {
   },
   breakpoints: BREAKPOINTS_APP,
 } as const;
+
+export const CARD_SIZE = { width: 320, height: 450 };

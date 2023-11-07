@@ -34,19 +34,25 @@ const ApodDescription = ({
         <St.ApodDescriptionInner
           isBackgroundImageLoading={isBackgroundImageLoading}
         >
-          <Image
-            width={96}
-            height={68}
-            src={"/planet-purple.png"}
-            priority={true}
-            alt="apod description"
-          />
+          <St.ApodImageWrapper
+            isBackgroundImageLoading={isBackgroundImageLoading}
+          >
+            <Image
+              width={100}
+              height={100}
+              src={"/planet-purple.png"}
+              priority={true}
+              alt="apod description"
+              style={{ objectFit: "contain" }}
+              sizes="10vw"
+            />
+          </St.ApodImageWrapper>
+          <Popover.Target>
+            <St.ApodButton onClick={() => setIsPopoverOpended((prev) => !prev)}>
+              <St.ApodButtonText>APOD Dynamic Image</St.ApodButtonText>
+            </St.ApodButton>
+          </Popover.Target>
         </St.ApodDescriptionInner>
-        <Popover.Target>
-          <St.ApodButton onClick={() => setIsPopoverOpended((prev) => !prev)}>
-            <St.ApodButtonText>APOD Dynamic Image</St.ApodButtonText>
-          </St.ApodButton>
-        </Popover.Target>
       </St.ApodDescription>
       <MyPopoverDropDown
         buttonInfoIsEnabled={true}

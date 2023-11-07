@@ -39,16 +39,17 @@ const ProjectCard = ({
           </St.ProjectStatus>
         </St.ProjectStatusWrapper>
         <St.CardThumbnailWrapper>
-          <St.CardImg>
+          <St.CardImgWrapper>
             <Image
               fill
               alt={title}
               quality={100}
               src={thumbnail}
               priority
+              style={{ objectFit: "cover" }}
               sizes={`max-width: ${BREAKPOINTS_APP.laptopMedium} 100vw, 50vw`}
             />
-          </St.CardImg>
+          </St.CardImgWrapper>
         </St.CardThumbnailWrapper>
         <St.CardTextWrapper>
           <St.CardTitle>{title}</St.CardTitle>
