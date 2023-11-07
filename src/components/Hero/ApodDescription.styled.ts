@@ -1,14 +1,25 @@
 import { css, keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 
-interface avs {
+interface ApodDescriptionProps {
   isBackgroundImageLoading: boolean;
 }
 
-export const ApodParagraphWrapper = styled.div``;
+export const ApodButton = styled.button`
+  background-color: transparent;
+  padding: 7px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #303030;
+  border-radius: 3px;
+  :hover {
+    scale: 1.02;
+  }
+`;
 
-export const ApodParagrap = styled.p`
-  text-align: end;
+export const ApodButtonText = styled.span`
+  z-index: 1;
+  white-space: nowrap;
 `;
 
 export const ApodDescription = styled.div`
@@ -16,7 +27,7 @@ export const ApodDescription = styled.div`
   cursor: pointer;
 `;
 
-export const ApodDescriptionInner = styled.div<avs>`
+export const ApodDescriptionInner = styled.div<ApodDescriptionProps>`
   filter: brightness(0.6);
   display: flex;
   justify-content: flex-start;
@@ -29,11 +40,7 @@ export const ApodDescriptionInner = styled.div<avs>`
       : css`
           ${blinkAnimation} 0.6s 2.15s 1.5 both
         `};
-`;
-
-export const ApodParagraph = styled.p`
-  margin-top: -50px;
-  z-index: 1;
+  cursor: default;
 `;
 
 export const ApodExternalLink = styled.a`

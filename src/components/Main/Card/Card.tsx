@@ -67,6 +67,8 @@ const ProjectCard = ({
             isDisabled={urlGit === "#"}
             onFocus={() => setIsCardHover(true)}
             onBlur={() => setIsCardHover(false)}
+            title={`Go to git ${title}`}
+            aria-label={`Go to git ${title}`}
           />
           <St.LinkLive
             href={urlLive}
@@ -75,6 +77,8 @@ const ProjectCard = ({
             isDisabled={urlLive === "#"}
             onFocus={() => setIsCardHover(true)}
             onBlur={() => setIsCardHover(false)}
+            title={`Go to live ${title}`}
+            aria-label={`Go to live ${title}`}
           />
         </St.ButtonsWrapper>
       </St.CardContent>

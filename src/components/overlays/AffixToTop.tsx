@@ -17,6 +17,8 @@ const AffixToTop = () => {
           {(transitionStyles) => (
             <Button
               color="dark"
+              title="Go to top"
+              aria-label="Go to top"
               size={isSmallScreen ? "xs" : "xl"}
               style={transitionStyles}
               onClick={() => scrollTo({ y: 0 })}

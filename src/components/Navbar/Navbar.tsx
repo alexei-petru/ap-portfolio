@@ -1,33 +1,36 @@
+import Link from "next/link";
 import { AiFillGithub } from "react-icons/ai";
 import * as St from "src/components/Navbar/Navbar.styled";
 import { StyledContainer } from "src/styles/Container.styled";
 
 const Navbar = () => {
   return (
-    <StyledContainer>
-      <St.Navbar>
-        <St.LogoWrapper>
-          <li>A.P. Portfolio</li>
-        </St.LogoWrapper>
-        <menu>
+    <St.Navbar>
+      <StyledContainer>
+        <ul>
+          <St.LogoWrapper>
+            <Link href="/">A.P. Portfolio</Link>
+          </St.LogoWrapper>
           <li>
-            <a href="#projects">Projects</a>
+            <Link href="#projects">Projects</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link href="#contact">Contact</Link>
           </li>
           <li>
             <a
-              rel="noreferrer"
               href="https://github.com/alexei-petru"
-              target={"_blank"}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Go to github"
+              aria-label="Go to github"
             >
               <AiFillGithub />
             </a>
           </li>
-        </menu>
-      </St.Navbar>
-    </StyledContainer>
+        </ul>
+      </StyledContainer>
+    </St.Navbar>
   );
 };
 
