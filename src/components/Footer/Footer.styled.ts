@@ -5,12 +5,9 @@ import {
   var_ContactItemHeight,
   var_ContactItemWidth,
 } from "src/constants/cssVariables";
-import { MAX_DEVICE_HEIGHT } from "src/constants/constants";
 
 export const Footer = styled.footer`
   margin: 0 auto;
-  height: 100vh;
-  max-height: ${MAX_DEVICE_HEIGHT}px;
   max-width: ${({ theme }) => theme.breakpoints.desktopQHD};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
@@ -19,19 +16,18 @@ export const Footer = styled.footer`
   }
 `;
 
-export const FooterInnerWrapper = styled.div`
+export const FooterInner = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 0 50px;
+  padding: 50px 10px 20px;
 `;
 
 export const FooterTitle = styled(StyledTitleSection)`
-  padding: 17px 0 25px 0;
-  margin-top: 5%;
+  margin-bottom: 80px;
 `;
 
 export const FooterBackground = styled(Image)`
@@ -46,6 +42,7 @@ export const MapFormFooterWrapper = styled.div`
   justify-content: space-between;
   padding: 0 50px;
   gap: 20px;
+  margin-bottom: 50px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
     display: flex;
@@ -58,12 +55,11 @@ export const MapFormFooterWrapper = styled.div`
 export const MapWrapper = styled.div`
   width: ${var_ContactItemWidth};
   height: ${var_ContactItemHeight};
+  margin-bottom: 100px;
 `;
 
 export const footerCopyright = styled.p`
   width: 100%;
   text-align: center;
   font: var(--text-regular-pre-large);
-  margin-top: 50px;
-  margin-bottom: 3%;
 `;

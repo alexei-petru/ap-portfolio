@@ -1,5 +1,4 @@
 import * as St from "src/components/Hero/Hero.styled";
-import { HERO_AP_DESCRIPTION } from "src/data/localData";
 import Image from "next/image";
 import { IApodData } from "../EntrySection/EntrySection";
 import { StyledContainer } from "src/styles/Container.styled";
@@ -27,19 +26,8 @@ const Hero = ({
           />
         </St.AvatarWrapper>
         <St.UserDescriptionWrapper>
-          {HERO_AP_DESCRIPTION.map((word, i) => (
-            <St.UserDescriptionWord
-              style={{
-                animation: `fade-in 0.8s ${Math.trunc(i / 10)}.${
-                  i % 10
-                }s forwards cubic-bezier(0.11, 0, 0.5, 0)`,
-              }}
-              key={i + word}
-            >
-              {word}
-              {"\u00A0"}
-            </St.UserDescriptionWord>
-          ))}
+          Hello my name is Alexei Petru and i am a self-taught frontend
+          developer
         </St.UserDescriptionWrapper>
         <St.ApodDescriptionSt headerBackgroundData={headerBackgroundData} />
       </St.Hero>

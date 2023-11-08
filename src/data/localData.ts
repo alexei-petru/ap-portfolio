@@ -72,10 +72,10 @@ export const CARDS_DATA = [
     tags: [
       "NextJS",
       "Typescript",
-      "Styled-Components",
       "Nodemailer",
       "Hcaptcha",
       "Backend",
+      "Styled-Components",
     ],
     thumbnail: "/ap-portfolio.jpg",
     urlGit: "https://github.com/Allex191/ap-portfolio",
@@ -92,7 +92,7 @@ export const CARDS_DATA = [
   {
     title: "A.P Skills Snake",
     description: "My Dev Story in a snake game format",
-    tags: ["NextJs", "Typescript", "Styled-Components", "React", "Redux"],
+    tags: ["NextJs", "Typescript", "React", "Redux", "Styled-Components"],
     thumbnail: "/ap-skills-snake.jpg",
     urlGit: "https://github.com/Allex191/ap-skills-snake-game",
     urlLive: "https://ap-skills-snake-game.vercel.app",
@@ -163,26 +163,4 @@ export const CARDS_DATA = [
       },
     },
   },
-  // {
-  //   title: "*Random Movie",
-  //   description: "React app for searching a good random movie",
-  //   tags: [
-  //     "Html/Css",
-  //     "React",
-  //     "Redux",
-  //     "Typescript",
-  //     "Firebase",
-  //     "Styled-Components",
-  //   ],
-  //   thumbnail: "/random-movie.jpeg",
-  //   urlGit: "#",
-  //   urlLive: "#",
-  //   devStatus: {
-  //     text: "Pending project",
-  //     colors: {
-  //       textColor: cardsDevStatusColors.pending.textColor,
-  //       backgroundColor: cardsDevStatusColors.pending.backgroundColor,
-  //     },
-  //   },
-  // },
 ];

@@ -28,19 +28,31 @@ export const ApodDescription = styled.div`
 `;
 
 export const ApodDescriptionInner = styled.div<ApodDescriptionProps>`
+  animation: ${({ isBackgroundImageLoading }) =>
+    isBackgroundImageLoading
+      ? css``
+      : css`
+          ${blinkAnimation} 0.6s 2.15s 1.5 both
+        `};
   filter: brightness(0.6);
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  cursor: default;
+`;
+
+export const ApodImageWrapper = styled.div<ApodDescriptionProps>`
   animation: ${({ isBackgroundImageLoading }) =>
     isBackgroundImageLoading
       ? css`
-          ${shakeCenterLloadingAnimation} 2s ease normal none infinite
+          ${shakeCenterLoadingAnimation} 2s ease normal none infinite
         `
       : css`
           ${blinkAnimation} 0.6s 2.15s 1.5 both
         `};
-  cursor: default;
+  position: relative;
+  width: 100px;
+  height: 100px;
 `;
 
 export const ApodExternalLink = styled.a`
@@ -58,7 +70,7 @@ const blinkAnimation = keyframes`
     opacity: 0;
 }`;
 
-const shakeCenterLloadingAnimation = keyframes`
+const shakeCenterLoadingAnimation = keyframes`
   0% {
     transform: rotate(0deg) scale(0.5);
     transform-origin: 50% 50%;
