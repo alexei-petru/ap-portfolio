@@ -94,6 +94,10 @@ export const UserDescriptionWrapper = styled.h1`
     grid-row: 12 / span 11;
   }
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmall}) {
+    font-size: clamp(19px, 6vw, 25px);
+  }
+
   @keyframes scale {
     100% {
       transform: scale(1.2);
@@ -115,5 +119,5 @@ export const UserDescriptionWord = styled.span`
 
 export const ApodDescriptionSt = styled(ApodDescription)`
   grid-column: 2 / span 6;
-  grid-row: 26 / span 2;
+  grid-row: 23 / span 2;
 `;

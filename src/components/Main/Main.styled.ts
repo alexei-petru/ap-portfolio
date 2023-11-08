@@ -1,8 +1,21 @@
 import styled from "@emotion/styled";
+import { MAX_DEVICE_HEIGHT } from "src/constants/constants";
 
 export const Main = styled.main`
   position: relative;
-  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100vh;
+  max-height: ${MAX_DEVICE_HEIGHT}px;
+  max-width: ${({ theme }) => theme.breakpoints.desktopQHD};
+  background-color: #000000c4;
+`;
+
+export const MainInner = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
 `;
 
 export const CardsSection = styled.div`

@@ -1,6 +1,5 @@
 import { Popover } from "@mantine/core";
 import { useState } from "react";
-import { BsInfoCircle } from "react-icons/bs";
 import * as St from "./TitleMain.styled";
 import { StyledPopover } from "src/components/shared/MyPopoverDropdown/MyPopoverDropdown.styled";
 import MyPopoverDropDown from "src/components/shared/MyPopoverDropdown/MyPopoverDropdown";
@@ -16,14 +15,16 @@ function MainTitle() {
       onChange={setOpened}
     >
       <St.ProjectsTitleWrapper>
-        <St.ProjectsTitle>
-          Projects
-          <Popover.Target>
-            <St.BsInfoWrapper>
-              <BsInfoCircle onClick={() => setOpened((prev) => !prev)} />
-            </St.BsInfoWrapper>
-          </Popover.Target>
-        </St.ProjectsTitle>
+        <St.ProjectsTitle>Projects</St.ProjectsTitle>
+        <Popover.Target>
+          <St.InfoBtn
+            title="Main Section Info"
+            aria-label="Main Section Info"
+            onClick={() => setOpened((prev) => !prev)}
+          >
+            <St.BsInfoCircleSt size={25} />
+          </St.InfoBtn>
+        </Popover.Target>
       </St.ProjectsTitleWrapper>
       <MyPopoverDropDown
         onClickClose={() => setOpened(false)}

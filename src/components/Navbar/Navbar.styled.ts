@@ -7,44 +7,51 @@ import {
 export const Navbar = styled.nav`
   position: relative;
   z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: ${var_NavbarBackgroundColor};
-  padding: 40px;
-  margin-top: 0;
-  height: ${var_NavbarHeight};
-  border-radius: 0 0 10px 10px;
+  width: 100%;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmall}) {
-    padding: 0;
+  ul {
+    height: ${var_NavbarHeight};
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0 0 10px 10px;
+    padding: 40px;
+    background-color: ${var_NavbarBackgroundColor};
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmall}) {
+      padding: 2px;
+    }
   }
 
   li {
     list-style: none;
     font-size: 20px;
     white-space: nowrap;
+    margin-left: 20px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMedium}) {
       font-size: 16px;
     }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmall}) {
+      font-size: 14px;
+      white-space: normal;
+    }
   }
 
-  menu {
-    display: flex;
-    justify-content: space-between;
-
-    li {
-      margin-left: 20px;
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmall}) {
+    padding: 0;
   }
 `;
 
-export const LogoWrapper = styled.nav`
+export const LogoWrapper = styled.li`
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 10px 0;
+  margin-right: auto;
 
   img {
     width: auto;

@@ -1,5 +1,13 @@
 import styled from "@emotion/styled";
+import { BsInfoCircle } from "react-icons/bs";
 import { StyledTitleSection } from "src/styles/StyledReusable.styled";
+
+export const ProjectsTitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 26px 0 42px 0;
+`;
 
 export const ProjectsTitle = styled(StyledTitleSection)`
   svg {
@@ -10,8 +18,6 @@ export const ProjectsTitle = styled(StyledTitleSection)`
   }
 `;
 
-export const ProjectsTitleWrapper = styled.div``;
-
 export const ProjectsInfoPopup = styled.div`
   background-color: #ffffff73;
   width: max-content;
@@ -20,6 +26,19 @@ export const ProjectsInfoPopup = styled.div`
   color: black;
 `;
 
-export const BsInfoWrapper = styled.span`
+export const InfoBtn = styled.button`
   display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  width: fit-content;
+  margin-left: 10px;
+`;
+
+export const BsInfoCircleSt = styled(BsInfoCircle)`
+  :hover {
+    scale: 1.15;
+    cursor: pointer;
+    transition: scale 0.1s;
+  }
 `;

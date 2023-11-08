@@ -5,30 +5,36 @@ import {
   var_ContactItemHeight,
   var_ContactItemWidth,
 } from "src/constants/cssVariables";
+import { MAX_DEVICE_HEIGHT } from "src/constants/constants";
 
-export const Footer = styled.footer``;
+export const Footer = styled.footer`
+  margin: 0 auto;
+  height: 100vh;
+  max-height: ${MAX_DEVICE_HEIGHT}px;
+  max-width: ${({ theme }) => theme.breakpoints.desktopQHD};
 
-export const FooterTitle = styled(StyledTitleSection)`
-  padding: 17px 0 25px 0;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
+    height: 100%;
+    max-height: unset;
+  }
 `;
 
 export const FooterInnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 60px 50px 40px;
+  padding: 0 50px;
 `;
 
-export const StyledImage = styled(Image)`
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+export const FooterTitle = styled(StyledTitleSection)`
+  padding: 17px 0 25px 0;
+  margin-top: 5%;
+`;
+
+export const FooterBackground = styled(Image)`
   opacity: 0.8;
   filter: blur(4px);
   border-radius: 5px;
@@ -55,8 +61,9 @@ export const MapWrapper = styled.div`
 `;
 
 export const footerCopyright = styled.p`
+  width: 100%;
   text-align: center;
   font: var(--text-regular-pre-large);
   margin-top: 50px;
-  width: 100%;
+  margin-bottom: 3%;
 `;

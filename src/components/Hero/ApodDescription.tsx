@@ -43,11 +43,9 @@ const ApodDescription = ({
           />
         </St.ApodDescriptionInner>
         <Popover.Target>
-          <St.ApodParagraphWrapper
-            onClick={() => setIsPopoverOpended((prev) => !prev)}
-          >
-            <St.ApodParagraph>APOD Dynamic Image</St.ApodParagraph>
-          </St.ApodParagraphWrapper>
+          <St.ApodButton onClick={() => setIsPopoverOpended((prev) => !prev)}>
+            <St.ApodButtonText>APOD Dynamic Image</St.ApodButtonText>
+          </St.ApodButton>
         </Popover.Target>
       </St.ApodDescription>
       <MyPopoverDropDown
