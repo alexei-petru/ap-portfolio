@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import {
   var_ContactItemHeight,
   var_ContactItemWidth,
-} from "src/constants/cssVariables";
+} from "src/constants-types/cssVariables";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { BsCheckCircle } from "react-icons/bs";
 import { VscError } from "react-icons/vsc";

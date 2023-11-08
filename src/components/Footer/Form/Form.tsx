@@ -10,6 +10,9 @@ import MyButton from "src/components/shared/MyButton/MyButton";
 import MyTexarea from "src/components/shared/MyTexarea/MyTextarea";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
+
+
+
 export type inputsType = {
   email: string;
   subject: string;
@@ -167,6 +170,7 @@ const Form = () => {
       />
       <MyTexarea
         value={messageInputText}
+        minRows={6}
         onChange={(e) => {
           setIsMessageSended(null);
           setMessageInputText(e.target.value);

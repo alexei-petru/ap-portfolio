@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { var_NavbarBackgroundFilter } from "src/constants/cssVariables";
+import { var_NavbarBackgroundFilter } from "src/constants-types/cssVariables";
 
 export const EntrySection = styled.header`
   position: relative;

@@ -1,19 +1,30 @@
 import styled from "@emotion/styled";
 import { StyledTitleSection } from "src/styles/StyledReusable.styled";
-import Image from "next/image";
 import {
   var_ContactItemHeight,
   var_ContactItemWidth,
-} from "src/constants/cssVariables";
+} from "src/constants-types/cssVariables";
 
 export const Footer = styled.footer`
+  position: relative;
   margin: 0 auto;
   max-width: ${({ theme }) => theme.breakpoints.desktopQHD};
+  /* width: 100%; */
+  /* height: 100%; */
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
     height: 100%;
     max-height: unset;
   }
+`;
+
+export const FooterBackgroundWrapper = styled.div`
+  position: absolute;
+  opacity: 0.8;
+  filter: blur(4px);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
 `;
 
 export const FooterInner = styled.div`
@@ -28,12 +39,6 @@ export const FooterInner = styled.div`
 
 export const FooterTitle = styled(StyledTitleSection)`
   margin-bottom: 80px;
-`;
-
-export const FooterBackground = styled(Image)`
-  opacity: 0.8;
-  filter: blur(4px);
-  border-radius: 5px;
 `;
 
 export const MapFormFooterWrapper = styled.div`

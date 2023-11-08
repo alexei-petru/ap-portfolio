@@ -2,7 +2,8 @@ import * as St from "src/components/Hero/Hero.styled";
 import Image from "next/image";
 import { IApodData } from "../EntrySection/EntrySection";
 import { StyledContainer } from "src/styles/Container.styled";
-import { BREAKPOINTS_APP } from "src/constants/constants";
+import { BREAKPOINTS_APP } from "src/constants-types/constants";
+import { HERO_APP_DESCRIPTION } from "src/data/localData";
 
 interface IHeroProps extends React.PropsWithChildren {
   entrySectionBackgroundData: IApodData;
@@ -26,8 +27,7 @@ const Hero = ({
           />
         </St.AvatarWrapper>
         <St.UserDescriptionWrapper>
-          Hello my name is Alexei Petru and i am a self-taught frontend
-          developer
+          {HERO_APP_DESCRIPTION.text}
         </St.UserDescriptionWrapper>
         <St.ApodDescriptionSt headerBackgroundData={headerBackgroundData} />
       </St.Hero>

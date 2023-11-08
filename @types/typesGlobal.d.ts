@@ -1,11 +1,10 @@
 import "@emotion/react";
-import { AppTheme } from "./typesLocal";
+import { AppTheme } from "../src/constants-types/typesLocal";
+import { MantineTheme } from "@mantine/core";
 
 declare module "@emotion/react" {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  export interface Theme extends AppTheme {}
+  export interface Theme extends AppTheme, MantineTheme {}
 }
-
 declare global {
   namespace NodeJS {
     interface ProcessEnv {

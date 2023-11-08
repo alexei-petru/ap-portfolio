@@ -1,18 +1,25 @@
 import React from "react";
 import MyErrorMessage from "../MyErrorMessage/MyErrorMessage";
 import * as St from "./MyTextarea.styled";
+import { TextareaProps } from "@mantine/core";
 //
-interface IMyTexarea extends React.ComponentPropsWithoutRef<"textarea"> {
+interface IMyTexarea extends TextareaProps {
   labelDescription: string;
   isLabel: boolean;
   isError: string;
   id: string;
 }
 
-const MyTexarea = ({ labelDescription, id, isError, ...props }: IMyTexarea) => {
+const MyTexarea = ({
+  isLabel,
+  labelDescription,
+  id,
+  isError,
+  ...props
+}: IMyTexarea) => {
   return (
     <St.MyTexareaWrapper>
-      {props.isLabel && (
+      {isLabel && (
         <St.MyTextareaLabel htmlFor={id}>{labelDescription}</St.MyTextareaLabel>
       )}
       <St.MyTextarea id={id} {...props} />

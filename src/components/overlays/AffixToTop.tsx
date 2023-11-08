@@ -2,7 +2,7 @@ import { Button, Transition } from "@mantine/core";
 import { useMediaQuery, useWindowScroll } from "@mantine/hooks";
 import { FaArrowUp } from "react-icons/fa";
 import * as St from "./AffixToTop.styled";
-import { BREAKPOINTS_APP } from "src/constants/constants";
+import { BREAKPOINTS_APP } from "src/constants-types/constants";
 
 const AffixToTop = () => {
   const [scroll, scrollTo] = useWindowScroll();

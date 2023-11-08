@@ -1,17 +1,6 @@
-export const HERO_AP_DESCRIPTION: string[] = [
-  "Hello ",
-  "my ",
-  "name ",
-  "is ",
-  "Alexei ",
-  "Petru ",
-  "and ",
-  "i ",
-  "am ",
-  "self-taught",
-  "frontend ",
-  "developer.",
-];
+export const HERO_APP_DESCRIPTION = {
+  text: "Hello my name is Alexei Petru and i am a self-taught frontend developer",
+};
 
 export const apodLocalImage = {
   title: "The Cygnus Wall of Star Formation",
