@@ -1,6 +1,6 @@
 import { StyledContainer } from "src/styles/Container.styled";
 import * as St from "src/components/Main/Main.styled";
-import { CARDS_INFO } from "src/data/localData";
+import { CARDS_DATA } from "src/data/localData";
 import Card from "src/components/Main/Card/Card";
 import React from "react";
 import TitleMain from "src/components/Main/TitleMain/TitleMain";
@@ -11,7 +11,7 @@ const Main = () => {
       <StyledContainer>
         <TitleMain />
         <St.CardsSection>
-          {CARDS_INFO.map((project) => {
+          {CARDS_DATA.map((project) => {
             return (
               <St.CardWrapper key={project.title}>
                 <Card

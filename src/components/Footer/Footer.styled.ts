@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
 import { StyledTitleSection } from "src/styles/StyledReusable.styled";
 import Image from "next/image";
+import {
+  var_ContactItemHeight,
+  var_ContactItemWidth,
+} from "src/constants/cssVariables";
 
 export const Footer = styled.footer``;
 
@@ -25,12 +29,12 @@ export const StyledImage = styled(Image)`
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.8;
+  filter: blur(4px);
   border-radius: 5px;
-  background: url("/ufo-background.png") no-repeat center 10%;
 `;
 
-export const MapFooterWrapper = styled.div`
+export const MapFormFooterWrapper = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -43,6 +47,11 @@ export const MapFooterWrapper = styled.div`
     align-items: center;
     gap: 50px;
   }
+`;
+
+export const MapWrapper = styled.div`
+  width: ${var_ContactItemWidth};
+  height: ${var_ContactItemHeight};
 `;
 
 export const footerCopyright = styled.p`

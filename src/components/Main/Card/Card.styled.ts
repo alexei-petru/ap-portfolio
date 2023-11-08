@@ -20,9 +20,8 @@ export const Card = styled.div<CardProps>`
   font: var(--text-regular-small);
 
   &:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.08);
     box-shadow: 0 10px 10px -10px rgba(#7f8c8d, 1);
-    transform: scale(1.08);
   }
 
   ::before {
@@ -34,7 +33,9 @@ export const Card = styled.div<CardProps>`
     bottom: 0;
     left: 0;
     filter: blur(35px) brightness(0.75);
-    background: url(${(props) => props.thumbnail}) repeat center / 300%;
+    background-color: #00399b;
+    background-image: linear-gradient(25deg, #81f877 0%, #001476 100%);
+    /* background: url(${(props) => props.thumbnail}) repeat center / 300%; */
   }
 `;
 
@@ -62,10 +63,10 @@ export const ProjectStatus = styled.span<IProjectStatusProps>`
   font: var(--text-regular-small-bold);
   border-radius: 0 0 0 5px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    ${({ colors }) => colors.backgroundColor}  0px 0px 17px -3px;
+    ${({ colors }) => colors.backgroundColor} 0px 0px 17px -3px;
 `;
 
-export const CardThumbnail = styled.div`
+export const CardThumbnailWrapper = styled.div`
   display: flex;
   height: 40%;
   width: 100%;
@@ -74,7 +75,7 @@ export const CardThumbnail = styled.div`
   padding-top: 8px;
 `;
 
-export const CardImg = styled.img`
+export const CardImg = styled.div`
   width: 220px;
   height: 150px;
   object-fit: cover;

@@ -43,7 +43,7 @@ export const cardsDevStatusColors = {
   },
 };
 
-export const CARDS_INFO = [
+export const CARDS_DATA = [
   {
     title: "VersoMart",
     description: "Eshop SSR App",
@@ -77,7 +77,7 @@ export const CARDS_INFO = [
       "Hcaptcha",
       "Backend",
     ],
-    thumbnail: "/ap-portfolio.png",
+    thumbnail: "/ap-portfolio.jpg",
     urlGit: "https://github.com/Allex191/ap-portfolio",
     urlLive: "#",
     devStatus: {
@@ -93,7 +93,7 @@ export const CARDS_INFO = [
     title: "A.P Skills Snake",
     description: "My Dev Story in a snake game format",
     tags: ["NextJs", "Typescript", "Styled-Components", "React", "Redux"],
-    thumbnail: "/ap-skills-snake.png",
+    thumbnail: "/ap-skills-snake.jpg",
     urlGit: "https://github.com/Allex191/ap-skills-snake-game",
     urlLive: "https://ap-skills-snake-game.vercel.app",
     devStatus: {
@@ -110,7 +110,7 @@ export const CARDS_INFO = [
     description:
       "Landing Page created after 300hours of learning web development.",
     tags: ["Html", "Css", "Bem", "StyleLint", "Sccs"],
-    thumbnail: "/real-idea.png",
+    thumbnail: "/real-idea.jpg",
     urlGit: "https://github.com/Allex191/real-idea-landing-page",
     urlLive: "https://allex191.github.io/real-idea-landing-page/",
     devStatus: {
@@ -126,7 +126,7 @@ export const CARDS_INFO = [
     description:
       "Mini project based on a simple encrypt algorythm created after starting learning dom manipulations",
     tags: ["Html", "Css", "JavaScript"],
-    thumbnail: "/encryptor.png",
+    thumbnail: "/encryptor.jpg",
     urlGit:
       "https://github.com/Allex191/javascript-tutorials/tree/main/message-encryptor",
     urlLive: "#",
@@ -152,7 +152,7 @@ export const CARDS_INFO = [
       "Capacitor",
       "Ionic",
     ],
-    thumbnail: "/warehouse-app.png",
+    thumbnail: "/warehouse-app.jpg",
     urlGit: "#",
     urlLive: "#",
     devStatus: {
