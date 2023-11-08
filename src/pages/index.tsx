@@ -17,6 +17,7 @@ const MainLazy = dynamic(() =>
 const FooterLazy = dynamic(() =>
   import("src/components/Footer/Footer").then((mod) => mod.default)
 );
+
 export default function Home() {
   return (
     <>

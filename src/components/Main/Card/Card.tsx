@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as St from "./Card.styled";
 import Image from "next/image";
-import { BREAKPOINTS_APP } from "src/constants/constants";
+import { BREAKPOINTS_APP } from "src/constants-types/constants";
 type CardPropsType = {
   title: string;
   description: string;

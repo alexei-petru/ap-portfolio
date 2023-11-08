@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import { var_NavbarHeight } from "src/constants/cssVariables";
+import { var_NavbarHeight } from "src/constants-types/cssVariables";
 import ApodDescription from "./ApodDescription";
 import { keyframes } from "@emotion/react";
-import { MAX_SECTION_SIZE } from "src/constants/constants";
+import { MAX_SECTION_SIZE } from "src/constants-types/constants";
 
 const SlideInEllipticBottomAnimation = keyframes`
   0% {

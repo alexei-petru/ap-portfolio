@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { BREAKPOINTS_APP, CARD_SIZE } from "src/constants/constants";
+import { BREAKPOINTS_APP, CARD_SIZE } from "src/constants-types/constants";
 
 export const Main = styled.main`
   position: relative;

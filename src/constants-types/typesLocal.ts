@@ -1,4 +1,4 @@
-import { APP_THEME } from "src/constants/constants";
+import { APP_THEME } from "src/constants-types/constants";
 
 export interface IApodData {
   copyright?: string;

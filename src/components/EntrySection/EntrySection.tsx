@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { apodLocalImage } from "src/data/localData";
-import { IApodApiResponse } from "src/types/typesLocal";
+import { IApodApiResponse } from "src/constants-types/typesLocal";
 import Hero from "../Hero/Hero";
 import Navbar from "../Navbar/Navbar";
 import * as St from "./EntrySection.styled";

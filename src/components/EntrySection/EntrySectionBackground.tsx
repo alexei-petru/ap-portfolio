@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { IApodData } from "./EntrySection";
 import * as St from "./EntrySection.styled";
-import { BREAKPOINTS_APP } from "src/constants/constants";
+import { BREAKPOINTS_APP } from "src/constants-types/constants";
 
 interface IEntrySectionBackgroundProps extends React.PropsWithChildren {
   entrySectionBackgroundImage: IApodData;

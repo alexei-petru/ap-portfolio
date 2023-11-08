@@ -29,3 +29,5 @@ export const APP_THEME = {
 } as const;
 
 export const CARD_SIZE = { width: 320, height: 450 };
+
+

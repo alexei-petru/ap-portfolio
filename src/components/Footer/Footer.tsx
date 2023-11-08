@@ -1,7 +1,7 @@
 import { StyledContainer } from "src/styles/Container.styled";
 import * as St from "./Footer.styled";
 import Image from "next/image";
-import { BREAKPOINTS_APP } from "src/constants/constants";
+import { BREAKPOINTS_APP } from "src/constants-types/constants";
 import { useGetCurrentYear } from "src/hooks/useGetCurrentYear";
 import Form from "./Form/Form";
 
@@ -10,13 +10,16 @@ const Footer = () => {
   return (
     <>
       <St.Footer id="contact">
-        <St.FooterBackground
-          alt=""
-          src={"/ufo-background.png"}
-          priority
-          fill
-          sizes={`max-width: ${BREAKPOINTS_APP.laptopMedium} 100vw, 50vw`}
-        />
+        <St.FooterBackgroundWrapper>
+          <Image
+            fill
+            style={{ objectFit: "cover" }}
+            alt=""
+            src={"/ufo-background.png"}
+            priority
+            sizes={`max-width: ${BREAKPOINTS_APP.laptopMedium} 100vw, 50vw`}
+          />
+        </St.FooterBackgroundWrapper>
         <StyledContainer>
           <St.FooterInner>
             <St.FooterTitle>Contact</St.FooterTitle>
@@ -24,6 +27,7 @@ const Footer = () => {
               <St.MapWrapper>
                 <Image
                   fill
+                  style={{ objectFit: "cover" }}
                   quality={100}
                   alt="location"
                   src={"/location.png"}

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { CARD_SIZE } from "src/constants/constants";
+import { CARD_SIZE } from "src/constants-types/constants";
 
 type CardProps = {
   thumbnail: string;

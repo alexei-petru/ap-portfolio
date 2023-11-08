@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import {
   var_NavbarBackgroundColor,
   var_NavbarHeight,
-} from "src/constants/cssVariables";
+} from "src/constants-types/cssVariables";
 
 export const Navbar = styled.nav`
   position: relative;

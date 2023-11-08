@@ -13,7 +13,7 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "typeRoots": ["./src/types/typesGlobal", "./node_modules/@types"],
+    "typeRoots": ["./@types", "./node_modules/@types"],
     "lib": ["dom", "es2015", "es2016"],
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
