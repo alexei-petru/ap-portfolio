@@ -49,17 +49,13 @@ export const sendInputsToEmail = async (inputs: inputsType) => {
   //   `,
   // };
 
-  let response: sendEmailResponseType = false;
-
   try {
     const info = await transporter.sendMail(mainEmailOptions);
     // const info = await transporter.sendMail(testEmailOptions);
     if (info) {
-      response = true;
+      return true;
     }
   } catch (error) {
-    response = false;
-  } finally {
-    return response;
+    return false;
   }
 };

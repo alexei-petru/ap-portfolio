@@ -13,13 +13,17 @@ export interface IApodData {
   hdurl?: string;
   media_type?: string;
   service_version?: string;
-  title: string;
-  url: string;
-  locale: boolean;
+  title?: string;
+  url?: string;
+  locale?: boolean;
 }
 
 const EntrySection = () => {
-  const [entrySectionBackgroundData, setEntrySectionBackgroundData] = useState({
+  const [entrySectionBackgroundData, setEntrySectionBackgroundData] = useState<{
+    title?: string;
+    url?: string;
+    locale?: boolean;
+  }>({
     title: "",
     url: "",
     locale: false,

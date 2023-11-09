@@ -18,7 +18,7 @@ const EntrySectionBackground = ({
           fill
           sizes={`max-width: ${BREAKPOINTS_APP.laptopMedium} 100vw, 50vw`}
           src={entrySectionBackgroundImage.url}
-          alt={entrySectionBackgroundImage.title}
+          alt={entrySectionBackgroundImage.title||''}
           priority={true}
           style={{ objectFit: "cover", zIndex: "0" }}
         />

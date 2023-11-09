@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { IApodData } from "../../EntrySection/EntrySection";
 
-interface IApodDescriptionProps extends React.HTMLProps<any> {
+interface IApodDescriptionProps extends React.HTMLProps<HTMLDivElement> {
   headerBackgroundData: IApodData;
 }
 
