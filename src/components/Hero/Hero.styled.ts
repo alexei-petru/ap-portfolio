@@ -1,8 +1,9 @@
+import { css, keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
-import { var_NavbarHeight } from "src/constants-types/cssVariables";
-import ApodDescription from "./ApodDescription";
-import { keyframes } from "@emotion/react";
 import { MAX_SECTION_SIZE } from "src/constants-types/constants";
+import { var_NavbarHeight } from "src/constants-types/cssVariables";
+import ApodDescription from "./ApodDescription/ApodDescription";
+import { AvatarAnimationKeys, avatarAnimationNames } from "./Hero";
 
 const SlideInEllipticBottomAnimation = keyframes`
   0% {
@@ -28,23 +29,67 @@ export const Hero = styled.section`
   grid-template-rows: repeat(29, 1fr);
 `;
 
-export const AvatarWrapper = styled.div`
+interface AvatarWrapperProps {
+  currentAnimation: AvatarAnimationKeys;
+}
+
+export const AvatarWrapper = styled.div<AvatarWrapperProps>`
   z-index: 1;
   position: relative;
   width: clamp(140px, 25vw, 220px);
   aspect-ratio: 0.747;
   border-radius: 10%;
   grid-column: 21 / span 5;
-  grid-row: 8 / span 11;
+  grid-row: 9 / span 11;
   overflow: hidden;
-  animation-name: ${SlideInEllipticBottomAnimation};
-  animation-duration: 2.2s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-  opacity: 0;
+  animation: ${({ currentAnimation }) => {
+    if (currentAnimation === avatarAnimationNames.entry) {
+      return css`
+        ${SlideInEllipticBottomAnimation} 1.5s ease 0s 1 normal forwards
+      `;
+    }
+    if (currentAnimation === avatarAnimationNames.second) {
+      return css`tada 1s ease-in-out forwards`;
+    }
+    if (currentAnimation === avatarAnimationNames.third) {
+      return css`rotate 0.7s ease-in-out forwards`;
+    }
+  }};
+  opacity: 1;
+
+  @keyframes rotate {
+    0%,
+    100% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(-180deg);
+    }
+  }
+
+  @keyframes tada {
+    0% {
+      transform: scale(1);
+    }
+    10%,
+    20% {
+      transform: scale(0.9) rotate(-3deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: scale(1.1) rotate(3deg);
+    }
+    40%,
+    60%,
+    80% {
+      transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletPortrait}) {
     grid-column: 22 / span 5;
@@ -57,43 +102,10 @@ export const AvatarWrapper = styled.div`
   }
 `;
 
-export const UserDescriptionWrapper = styled.h1`
+export const UserDescriptionWrapper = styled.div`
   z-index: 1;
-  font: var(--title-regular-large);
   grid-column: 3 / span 15;
   grid-row: 10 / span 14;
-  text-align: center;
-  letter-spacing: 0.5px;
-  word-spacing: 7px;
-  font-size: clamp(27px, 8vw, 38px);
-  display: inline-block;
-  opacity: 0;
-  scale: 1.2;
-  animation: slideBlurIn 2s ease forwards;
-
-  @keyframes slideBlurIn {
-    0% {
-      transform: translateX(-1000px);
-      filter: blur(4px);
-      opacity: 0;
-    }
-
-    50% {
-      filter: blur(4px);
-      opacity: 0.2;
-    }
-
-    80% {
-      transform: translateX(-10px);
-      filter: blur(3px);
-      opacity: 0.6;
-    }
-    100% {
-      transform: translateX(0);
-      filter: blur(0);
-      opacity: 1;
-    }
-  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
     grid-column: 3 / span 15;

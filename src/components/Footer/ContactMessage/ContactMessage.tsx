@@ -3,8 +3,7 @@ import * as St from "./ContactMessage.styled";
 const ContactMessage = () => {
   return (
     <St.ContactMessageWrapper>
-      <St.ContactMessageText>Heyyyy!</St.ContactMessageText>
-      {/* <span>{">"}</span> */}
+      <St.ContactMessageText>Want to say Hi?</St.ContactMessageText>
     </St.ContactMessageWrapper>
   );
 };

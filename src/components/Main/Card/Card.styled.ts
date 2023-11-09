@@ -37,7 +37,6 @@ export const Card = styled.div<CardProps>`
     filter: blur(35px) brightness(0.75);
     background-color: #00399b;
     background-image: linear-gradient(25deg, #81f877 0%, #001476 100%);
-    /* background: url(${(props) => props.thumbnail}) repeat center / 300%; */
   }
 `;
 
@@ -110,7 +109,6 @@ export const CardTitle = styled.div`
 export const CardDescription = styled.div`
   color: rgba(#ecf0f1, 0.8);
   text-align: start;
-  /* font: inherit; */
   margin-bottom: 5px;
 `;
 
@@ -118,7 +116,6 @@ export const CardTagsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  /* justify-content: center; */
 `;
 
 export const CardTag = styled.span`

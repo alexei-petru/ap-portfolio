@@ -1,15 +1,10 @@
 import { Popover } from "@mantine/core";
-import * as St from "src/components/Hero/ApodDescription.styled";
+import * as St from "src/components/Hero/ApodDescription/ApodDescription.styled";
 import MyPopoverDropDown from "src/components/shared/MyPopoverDropdown/MyPopoverDropdown";
 import { StyledPopover } from "src/components/shared/MyPopoverDropdown/MyPopoverDropdown.styled";
 import Image from "next/image";
 import { useState } from "react";
-import { IApodData } from "../EntrySection/EntrySection";
-// const popoverContent: MyPopoverDropDownProps[] = {
-//   dropDownText: "string",
-//   buttonClose: " string",
-//   buttonInfo: " string,",
-// };
+import { IApodData } from "../../EntrySection/EntrySection";
 
 interface IApodDescriptionProps extends React.HTMLProps<any> {
   headerBackgroundData: IApodData;
