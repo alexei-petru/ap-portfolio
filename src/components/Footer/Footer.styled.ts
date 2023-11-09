@@ -57,7 +57,8 @@ export const MapFormFooterWrapper = styled.div`
 
 export const MapWrapper = styled.div`
   width: ${var_ContactItemWidth};
-  height: ${var_ContactItemHeight};
+  height: 100%;
+  min-height: ${var_ContactItemHeight};
   margin-bottom: 100px;
 `;
 

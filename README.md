@@ -21,3 +21,10 @@
 - form animation ufo start:fligh in, formSend:fligh out
 - ufo animation form yellow/blue/green/red fly
 - add contact info popover "feel free to contact...."
+
+### Documentation
+
+`Styled-components`
+
+- error "React does not recognize the `isMessageSended` prop on a DOM element",
+  solution : custom atributes need to be passed with $ prefix to not be passed to DOM

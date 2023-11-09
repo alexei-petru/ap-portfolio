@@ -13,7 +13,7 @@ export interface IApodData {
 
 export interface IApodApiResponse {
   isError: boolean;
-  data: IApodData | any;
+  data: IApodData | object;
 }
 
 export type AppTheme = typeof APP_THEME;

@@ -5,7 +5,7 @@
     "build": "next build",
     "start": "next start",
     "build-start": "npm run build && npm run start",
-    "lint": "next lint",
+    "lint": "next lint && npx tsc --noEmit",
     "test": "playwright test",
     "test:chrome": "playwright test --project=chromium",
     "test:file": "playwright test example",
