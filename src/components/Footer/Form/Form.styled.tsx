@@ -25,7 +25,6 @@ export const Form = styled.form`
 
   @media (max-width: 735px) {
     margin-bottom: 70px;
-    /* margin-left: -18px; */
   }
 `;
 
@@ -81,7 +80,7 @@ const spin = keyframes`
 export const AiOutlineLoading3Quart = styled(AiOutlineLoading3Quarters)`
   animation: ${spin} 0.9s ease infinite;
   fill: blue;
-  ${isMessageSendedStyle}/* padding: 5px; */
+  ${isMessageSendedStyle}
 `;
 
 export const FormDeliverMessage = styled(MyErrorMessage)`

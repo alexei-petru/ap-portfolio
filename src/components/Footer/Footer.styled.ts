@@ -9,8 +9,6 @@ export const Footer = styled.footer`
   position: relative;
   margin: 0 auto;
   max-width: ${({ theme }) => theme.breakpoints.desktopQHD};
-  /* width: 100%; */
-  /* height: 100%; */
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletLandscape}) {
     height: 100%;
