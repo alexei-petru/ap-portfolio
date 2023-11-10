@@ -1,5 +1,7 @@
 import { useState } from "react";
 import * as St from "./Card.styled";
+import Image from "next/image";
+import { BREAKPOINTS_APP } from "src/constants-types/constants";
 type CardPropsType = {
   title: string;
   description: string;
@@ -36,10 +38,19 @@ const ProjectCard = ({
             {devStatus.text}
           </St.ProjectStatus>
         </St.ProjectStatusWrapper>
-        <St.CardThumbnail>
-          <St.CardImg src={thumbnail} />
-        </St.CardThumbnail>
-
+        <St.CardThumbnailWrapper>
+          <St.CardImgWrapper>
+            <Image
+              fill
+              alt={title}
+              quality={100}
+              src={thumbnail}
+              priority
+              style={{ objectFit: "cover" }}
+              sizes={`max-width: ${BREAKPOINTS_APP.laptopMedium} 100vw, 50vw`}
+            />
+          </St.CardImgWrapper>
+        </St.CardThumbnailWrapper>
         <St.CardTextWrapper>
           <St.CardTitle>{title}</St.CardTitle>
           <St.CardDescription>{description}</St.CardDescription>
@@ -57,6 +68,8 @@ const ProjectCard = ({
             isDisabled={urlGit === "#"}
             onFocus={() => setIsCardHover(true)}
             onBlur={() => setIsCardHover(false)}
+            title={`Go to git ${title}`}
+            aria-label={`Go to git ${title}`}
           />
           <St.LinkLive
             href={urlLive}
@@ -65,6 +78,8 @@ const ProjectCard = ({
             isDisabled={urlLive === "#"}
             onFocus={() => setIsCardHover(true)}
             onBlur={() => setIsCardHover(false)}
+            title={`Go to live ${title}`}
+            aria-label={`Go to live ${title}`}
           />
         </St.ButtonsWrapper>
       </St.CardContent>

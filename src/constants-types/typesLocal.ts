@@ -1,4 +1,4 @@
-import { APP_THEME } from "src/constants/constants";
+import { APP_THEME } from "src/constants-types/constants";
 
 export interface IApodData {
   copyright?: string;
@@ -13,7 +13,7 @@ export interface IApodData {
 
 export interface IApodApiResponse {
   isError: boolean;
-  data: IApodData | any;
+  data: IApodData | object;
 }
 
 export type AppTheme = typeof APP_THEME;

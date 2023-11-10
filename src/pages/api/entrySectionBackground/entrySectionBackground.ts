@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { IApodApiResponse } from "../../../types/typesLocal";
+import { IApodApiResponse } from "../../../constants-types/typesLocal";
 
 export default async function handler(
   req: NextApiRequest,

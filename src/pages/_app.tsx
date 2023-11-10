@@ -3,7 +3,7 @@ import { GlobalStyle } from "src/styles/GlobalStyle";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { Global, ThemeProvider } from "@emotion/react";
-import { APP_THEME } from "src/constants/constants";
+import { APP_THEME } from "src/constants-types/constants";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;

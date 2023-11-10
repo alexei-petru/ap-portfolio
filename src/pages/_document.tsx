@@ -4,9 +4,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css"
+        <meta
+          name="description"
+          content="Discover my journey in web development through my projects in React,
+           Angular, Typescript, JavaScript and responsive design. See how I solve frontend challenges creatively."
         />
       </Head>
       <body>

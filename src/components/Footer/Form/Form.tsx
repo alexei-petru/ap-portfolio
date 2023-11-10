@@ -1,14 +1,13 @@
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import AlienSvg from "src/components/Footer/Form/AlienSvg";
+import { TextInput, Textarea } from "@mantine/core";
 import Joi from "joi";
-import { emailResponseType } from "src/pages/api/email/email";
 import React, { useEffect, useRef, useState } from "react";
+import AlienSvg from "src/components/Footer/Form/AlienSvg";
+import MyButton from "src/components/shared/MyButton/MyButton";
+import { emailResponseType } from "src/pages/api/email/email";
 import { getInputsValidation } from "src/utils/getInputsValidation";
 import ContactMessage from "../ContactMessage/ContactMessage";
 import * as St from "./Form.styled";
-import MyInput from "src/components/shared/Input/MyInput";
-import MyButton from "src/components/shared/MyButton/MyButton";
-import MyTexarea from "src/components/shared/MyTexarea/MyTextarea";
 
 export type inputsType = {
   email: string;
@@ -18,7 +17,7 @@ export type inputsType = {
 
 const sendFormDataToSrv = async (
   inputsText: inputsType,
-  formVerifyToken: string
+  formVerifyToken: string,
 ) => {
   const controller = new AbortController();
   const options = {
@@ -40,7 +39,7 @@ const sendFormDataToSrv = async (
 const updateErrorsMessages = (
   validationErrors: Joi.ValidationErrorItem[],
   setInputsErrors: React.Dispatch<React.SetStateAction<inputsType>>,
-  inputsErrors: inputsType
+  inputsErrors: inputsType,
 ) => {
   const errors: Record<string, string> = {};
   for (const object of validationErrors) {
@@ -58,7 +57,7 @@ const useEraseInputsErrorsOnInputsChange = (
   setInputsErrors: React.Dispatch<React.SetStateAction<inputsType>>,
   emailInputText: string,
   subjectInputText: string,
-  messageInputText: string
+  messageInputText: string,
 ) => {
   useEffect(() => {
     setInputsErrors({ email: "", subject: "", message: "" });
@@ -113,7 +112,7 @@ const Form = () => {
         } else {
           const isEmailSended = await sendFormDataToSrv(
             inputsText,
-            formVerifyToken
+            formVerifyToken,
           );
           setIsMessageSended(isEmailSended);
 
@@ -135,49 +134,61 @@ const Form = () => {
     setInputsErrors,
     emailInputText,
     subjectInputText,
-    messageInputText
+    messageInputText,
   );
 
   return (
     <St.Form id="contact-form" onSubmit={sumbitInputsValues} noValidate>
       <ContactMessage />
-      <MyInput
+      <TextInput
         value={emailInputText}
         onChange={(e) => {
           setIsMessageSended(null);
           setEmailInputText(e.target.value);
         }}
-        isLabel={true}
-        type="email"
-        labelDescription="Email"
-        isError={inputsErrors.email}
+        error={inputsErrors.email}
         id="contact-form-email"
+        label={"Email"}
+        type={"email"}
+        placeholder="Email"
+        aria-label="Input your email"
+        style={{ width: "100%" }}
+        styles={{ label: { color: "white" } }}
+        withAsterisk
       />
-      <MyInput
+      <TextInput
         value={subjectInputText}
         onChange={(e) => {
           setIsMessageSended(null);
           setSubjectInputText(e.target.value);
         }}
-        isLabel={true}
-        type={"text"}
-        labelDescription={"Subject"}
-        isError={inputsErrors.subject}
+        error={inputsErrors.subject}
         id="contact-form-subject"
+        label={"Subject"}
+        type={"text"}
+        placeholder="Type message subject"
+        aria-label="Subject"
+        style={{ width: "100%" }}
+        styles={{ label: { color: "white" } }}
+        withAsterisk
       />
-      <MyTexarea
+      <Textarea
         value={messageInputText}
         onChange={(e) => {
           setIsMessageSended(null);
           setMessageInputText(e.target.value);
         }}
-        isLabel={true}
-        labelDescription={"Message"}
-        name={"textarea"}
-        cols={30}
-        rows={10}
-        isError={inputsErrors.message}
+        error={inputsErrors.message}
         id="contact-form-message"
+        minRows={8}
+        maxRows={8}
+        label={"Message"}
+        name={"textarea"}
+        aria-label="Message"
+        placeholder="Type your message"
+        style={{ width: "100%", height: "100%" }}
+        styles={{ label: { color: "white" } }}
+        withAsterisk
       />
       <HCaptcha
         sitekey={"ede863f0-f565-47cd-a488-5bd2f49904ef"}
@@ -185,9 +196,8 @@ const Form = () => {
         ref={captchaRef}
         theme="dark"
         id="hCaptcha"
-        // onClose={}
       />
-      <St.FormStatus isMessageSended={isMessageSended}>
+      <St.FormStatus $isMessageSended={isMessageSended}>
         <MyButton id="contact-form-button-submit">
           Send Message
           <AlienSvg />
@@ -195,13 +205,13 @@ const Form = () => {
         {isLoading && <St.AiOutlineLoading3Quart />}
         {isMessageSended === false && (
           <St.FormDeliverMessage>
-            <St.ErrorMessage isMessageSended={isMessageSended} />
+            <St.ErrorMessage $isMessageSended={isMessageSended} />
             error, try again
           </St.FormDeliverMessage>
         )}
         {isMessageSended === true && (
           <St.FormDeliverMessage color="#00c700">
-            <St.BsCheck isMessageSended={isMessageSended} />
+            <St.BsCheck $isMessageSended={isMessageSended} />
             message sent
           </St.FormDeliverMessage>
         )}

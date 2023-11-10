@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { CARD_SIZE } from "src/constants-types/constants";
 
 type CardProps = {
   thumbnail: string;
@@ -6,8 +7,9 @@ type CardProps = {
 
 export const Card = styled.div<CardProps>`
   position: relative;
-  max-width: 100%;
-  width: 250px;
+  width: ${CARD_SIZE.width}px;
+  height: ${CARD_SIZE.height}px;
+  z-index: 1;
   display: flex;
   flex-flow: column;
   background-color: #ecf0f1;
@@ -20,9 +22,8 @@ export const Card = styled.div<CardProps>`
   font: var(--text-regular-small);
 
   &:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.08);
     box-shadow: 0 10px 10px -10px rgba(#7f8c8d, 1);
-    transform: scale(1.08);
   }
 
   ::before {
@@ -34,7 +35,8 @@ export const Card = styled.div<CardProps>`
     bottom: 0;
     left: 0;
     filter: blur(35px) brightness(0.75);
-    background: url(${(props) => props.thumbnail}) repeat center / 300%;
+    background-color: #00399b;
+    background-image: linear-gradient(25deg, #81f877 0%, #001476 100%);
   }
 `;
 
@@ -62,22 +64,22 @@ export const ProjectStatus = styled.span<IProjectStatusProps>`
   font: var(--text-regular-small-bold);
   border-radius: 0 0 0 5px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    ${({ colors }) => colors.backgroundColor}  0px 0px 17px -3px;
+    ${({ colors }) => colors.backgroundColor} 0px 0px 17px -3px;
 `;
 
-export const CardThumbnail = styled.div`
+export const CardThumbnailWrapper = styled.div`
   display: flex;
-  height: 40%;
+  height: 45%;
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding-top: 8px;
+  padding: 20px;
 `;
 
-export const CardImg = styled.img`
-  width: 220px;
-  height: 150px;
-  object-fit: cover;
+export const CardImgWrapper = styled.div`
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 7px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   user-select: none;
 `;
@@ -107,7 +109,6 @@ export const CardTitle = styled.div`
 export const CardDescription = styled.div`
   color: rgba(#ecf0f1, 0.8);
   text-align: start;
-  /* font: inherit; */
   margin-bottom: 5px;
 `;
 
@@ -115,7 +116,6 @@ export const CardTagsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  /* justify-content: center; */
 `;
 
 export const CardTag = styled.span`

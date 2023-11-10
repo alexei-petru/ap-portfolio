@@ -15,45 +15,73 @@ interface formReqI {
 
 const getTokenValidity = async (token: string) => {
   const SECRET_KEY = process.env.HCAPTCHA_SECRET_PSW;
-  let response = false;
   const SITE_KEY = process.env.HCAPTCHA_SITE_KEY;
 
+  if (!SECRET_KEY || !SITE_KEY) {
+    return false;
+  }
+
   try {
-    if (SECRET_KEY && SITE_KEY) {
-      const verifyData = await verify(SECRET_KEY, token, undefined, SITE_KEY);
-      if (verifyData.success === true) {
-        response = true;
-      }
-    }
+    const verifyData = await verify(SECRET_KEY, token, undefined, SITE_KEY);
+    return verifyData.success === true;
   } catch (error) {
-    response = false;
-  } finally {
-    return response;
+    return false;
   }
 };
+
+// export default async function handler(
+//   req: NextApiRequest,
+//   res: NextApiResponse
+// ) {
+//   if (req.method === "POST") {
+//     const { inputsText, formVerifyToken }: formReqI = req.body;
+//     const { isInputsValid } = getInputsValidation(inputsText);
+
+//     const isTokenValid = await getTokenValidity(formVerifyToken);
+
+//     let isEmailSended: sendEmailResponseType = false;
+
+//     if (isInputsValid && isTokenValid) {
+//       await new Promise<void>(async (resolve) => {
+//         setTimeout(() => {
+//           resolve();
+//         }, 40000);
+//         isEmailSended = await sendInputsToEmail(inputsText);
+//         resolve();
+//       });
+//     }
+
+//     res.status(200).json({ isEmailSended });
+//   }
+// }
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method === "POST") {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  try {
     const { inputsText, formVerifyToken }: formReqI = req.body;
     const { isInputsValid } = getInputsValidation(inputsText);
 
-    const isTokenValid = await getTokenValidity(formVerifyToken);
-
-    let isEmailSended: sendEmailResponseType = false;
-
-    if (isInputsValid && isTokenValid) {
-      await new Promise<void>(async (resolve) => {
-        setTimeout(() => {
-          resolve();
-        }, 40000);
-        isEmailSended = await sendInputsToEmail(inputsText);
-        resolve();
-      });
+    if (!isInputsValid) {
+      return res.status(400).json({ error: "Invalid inputs" });
     }
 
-    res.status(200).json({ isEmailSended });
+    const isTokenValid = await getTokenValidity(formVerifyToken);
+
+    if (!isTokenValid) {
+      return res.status(400).json({ error: "Invalid token" });
+    }
+
+    const isEmailSended = await sendInputsToEmail(inputsText);
+
+    return res.status(200).json({ isEmailSended });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

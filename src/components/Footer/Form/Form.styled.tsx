@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import {
   var_ContactItemHeight,
   var_ContactItemWidth,
-} from "src/constants/cssVariables";
+} from "src/constants-types/cssVariables";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { BsCheckCircle } from "react-icons/bs";
 import { VscError } from "react-icons/vsc";
@@ -19,13 +19,13 @@ export const Form = styled.form`
   border-radius: 5px;
   min-width: 300px;
   max-width: ${var_ContactItemWidth};
-  height: ${var_ContactItemHeight};
+  height: 100%;
+  min-height: ${var_ContactItemHeight};
   background: #120449;
   background: linear-gradient(15deg, #3e7134 15%, #120449 92%);
 
   @media (max-width: 735px) {
     margin-bottom: 70px;
-    /* margin-left: -18px; */
   }
 `;
 
@@ -36,14 +36,14 @@ export const buttonsWrapper = styled.div`
 `;
 
 interface FormSubmitTypes {
-  isMessageSended?: boolean | null;
+  $isMessageSended?: boolean | null;
   color?: string;
 }
 
 export const FormStatus = styled.div<FormSubmitTypes>`
   display: flex;
   justify-content: ${(props) =>
-    props.isMessageSended === null ? "flex-start" : "space-between"};
+    props.$isMessageSended === null ? "flex-start" : "space-between"};
   justify-content: space-between;
   width: 100%;
 `;
@@ -59,7 +59,7 @@ export const BsCheck = styled(({ ...rest }: FormSubmitTypes) => (
   ${isMessageSendedStyle}
   fill: #07ca21;
   display: ${(props) => {
-    return props.isMessageSended === true ? "inline-block" : "none";
+    return props.$isMessageSended === true ? "inline-block" : "none";
   }};
 `;
 
@@ -69,7 +69,7 @@ export const ErrorMessage = styled(({ ...rest }: FormSubmitTypes) => (
   ${isMessageSendedStyle}
   fill: #ca0707;
   display: ${(props) =>
-    props.isMessageSended === false ? "inline-block" : "none"};
+    props.$isMessageSended === false ? "inline-block" : "none"};
 `;
 
 const spin = keyframes`
@@ -81,7 +81,7 @@ const spin = keyframes`
 export const AiOutlineLoading3Quart = styled(AiOutlineLoading3Quarters)`
   animation: ${spin} 0.9s ease infinite;
   fill: blue;
-  ${isMessageSendedStyle}/* padding: 5px; */
+  ${isMessageSendedStyle}
 `;
 
 export const FormDeliverMessage = styled(MyErrorMessage)`
