@@ -47,7 +47,12 @@ const ProjectCard = ({
               src={thumbnail}
               priority
               style={{ objectFit: "cover" }}
-              sizes={`max-width: ${BREAKPOINTS_APP.laptopMedium} 100vw, 50vw`}
+              sizes={`
+              (max-width: ${BREAKPOINTS_APP.mobileMedium}) 200vw,
+              (max-width: ${BREAKPOINTS_APP.tabletLandscape}) 100vw,
+              (max-width: ${BREAKPOINTS_APP.laptopMedium}) 50vw,
+              (max-width: ${BREAKPOINTS_APP.desktopLarge}) 30vw,
+                10vw`}
             />
           </St.CardImgWrapper>
         </St.CardThumbnailWrapper>

@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { CARD_SIZE } from "src/constants-types/constants";
+import { boxShadowCard } from "src/styles/StyledReusable.styled";
 
 type CardProps = {
   thumbnail: string;
@@ -17,7 +18,7 @@ export const Card = styled.div<CardProps>`
   border-radius: 0.2rem;
   user-select: text;
   transition: 0.25s ease-in-out;
-  box-shadow: 5px 3px 30px black;
+  box-shadow: ${boxShadowCard};
   overflow: hidden;
   font: var(--text-regular-small);
 
@@ -63,7 +64,8 @@ export const ProjectStatus = styled.span<IProjectStatusProps>`
   color: ${({ colors }) => colors.textColor};
   font: var(--text-regular-small-bold);
   border-radius: 0 0 0 5px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
     ${({ colors }) => colors.backgroundColor} 0px 0px 17px -3px;
 `;
 
@@ -80,7 +82,9 @@ export const CardImgWrapper = styled.div`
   width: 90%;
   height: 100%;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 7px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow:
+    rgba(0, 0, 0, 0.2) 0px 0px 7px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
   user-select: none;
 `;
 
@@ -150,7 +154,10 @@ export const ButtonsWrapper = styled.div<cardButtonsProps>`
     font-weight: 600;
     font-size: 18px;
     border: none;
-    transition: margin, opacity, 0.25s ease-in-out;
+    transition:
+      margin,
+      opacity,
+      0.25s ease-in-out;
     opacity: ${(props) => (props.isCardHover ? "1" : "0")};
   }
 `;
