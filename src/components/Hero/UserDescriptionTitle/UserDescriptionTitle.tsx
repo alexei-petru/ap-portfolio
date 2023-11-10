@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { HERO_APP_DESCRIPTION } from "src/data/localData";
 import {
   AnimationEffectIn,
@@ -6,6 +5,7 @@ import {
   Textillate,
 } from "textillate-react";
 import * as St from "./UserDescriptionTitle.styled";
+import { useState } from "react";
 
 const selectedAnimationEffects: {
   in: AnimationEffectIn;

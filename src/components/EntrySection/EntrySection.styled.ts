@@ -12,7 +12,7 @@ export const EntrySection = styled.header`
 export const EntrySectionImageWrapper = styled.div`
   position: absolute;
   filter: ${var_NavbarBackgroundFilter};
-  opacity: 0.85;
+  opacity: 0.5;
   width: 100%;
   height: 100%;
   top: 0;

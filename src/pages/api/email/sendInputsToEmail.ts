@@ -1,4 +1,4 @@
-import { inputsType } from "src/components/Footer/Form/Form";
+import { inputsType } from "src/components/Footer/Form/FormReal/FormReal";
 import nodemailer from "nodemailer";
 
 export type sendEmailResponseType = boolean;

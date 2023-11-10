@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
 import * as St from "src/components/Hero/Hero.styled";
@@ -7,12 +6,18 @@ import { HERO_APP_DESCRIPTION } from "src/data/localData";
 import { StyledContainer } from "src/styles/Container.styled";
 import { IApodData } from "../EntrySection/EntrySection";
 
+import React from "react";
+import dynamic from "next/dynamic";
+
+// fix for LCP:  setting opacity to 0 will greatly decrease LCP
 const UserDescriptionTitleLazy = dynamic(
   () => import("./UserDescriptionTitle/UserDescriptionTitle"),
   {
     ssr: false,
-    loading: () => <h1 style={{ opacity: 0 }}>{HERO_APP_DESCRIPTION.text}</h1>,
-  }
+    loading: () => (
+      <h1 style={{ opacity: 0.01, zIndex: -1 }}>{HERO_APP_DESCRIPTION.text}</h1>
+    ),
+  },
 );
 
 interface IHeroProps extends React.PropsWithChildren {
@@ -32,7 +37,7 @@ const Hero = ({
   entrySectionBackgroundData: headerBackgroundData,
 }: IHeroProps) => {
   const [currentAnimation, setCurrentAnimation] = useState<AvatarAnimationKeys>(
-    avatarAnimationNames.entry
+    avatarAnimationNames.entry,
   );
 
   const setCurrentAnimationHandler = () => {
@@ -57,7 +62,7 @@ const Hero = ({
           <Image
             fill
             style={{ objectFit: "cover" }}
-            sizes={`(max-width: ${BREAKPOINTS_APP.mobileMedium}) 100vw,
+            sizes={`(max-width: ${BREAKPOINTS_APP.mobileMedium}) 80vw,
              (max-width: ${BREAKPOINTS_APP.tabletLandscape}) 50vw,
               33vw`}
             src={"/me.jpg"}

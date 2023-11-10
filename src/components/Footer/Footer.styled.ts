@@ -18,7 +18,7 @@ export const Footer = styled.footer`
 
 export const FooterBackgroundWrapper = styled.div`
   position: absolute;
-  opacity: 0.8;
+  opacity: 0.5;
   filter: blur(4px);
   border-radius: 5px;
   width: 100%;

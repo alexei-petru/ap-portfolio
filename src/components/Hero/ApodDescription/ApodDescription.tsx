@@ -5,6 +5,7 @@ import { StyledPopover } from "src/components/shared/MyPopoverDropdown/MyPopover
 import Image from "next/image";
 import { useState } from "react";
 import { IApodData } from "../../EntrySection/EntrySection";
+import { BREAKPOINTS_APP } from "src/constants-types/constants";
 
 interface IApodDescriptionProps extends React.HTMLProps<HTMLDivElement> {
   headerBackgroundData: IApodData;
@@ -39,7 +40,10 @@ const ApodDescription = ({
               priority={true}
               alt="apod description"
               style={{ objectFit: "contain" }}
-              sizes="10vw"
+              sizes={`
+              (max-width: ${BREAKPOINTS_APP.mobileMedium}) 100vw,
+               (max-width: ${BREAKPOINTS_APP.tabletLandscape}) 30vw,
+                10vw`}
             />
           </St.ApodImageWrapper>
           <Popover.Target>

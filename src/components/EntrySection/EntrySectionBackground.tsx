@@ -16,7 +16,10 @@ const EntrySectionBackground = ({
       {entrySectionBackgroundImage.url && (
         <Image
           fill
-          sizes={`max-width: ${BREAKPOINTS_APP.laptopMedium} 100vw, 50vw`}
+          sizes={`
+          (max-width: ${BREAKPOINTS_APP.mobileMedium}) 200vw,
+          (max-width: ${BREAKPOINTS_APP.desktopLarge}) 100vw,
+           50vw`}
           src={entrySectionBackgroundImage.url}
           alt={entrySectionBackgroundImage.title || ""}
           priority={true}
