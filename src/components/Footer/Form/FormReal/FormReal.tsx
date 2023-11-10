@@ -180,8 +180,8 @@ const Form = () => {
         }}
         error={inputsErrors.message}
         id="contact-form-message"
-        minRows={8}
-        maxRows={8}
+        minRows={7}
+        maxRows={7}
         label={"Message"}
         name={"textarea"}
         aria-label="Message"

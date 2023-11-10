@@ -5,3 +5,5 @@ export const StyledTitleSection = styled.h2`
   text-align: center;
   letter-spacing: 3px;
 `;
+
+export const boxShadowCard = `5px 3px 30px black`;
