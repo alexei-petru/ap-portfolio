@@ -3,7 +3,7 @@ module.exports = {
   "src/**/*.{ts,tsx,js}": (filenames) => {
     const filesToLint = filenames.join(' ');
     return [
-      `next lint --file ${filesToLint}`,
+      `eslint ${filesToLint}`,
       `tsc --noEmit --skipLibCheck`,
       `prettier --write ${filesToLint}`
     ];

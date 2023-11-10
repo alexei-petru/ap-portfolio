@@ -17,7 +17,7 @@ export type inputsType = {
 
 const sendFormDataToSrv = async (
   inputsText: inputsType,
-  formVerifyToken: string
+  formVerifyToken: string,
 ) => {
   const controller = new AbortController();
   const options = {
@@ -39,7 +39,7 @@ const sendFormDataToSrv = async (
 const updateErrorsMessages = (
   validationErrors: Joi.ValidationErrorItem[],
   setInputsErrors: React.Dispatch<React.SetStateAction<inputsType>>,
-  inputsErrors: inputsType
+  inputsErrors: inputsType,
 ) => {
   const errors: Record<string, string> = {};
   for (const object of validationErrors) {
@@ -57,7 +57,7 @@ const useEraseInputsErrorsOnInputsChange = (
   setInputsErrors: React.Dispatch<React.SetStateAction<inputsType>>,
   emailInputText: string,
   subjectInputText: string,
-  messageInputText: string
+  messageInputText: string,
 ) => {
   useEffect(() => {
     setInputsErrors({ email: "", subject: "", message: "" });
@@ -99,7 +99,7 @@ const Form = () => {
 
   const sumbitInputsValues = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
       const { validationErrors, isInputsValid } =
         getInputsValidation(inputsText);
@@ -112,7 +112,7 @@ const Form = () => {
         } else {
           const isEmailSended = await sendFormDataToSrv(
             inputsText,
-            formVerifyToken
+            formVerifyToken,
           );
           setIsMessageSended(isEmailSended);
 
@@ -134,7 +134,7 @@ const Form = () => {
     setInputsErrors,
     emailInputText,
     subjectInputText,
-    messageInputText
+    messageInputText,
   );
 
   return (

@@ -3,7 +3,11 @@ import * as St from "./Footer.styled";
 import Image from "next/image";
 import { BREAKPOINTS_APP } from "src/constants-types/constants";
 import { useGetCurrentYear } from "src/hooks/useGetCurrentYear";
-import Form from "./Form/Form";
+import dynamic from "next/dynamic";
+
+const DynamicForm = dynamic(() => import("src/components/Footer/Form/Form"), {
+  ssr: false,
+});
 
 const Footer = () => {
   const currentYear = useGetCurrentYear();
@@ -34,7 +38,7 @@ const Footer = () => {
                   sizes={`max-width: ${BREAKPOINTS_APP.laptopMedium} 100vw, 50vw`}
                 />
               </St.MapWrapper>
-              <Form />
+              <DynamicForm />
             </St.MapFormFooterWrapper>
             <St.footerCopyright>
               {`Designed and developed with ❤ by Alexei Petru. © ${currentYear}`}
