@@ -7,7 +7,7 @@ export const Main = styled.main`
   justify-content: center;
   margin: 0 auto;
   max-width: ${({ theme }) => theme.breakpoints.desktopQHD};
-  background-color: #000000c4;
+  background-color: #00000082;
 `;
 
 export const MainInner = styled.div`

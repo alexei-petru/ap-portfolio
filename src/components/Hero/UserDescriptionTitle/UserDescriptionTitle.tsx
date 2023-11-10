@@ -1,11 +1,12 @@
-import { useState } from "react";
 import { HERO_APP_DESCRIPTION } from "src/data/localData";
 import {
   AnimationEffectIn,
   AnimationEffectOut,
+  AnimationOptions,
   Textillate,
 } from "textillate-react";
 import * as St from "./UserDescriptionTitle.styled";
+import { useState } from "react";
 
 const selectedAnimationEffects: {
   in: AnimationEffectIn;
@@ -23,7 +24,8 @@ const selectedAnimationEffects: {
 const UserDescriptionTitle = ({ setIsTitleAnimationFinished }) => {
   const [animationInIndexState, setAnimationInIndexState] = useState(0);
 
-  const animationOptions = {
+  const animationOptions: AnimationOptions = {
+    minDisplayTime: 300,
     loop: true,
     in: {
       effect: selectedAnimationEffects[animationInIndexState]?.in,

@@ -1,21 +1,16 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import EntrySection from "src/components/EntrySection/EntrySection";
+import Footer from "src/components/Footer/Footer";
+import Main from "src/components/Main/Main";
 import AffixToTop from "src/components/overlays/AffixToTop";
 
 const ReactNebulaClient = dynamic(
   () => import("@flodlc/nebula").then((mod) => mod.ReactNebula),
   {
+    loading: () => <div style={{ opacity: 0.01 }}>Loading</div>,
     ssr: false,
-  }
-);
-
-const MainLazy = dynamic(() =>
-  import("src/components/Main/Main").then((mod) => mod.default)
-);
-
-const FooterLazy = dynamic(() =>
-  import("src/components/Footer/Footer").then((mod) => mod.default)
+  },
 );
 
 export default function Home() {
@@ -41,8 +36,8 @@ export default function Home() {
       />
       <AffixToTop />
       <EntrySection />
-      <MainLazy />
-      <FooterLazy />
+      <Main />
+      <Footer />
     </>
   );
 }

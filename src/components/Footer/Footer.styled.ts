@@ -1,5 +1,8 @@
 import styled from "@emotion/styled";
-import { StyledTitleSection } from "src/styles/StyledReusable.styled";
+import {
+  StyledTitleSection,
+  boxShadowCard,
+} from "src/styles/StyledReusable.styled";
 import {
   var_ContactItemHeight,
   var_ContactItemWidth,
@@ -18,7 +21,7 @@ export const Footer = styled.footer`
 
 export const FooterBackgroundWrapper = styled.div`
   position: absolute;
-  opacity: 0.8;
+  opacity: 0.5;
   filter: blur(4px);
   border-radius: 5px;
   width: 100%;
@@ -60,6 +63,7 @@ export const MapWrapper = styled.div`
   height: 100%;
   min-height: ${var_ContactItemHeight};
   margin-bottom: 100px;
+  box-shadow: ${boxShadowCard};
 `;
 
 export const footerCopyright = styled.p`

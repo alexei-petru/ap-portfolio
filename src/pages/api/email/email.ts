@@ -1,4 +1,4 @@
-import { inputsType } from "src/components/Footer/Form/Form";
+import { inputsType } from "src/components/Footer/Form/FormReal/FormReal";
 import { verify } from "hcaptcha";
 import { NextApiRequest, NextApiResponse } from "next";
 import { getInputsValidation } from "src/utils/getInputsValidation";
@@ -57,7 +57,7 @@ const getTokenValidity = async (token: string) => {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });

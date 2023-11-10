@@ -3,11 +3,7 @@ import * as St from "./Footer.styled";
 import Image from "next/image";
 import { BREAKPOINTS_APP } from "src/constants-types/constants";
 import { useGetCurrentYear } from "src/hooks/useGetCurrentYear";
-import dynamic from "next/dynamic";
-
-const DynamicForm = dynamic(() => import("src/components/Footer/Form/Form"), {
-  ssr: false,
-});
+import Form from "./Form/Form";
 
 const Footer = () => {
   const currentYear = useGetCurrentYear();
@@ -21,7 +17,10 @@ const Footer = () => {
             alt=""
             src={"/ufo-background.png"}
             priority
-            sizes={`max-width: ${BREAKPOINTS_APP.laptopMedium} 100vw, 50vw`}
+            sizes={`
+            (max-width: ${BREAKPOINTS_APP.mobileMedium}) 200vw,
+             (max-width: ${BREAKPOINTS_APP.desktopLarge}) 100vw,
+              40vw`}
           />
         </St.FooterBackgroundWrapper>
         <StyledContainer>
@@ -35,10 +34,13 @@ const Footer = () => {
                   quality={100}
                   alt="location"
                   src={"/location.png"}
-                  sizes={`max-width: ${BREAKPOINTS_APP.laptopMedium} 100vw, 50vw`}
+                  sizes={`
+                  (max-width: ${BREAKPOINTS_APP.mobileMedium}) 200vw,
+                  (max-width: ${BREAKPOINTS_APP.laptopMedium}) 40vw,
+                    20vw`}
                 />
               </St.MapWrapper>
-              <DynamicForm />
+              <Form />
             </St.MapFormFooterWrapper>
             <St.footerCopyright>
               {`Designed and developed with ❤ by Alexei Petru. © ${currentYear}`}
