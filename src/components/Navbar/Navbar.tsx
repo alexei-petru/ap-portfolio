@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import * as St from "src/components/Navbar/Navbar.styled";
-import { BREAKPOINTS_APP } from "src/constants-types/constants";
 import { StyledContainer } from "src/styles/Container.styled";
 
 const Navbar = () => {
@@ -9,33 +7,9 @@ const Navbar = () => {
     <St.Navbar>
       <StyledContainer>
         <ul>
-          <St.LogoWrapper>
-            <Link
-              style={{
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
-                width: "100%",
-                height: "100%",
-              }}
-              href="/"
-            >
-              <St.LogoImageWrapper>
-                <Image
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes={`(max-width: ${BREAKPOINTS_APP.mobileMedium}) 50vw,
-             (max-width: ${BREAKPOINTS_APP.tabletLandscape}) 10vw,
-              5vw`}
-                  src={"/android-chrome-192x192.png"}
-                  placeholder="blur"
-                  blurDataURL={"/me.jpg"}
-                  alt="author image"
-                />
-              </St.LogoImageWrapper>
-              <St.LogoText>Portfolio</St.LogoText>
-            </Link>
-          </St.LogoWrapper>
+          <li style={{ marginRight: "auto" }}>
+            <Link href="/">AP Portfolio</Link>
+          </li>
           <li>
             <a href="#projects">Projects</a>
           </li>

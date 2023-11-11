@@ -41,33 +41,6 @@ export const Navbar = styled.nav`
   }
 `;
 
-export const LogoWrapper = styled.li`
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 0;
-  margin-right: auto;
-
-  img {
-    width: auto;
-    height: 50px;
-  }
-`;
-
-export const LogoImageWrapper = styled.div`
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin-right: 2px;
-`;
-
-export const LogoText = styled.div`
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMedium}) {
-    display: none;
-  }
-`;
-
 export const NavbarBackground = styled.div`
   width: 100%;
   height: ${var_NavbarHeight};
