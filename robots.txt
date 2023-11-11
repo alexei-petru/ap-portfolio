@@ -1,0 +1,8 @@
+# Allow everything
+User-agent: *
+Allow: /
+
+# Disallow indexing of certain paths
+# User-agent: *
+# Disallow: /private/
+# Disallow: /admin/
