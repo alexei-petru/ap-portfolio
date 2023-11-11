@@ -22,8 +22,9 @@ const EntrySectionBackground = ({
            50vw`}
           src={entrySectionBackgroundImage.url}
           alt={entrySectionBackgroundImage.title || ""}
-          priority={true}
           style={{ objectFit: "cover", zIndex: "0" }}
+          placeholder="blur"
+          blurDataURL={entrySectionBackgroundImage.url}
         />
       )}
     </St.EntrySectionImageWrapper>

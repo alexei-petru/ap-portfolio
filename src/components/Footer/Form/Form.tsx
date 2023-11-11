@@ -45,6 +45,8 @@ const Form = () => {
           quality={100}
           alt="location"
           src={"/form-placeholder.jpg"}
+          placeholder="blur"
+          blurDataURL={"/form-placeholder.jpg"}
           sizes={`
           (max-width: ${BREAKPOINTS_APP.mobileMedium}) 200vw,
           (max-width: ${BREAKPOINTS_APP.laptopMedium}) 80vw,
