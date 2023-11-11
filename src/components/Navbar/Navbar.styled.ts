@@ -57,8 +57,8 @@ export const LogoWrapper = styled.li`
 
 export const LogoImageWrapper = styled.div`
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin-right: 2px;
 `;
 
