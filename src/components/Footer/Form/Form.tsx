@@ -1,4 +1,4 @@
-import { Button, Loader } from "@mantine/core";
+import { Loader } from "@mantine/core";
 import { useTimeout } from "@mantine/hooks";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -27,7 +27,7 @@ const Form = () => {
           return m.default;
         }),
       {
-        loading: () => <div>Loading form...</div>,
+        loading: () => <div>Contact Us</div>,
         ssr: true,
       },
     );
@@ -37,7 +37,11 @@ const Form = () => {
       {isPlaceholderImageShown && (
         <Image
           fill
-          style={{ zIndex: 1, transform: "rotateY(180deg)" }}
+          style={{
+            objectFit: "cover",
+            zIndex: 1,
+            transform: "rotateY(180deg)",
+          }}
           quality={100}
           alt="location"
           src={"/form-placeholder.jpg"}
@@ -50,9 +54,8 @@ const Form = () => {
       {isLoadStart && <DynamicForm />}
       {isPlaceholderImageShown && (
         <St.Placeholder>
-          <Button
+          <St.ButtonShowForm
             variant="filled"
-            color="green"
             size="lg"
             onClick={() => {
               setIsLoadStart(true);
@@ -62,7 +65,7 @@ const Form = () => {
               <Loader style={{ zIndex: 2 }} color="blue" size="md" />
             )}
             {!isLoadStart && " Open for magic"}
-          </Button>
+          </St.ButtonShowForm>
         </St.Placeholder>
       )}
     </St.FormSt>

@@ -1,6 +1,11 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { keyframes } from "@mantine/core";
+import {
+  Button,
+  ButtonProps,
+  createPolymorphicComponent,
+  keyframes,
+} from "@mantine/core";
 import {
   var_ContactItemWidth,
   var_ContactItemHeight,
@@ -29,6 +34,7 @@ export const Placeholder = styled.div`
   cursor: pointer;
   z-index: 2;
   transform: rotateY(180deg);
+  cursor: default;
 `;
 
 export const palceholderImageDuration = 2000;
@@ -47,3 +53,13 @@ export const FormSt = styled.div<{ $isFormLoaded: boolean }>`
       : "none"};
   box-shadow: ${boxShadowCard};
 `;
+
+export const ButtonShowForm_ = styled(Button)`
+  background-color: #115700;
+  :hover {
+    background-color: #166c00;
+  }
+`;
+export const ButtonShowForm = createPolymorphicComponent<"button", ButtonProps>(
+  ButtonShowForm_,
+);
