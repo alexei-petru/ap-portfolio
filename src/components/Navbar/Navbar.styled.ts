@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { AiFillGithub } from "react-icons/ai";
 import {
   var_NavbarBackgroundColor,
   var_NavbarHeight,
@@ -14,14 +15,14 @@ export const Navbar = styled.nav`
     width: 100%;
     margin-top: 0;
     border-radius: 0 0 10px 10px;
-    padding: 40px;
+    padding: 20px;
     background-color: ${var_NavbarBackgroundColor};
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmall}) {
-      padding: 2px;
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMedium}) {
+      padding: 5px;
     }
   }
 
@@ -32,22 +33,17 @@ export const Navbar = styled.nav`
     margin-left: 20px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMedium}) {
+      font-size: 18px;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmall}) {
       font-size: 16px;
     }
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmall}) {
-      font-size: 14px;
-      white-space: normal;
-    }
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmall}) {
-    padding: 0;
   }
 `;
 
 export const LogoWrapper = styled.li`
   display: flex;
+  justify-content: center;
   flex-direction: row;
   align-items: center;
   padding: 10px 0;
@@ -56,6 +52,19 @@ export const LogoWrapper = styled.li`
   img {
     width: auto;
     height: 50px;
+  }
+`;
+
+export const LogoImageWrapper = styled.div`
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-right: 2px;
+`;
+
+export const LogoText = styled.div`
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMedium}) {
+    display: none;
   }
 `;
 
@@ -68,4 +77,21 @@ export const NavbarBackground = styled.div`
   left: 0;
   right: 0;
   z-index: 2;
+`;
+
+export const GithubLogoWrapper = styled.li`
+  min-height: 25px;
+  min-width: 25px;
+`;
+
+export const GithubLogoLink = styled.a`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+`;
+
+export const GithubLogoSvg = styled(AiFillGithub)`
+  width: 100%;
+  height: 100%;
 `;

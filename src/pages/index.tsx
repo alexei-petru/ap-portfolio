@@ -17,8 +17,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>A.P. Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>AP Portfolio</title>
       </Head>
       <ReactNebulaClient
         config={{
