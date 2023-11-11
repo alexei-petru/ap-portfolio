@@ -16,7 +16,8 @@ const Footer = () => {
             style={{ objectFit: "cover" }}
             alt=""
             src={"/ufo-background.png"}
-            priority
+            placeholder="blur"
+            blurDataURL={"/ufo-background.png"}
             sizes={`
             (max-width: ${BREAKPOINTS_APP.mobileMedium}) 200vw,
              (max-width: ${BREAKPOINTS_APP.desktopLarge}) 100vw,
@@ -34,6 +35,8 @@ const Footer = () => {
                   quality={100}
                   alt="location"
                   src={"/location.png"}
+                  placeholder="blur"
+                  blurDataURL={"/location.png"}
                   sizes={`
                   (max-width: ${BREAKPOINTS_APP.mobileMedium}) 200vw,
                   (max-width: ${BREAKPOINTS_APP.laptopMedium}) 40vw,

@@ -66,7 +66,8 @@ const Hero = ({
              (max-width: ${BREAKPOINTS_APP.tabletLandscape}) 50vw,
               33vw`}
             src={"/me.jpg"}
-            priority
+            placeholder="blur"
+            blurDataURL={"/me.jpg"}
             alt="author image"
           />
         </St.AvatarWrapper>
