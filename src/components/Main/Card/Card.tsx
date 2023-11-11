@@ -45,8 +45,9 @@ const ProjectCard = ({
               alt={title}
               quality={100}
               src={thumbnail}
-              priority
               style={{ objectFit: "cover" }}
+              placeholder="blur"
+              blurDataURL={thumbnail}
               sizes={`
               (max-width: ${BREAKPOINTS_APP.mobileMedium}) 200vw,
               (max-width: ${BREAKPOINTS_APP.tabletLandscape}) 100vw,
