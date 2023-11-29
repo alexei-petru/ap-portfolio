@@ -9,30 +9,55 @@ export const apodLocalImage = {
   hdurl: "https://apod.nasa.gov/apod/image/2208/CygnusWall_Bogaerts_4143.jpg",
 };
 
-export const cardsDevStatusColors = {
-  justStarted: {
-    backgroundColor: "rgba(255, 255, 255, 0.85)",
+export const cardsDevStatus = {
+  inProgress: {
+    text: "In progress",
+    backgroundColor: "rgb(115 115 255 / 89%)",
     textColor: "black",
   },
   prerelease: {
+    text: "Prerelease",
     backgroundColor: "rgb(217 217 0 / 85%)",
     textColor: "black",
   },
   release: {
+    text: "Release",
     backgroundColor: "rgba(0, 255, 0, 0.65)",
     textColor: "black",
   },
   nextProject: {
+    text: "Next Project",
     backgroundColor: "rgb(245 80 80)",
     textColor: "black",
   },
-  pending: {
-    backgroundColor: "rgb(115 115 255 / 89%)",
-    textColor: "black",
-  },
 };
-
 export const CARDS_DATA = [
+  {
+    title: "AI Crossplatform App",
+    description:
+      "A crossplatform comercial app using AI, *links will be available when app will be published in store",
+    tags: [
+      "Next.js",
+      "Typescript",
+      "Capacitor",
+      "ionic",
+      "OpenAI",
+      "Prisma",
+      "Tailwind",
+      "tRPC",
+      "NextAuth.js",
+    ],
+    thumbnail: "/ai-app.jpg",
+    urlGit: "#",
+    urlLive: "#",
+    devStatus: {
+      text: cardsDevStatus.inProgress.text,
+      colors: {
+        textColor: cardsDevStatus.inProgress.textColor,
+        backgroundColor: cardsDevStatus.inProgress.backgroundColor,
+      },
+    },
+  },
   {
     title: "VersoMart",
     description: "Eshop SSR App",
@@ -48,10 +73,10 @@ export const CARDS_DATA = [
     urlGit: "https://github.com/alexei-petru/VersoMart",
     urlLive: "https://versomart-dd427b87b213.herokuapp.com/en/auth/sign-up",
     devStatus: {
-      text: "Prerelease v0.4",
+      text: cardsDevStatus.prerelease.text + "v0.4",
       colors: {
-        textColor: cardsDevStatusColors.prerelease.textColor,
-        backgroundColor: cardsDevStatusColors.prerelease.backgroundColor,
+        textColor: cardsDevStatus.prerelease.textColor,
+        backgroundColor: cardsDevStatus.prerelease.backgroundColor,
       },
     },
   },
@@ -70,10 +95,10 @@ export const CARDS_DATA = [
     urlGit: "https://github.com/Allex191/ap-portfolio",
     urlLive: "#",
     devStatus: {
-      text: "Release v1",
+      text: cardsDevStatus.release.text + "v1",
       colors: {
-        textColor: cardsDevStatusColors.release.textColor,
-        backgroundColor: cardsDevStatusColors.release.backgroundColor,
+        textColor: cardsDevStatus.release.textColor,
+        backgroundColor: cardsDevStatus.release.backgroundColor,
       },
     },
   },
@@ -86,10 +111,10 @@ export const CARDS_DATA = [
     urlGit: "https://github.com/Allex191/ap-skills-snake-game",
     urlLive: "https://ap-skills-snake-game.vercel.app",
     devStatus: {
-      text: "Prerelease v0.7",
+      text: cardsDevStatus.prerelease.text + "v0.7",
       colors: {
-        textColor: cardsDevStatusColors.prerelease.textColor,
-        backgroundColor: cardsDevStatusColors.prerelease.backgroundColor,
+        textColor: cardsDevStatus.prerelease.textColor,
+        backgroundColor: cardsDevStatus.prerelease.backgroundColor,
       },
     },
   },
@@ -103,10 +128,10 @@ export const CARDS_DATA = [
     urlGit: "https://github.com/Allex191/real-idea-landing-page",
     urlLive: "https://allex191.github.io/real-idea-landing-page/",
     devStatus: {
-      text: "Release v1.0",
+      text: cardsDevStatus.release.text + "v1.0",
       colors: {
-        textColor: cardsDevStatusColors.release.textColor,
-        backgroundColor: cardsDevStatusColors.release.backgroundColor,
+        textColor: cardsDevStatus.release.textColor,
+        backgroundColor: cardsDevStatus.release.backgroundColor,
       },
     },
   },
@@ -120,35 +145,10 @@ export const CARDS_DATA = [
       "https://github.com/Allex191/javascript-tutorials/tree/main/message-encryptor",
     urlLive: "#",
     devStatus: {
-      text: "Release v1.0",
+      text: cardsDevStatus.release.text + "v1.0",
       colors: {
-        textColor: cardsDevStatusColors.release.textColor,
-        backgroundColor: cardsDevStatusColors.release.backgroundColor,
-      },
-    },
-  },
-  {
-    title: "*Warehouse App",
-    description:
-      "A  cross platform mobile app for warehouse with useful statistics",
-    tags: [
-      "Html",
-      "Css",
-      "Typescript",
-      "NextJs",
-      "Redux-Toolkit",
-      "Firebase",
-      "Capacitor",
-      "Ionic",
-    ],
-    thumbnail: "/warehouse-app.jpg",
-    urlGit: "#",
-    urlLive: "#",
-    devStatus: {
-      text: "Next project",
-      colors: {
-        textColor: cardsDevStatusColors.nextProject.textColor,
-        backgroundColor: cardsDevStatusColors.nextProject.backgroundColor,
+        textColor: cardsDevStatus.release.textColor,
+        backgroundColor: cardsDevStatus.release.backgroundColor,
       },
     },
   },
