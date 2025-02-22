@@ -1,12 +1,11 @@
-import { StyledContainer } from "src/styles/Container.styled";
-import * as St from "./Footer.styled";
 import Image from "next/image";
 import { BREAKPOINTS_APP } from "src/constants-types/constants";
-import { useGetCurrentYear } from "src/hooks/useGetCurrentYear";
+import { StyledContainer } from "src/styles/Container.styled";
+import * as St from "./Footer.styled";
 import Form from "./Form/Form";
 
 const Footer = () => {
-  const currentYear = useGetCurrentYear();
+  const projectYear = 2023;
   return (
     <>
       <St.Footer id="contact">
@@ -46,7 +45,7 @@ const Footer = () => {
               <Form />
             </St.MapFormFooterWrapper>
             <St.footerCopyright>
-              {`Designed and developed with ❤ by Alexei Petru. © ${currentYear}`}
+              {`Designed and developed with ❤ by Alexei Petru. © ${projectYear}`}
             </St.footerCopyright>
           </St.FooterInner>
         </StyledContainer>
