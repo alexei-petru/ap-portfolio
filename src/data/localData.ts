@@ -9,6 +9,12 @@ export const apodLocalImage = {
   hdurl: "https://apod.nasa.gov/apod/image/2208/CygnusWall_Bogaerts_4143.jpg",
 };
 
+// export type DevStatusType = {
+//   text: string;
+//   backgroundColor: string;
+//   textColor: string;
+// };
+
 export const cardsDevStatus = {
   inProgress: {
     text: "In progress",
@@ -31,7 +37,20 @@ export const cardsDevStatus = {
     textColor: "black",
   },
 };
-export const CARDS_DATA = [
+export type CardsData = Array<{
+  title: string;
+  description: string;
+  tags: string[];
+  thumbnail: string;
+  urlGit: string;
+  urlLive: string;
+  devStatus: {
+    text: string;
+    colors: { textColor: string; backgroundColor: string };
+  };
+}>;
+
+export const CARDS_DATA: CardsData = [
   {
     title: "AI Crossplatform App",
     description:
@@ -55,6 +74,32 @@ export const CARDS_DATA = [
       colors: {
         textColor: cardsDevStatus.inProgress.textColor,
         backgroundColor: cardsDevStatus.inProgress.backgroundColor,
+      },
+    },
+  },
+  {
+    title: "Picker Stats - Warehouse Calculator",
+    description:
+      "Warehouse app for calculating and displaying statistics for the packages collected by the picker.",
+    tags: [
+      "Next.js",
+      "Typescript",
+      "Capacitor",
+      "ionic",
+      "ag-charts",
+      "ag-grid",
+      "pwa",
+      "11k-loc",
+      "350+commits",
+    ],
+    thumbnail: "/picker-stats-logo.png",
+    urlGit: "#",
+    urlLive: "https://www.pickerstats.com/",
+    devStatus: {
+      text: cardsDevStatus.release.text,
+      colors: {
+        textColor: cardsDevStatus.release.textColor,
+        backgroundColor: cardsDevStatus.release.backgroundColor,
       },
     },
   },
